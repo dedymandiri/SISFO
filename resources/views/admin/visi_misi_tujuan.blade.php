@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Berita</h1>
+            <h1 class="m-0 text-dark">Visi Misi Tujuan</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item">Home</li>
-              <li class="breadcrumb-item active">Berita</li>
+              <li class="breadcrumb-item active">Visi Misi Tujuan</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -24,7 +24,7 @@
 <body>
 <div>
    <div class="col-sm-4">
-       <a href="/inputberita"><button type="button" class="btn btn-success">Tambah Data</button></a>
+      <button type="button" class="btn btn-success"> Tambah Data</button>
        <!-- Search form -->
        <input style="margin-top:-40px;margin-left:805px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">   
    </div>
@@ -36,13 +36,11 @@
     <tr align="center">
       <th class="th-sm">No
       </th>
-      <th class="th-sm">Judul
+      <th class="th-sm">Visi
       </th>
-      <th class="th-sm">Tanggal_Waktu
+      <th class="th-sm">Misi
       </th>
-      <th class="th-sm">Isi
-      </th>
-      <th class="th-sm">File
+      <th class="th-sm">Tujuan
       </th>
       <th class="th-sm">Aksi
       </th>
@@ -53,15 +51,14 @@
     <!--Untuk menampilkan tabel berita dari database-->
     @foreach($liat as $li)
     <tr>
-        <td>{{ $li->id_berita }}</td>
-        <td>{{ $li->judul }}</td>
-        <td>{{ $li->tanggal_waktu }}</td>
-        <td><p align="justify">{{ $li->isi }}</p></td>
-        <td>{{ $li->file }}</td>
+        <td>{{ $li->id_profil }}</td>
+        <td><p align="justify">{{ $li->visi }}</p></td>
+        <td><p align="justify">{{ $li->misi }}</p></td>
+        <td><p align="justify">{{ $li->tujuan }}</p></td>
         <td>
-            <a href="/formberita/{{ $li->id_berita }}"><button style="width:70px;" title="Edit" type="button" class="btn btn-info">Edit</button></a>
+        <a href="/formvisimisi/{{ $li->id_profil}}"><button style="width:70px;" title="Edit"  type="button" class="btn btn-info">Edit</button></a>
             <br><br>
-            <a href="/berita/hapus/{{ $li->id_berita }}"><button onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger">Hapus</button></a>
+            <button title="Hapus" type="button" class="btn btn-danger">Hapus</button>
         </td>   
     </tr>
     @endforeach
@@ -69,7 +66,7 @@
   </table>
   <br>
 
- </div>
+</div>
 </body>
 
 @endsection

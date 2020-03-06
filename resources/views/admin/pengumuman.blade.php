@@ -2,9 +2,28 @@
 
 @section('content')  
 
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Pengumuman</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item">Home</li>
+              <li class="breadcrumb-item active">Pengumuman</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+
 <div>
    <div class="col-sm-4">
-      <button type="button" class="btn btn-info add-new">Tambah Data</button>
+      <a href="/inputpengumuman"><button type="button" class="btn btn-success">Tambah Data</button></a>
       <!-- Search form -->
       <input style="margin-top:-40px;margin-left:835px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">   
    </div>
@@ -13,79 +32,41 @@
 
   <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
-    <tr>
+    <tr align="center">
       <th class="th-sm">No
       </th>
-      <th class="th-sm">Position
+      <th class="th-sm">Judul
       </th>
-      <th class="th-sm">Office
+      <th class="th-sm">Tanggal_Waktu
       </th>
-      <th class="th-sm">Age
+      <th class="th-sm">Isi
       </th>
-      <th class="th-sm">Start date
+      <th class="th-sm">File
       </th>
       <th class="th-sm">Aksi
       </th>
     </tr>
   </thead>
   <tbody>
+     <!--Untuk menampilkan tabel berita dari database-->
+     @foreach($liat as $li)
     <tr>
-      <td>1</td>
-      <td>System Architect</td>
-      <td>Edinburgh</td>
-      <td>61</td>
-      <td>2011/04/25</td>
-      <td>
-            <button title="Edit" href="" type="button" class="btn btn-danger">Edit</button>
-            <button title="Hapus" href=""type="button" class="btn btn-warning">Hapus</button>
-      </td>
-               
+        <td>{{ $li->id_info }}</td>
+        <td>{{ $li->judul }}</td>
+        <td>{{ $li->tanggal_waktu }}</td>
+        <td><p align="justify">{{ $li->isi }}</p></td>
+        <td>{{ $li->file }}</td>
+        <td>
+            <a href="/forminfo/{{ $li->id_info}}"><button style="width:70px;" title="Edit" type="button" class="btn btn-info">Edit</button></a>
+            <br><br>
+            <a href="/pengumuman/hapus/{{ $li->id_info }}"><button onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger">Hapus</button></a>
+        </td>   
     </tr>
-    <tr>
-      <td>2</td>
-      <td>Accountant</td>
-      <td>Tokyo</td>
-      <td>63</td>
-      <td>2011/07/25</td>
-      <td>
-            <button title="Edit" href="" type="button" class="btn btn-danger">Edit</button>
-            <button title="Hapus" href=""type="button" class="btn btn-warning">Hapus</button>
-      </td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Junior Technical Author</td>
-      <td>San Francisco</td>
-      <td>66</td>
-      <td>2009/01/12</td>
-      <td>
-            <button title="Edit" href="" type="button" class="btn btn-danger">Edit</button>
-            <button title="Hapus" href=""type="button" class="btn btn-warning">Hapus</button>
-      </td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Senior Javascript Developer</td>
-      <td>Edinburgh</td>
-      <td>22</td>
-      <td>2012/03/29</td>
-      <td>
-            <button title="Edit" href="" type="button" class="btn btn-danger">Edit</button>
-            <button title="Hapus" href=""type="button" class="btn btn-warning">Hapus</button>
-      </td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Accountant</td>
-      <td>Tokyo</td>
-      <td>33</td>
-      <td>2008/11/28</td>
-      <td>
-            <button title="Edit" href="" type="button" class="btn btn-danger">Edit</button>
-            <button title="Hapus" href=""type="button" class="btn btn-warning">Hapus</button>
-      </td>
-    </tr>   
+    @endforeach
+  </tbody>
   </table>
+  <br>
+  
 </div>
 
 @endsection
