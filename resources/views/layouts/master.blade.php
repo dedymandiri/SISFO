@@ -124,13 +124,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="struktur_sekolah" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Struktur Sekolah</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="fasilitas" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Fasilitas</p>
                 </a>

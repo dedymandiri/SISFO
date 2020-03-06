@@ -23,9 +23,9 @@
 
 <div>
    <div class="col-sm-4">
-      <a href="/inputpengumuman"><button type="button" class="btn btn-success">Tambah Data</button></a>
+      <a href="/input_pengumuman"><button type="button" class="btn btn-success">Tambah Data</button></a>
       <!-- Search form -->
-      <input style="margin-top:-40px;margin-left:835px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">   
+      <input style="margin-top:-40px;margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">   
    </div>
 
 <br>
@@ -57,7 +57,7 @@
         <td><p align="justify">{{ $li->isi }}</p></td>
         <td>{{ $li->file }}</td>
         <td>
-            <a href="/forminfo/{{ $li->id_info}}"><button style="width:70px;" title="Edit" type="button" class="btn btn-info">Edit</button></a>
+            <a href="/edit_info/{{ $li->id_info}}"><button style="width:70px;" title="Edit" type="button" class="btn btn-info">Edit</button></a>
             <br><br>
             <a href="/pengumuman/hapus/{{ $li->id_info }}"><button onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger">Hapus</button></a>
         </td>   

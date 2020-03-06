@@ -10,19 +10,19 @@
 </h5>
 <br>
 @foreach($liat as $li)
-<form style="width:500px;margin-left:20px;" action="" method="post">
+<form style="width:500px;margin-left:20px;" action="/visi_misi_tujuan/update/{{ $li->id_profil }}" method="post">
 {{ csrf_field() }}
   <div class="form-group">
     <label for="visi">Visi</label>
-    <textarea style="height:200px;width:850px;margin-top:10px" class="form-control" placeholder="Masukan isi berita . . ." required="required" name="visi">{{ $li->visi }}</textarea><br/>
+    <textarea style="height:200px;width:850px;margin-top:10px" class="form-control" placeholder="Masukan isi berita . . ." name="visi">{{ $li->visi }}</textarea><br/>
   </div> 
   <div class="form-group">
     <label for="misi">Misi</label>
-    <textarea style="height:200px;width:850px;margin-top:10px" class="form-control" placeholder="Masukan isi berita . . ." required="required" name="misi">{{ $li->misi }}</textarea><br/>
+    <textarea style="height:200px;width:850px;margin-top:10px" class="form-control" placeholder="Masukan isi berita . . ." name="misi">{{ $li->misi }}</textarea><br/>
   </div> 
   <div class="form-group">
     <label for="tujuan">Tujuan</label>
-    <textarea style="height:200px;width:850px;margin-top:10px" class="form-control" placeholder="Masukan isi berita . . ." required="required" name="tujuan">{{ $li->tujuan }}</textarea><br/>
+    <textarea style="height:200px;width:850px;margin-top:10px" class="form-control" placeholder="Masukan isi berita . . ." name="tujuan">{{ $li->tujuan }}</textarea><br/>
   </div>   
    
   <button type="submit" class="btn btn-primary" value="Simpan">Simpan</button>

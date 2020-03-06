@@ -12,21 +12,21 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item">Home</li>
-              <li class="breadcrumb-item active">Visi Misi Tujuan</li>
+              <li class="breadcrumb-item active">visi_misi_tujuan</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
+<br>
 
 <body>
 <div>
    <div class="col-sm-4">
-      <button type="button" class="btn btn-success"> Tambah Data</button>
+      <!--<button type="button" class="btn btn-success"> Tambah Data</button>-->
        <!-- Search form -->
-       <input style="margin-top:-40px;margin-left:805px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">   
+       <input style="margin-top:-40px;margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">   
    </div>
 
 <br>
@@ -56,9 +56,8 @@
         <td><p align="justify">{{ $li->misi }}</p></td>
         <td><p align="justify">{{ $li->tujuan }}</p></td>
         <td>
-        <a href="/formvisimisi/{{ $li->id_profil}}"><button style="width:70px;" title="Edit"  type="button" class="btn btn-info">Edit</button></a>
+        <a href="/edit_visi_misi_tujuan/{{ $li->id_profil}}"><button style="width:70px;" title="Edit"  type="button" class="btn btn-info">Edit</button></a>
             <br><br>
-            <button title="Hapus" type="button" class="btn btn-danger">Hapus</button>
         </td>   
     </tr>
     @endforeach
