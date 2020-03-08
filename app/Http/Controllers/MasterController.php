@@ -10,6 +10,8 @@ use App\Pengumuman;
 use App\Profil;
 use App\Fasilitas;
 use App\Struktur_guru;
+use App\Tkj_model;
+use App\Tkr_model;
 // Batas Model buat manggil tabel di database
 
 class MasterController extends Controller
@@ -324,6 +326,73 @@ class MasterController extends Controller
 	    return redirect('struktur_sekolah');
     }
     //---------------------------------------------------------------------Batas struktur guru berita admin
+
+
+
+      
+    //---------------------------------------------------------------------halaman TKJ admin
+    public function tkj(){
+        return view('admin.tkj');
+    }
+
+    public function lihattkj(){
+        $hasil = Tkj_model::all();
+        return view('admin.tkj',['liat'=>$hasil]);
+    }
+
+    //edit data berita
+    public function edittkj($id){
+        $hasil = Tkj_model::where('id_tkj',$id)->get();
+        return view('admin.edit.edit_tkj',['liat'=>$hasil]);
+    }
+
+    // update data berita
+    public function updatetkj($id, Request $request)
+    {
+        $tkj = [
+        'pengenalan_umum' => $request->pengenalan_umum,
+        'tujuan_kompetensi' => $request->tujuan_kompetensi,
+        'prospek_lulusan' => $request->prospek_lulusan,
+        'alumni' => $request->alumni
+        ];
+        DB::table('jurusan_tkj')->where('id_tkj',$request->id)->update($tkj);
+
+        return redirect('tkj');
+    }
+    //---------------------------------------------------------------------Batas TKJ berita admin
+
+
+          
+    //---------------------------------------------------------------------halaman TKR admin
+    public function tkr(){
+        return view('admin.tkr');
+    }
+
+    public function lihattkr(){
+        $hasil = Tkr_model::all();
+        return view('admin.tkr',['liat'=>$hasil]);
+    }
+
+    //edit data berita
+    public function edittkr($id){
+        $hasil = Tkr_model::where('id_tkr',$id)->get();
+        return view('admin.edit.edit_tkr',['liat'=>$hasil]);
+    }
+
+    // update data berita
+    public function updatetkr($id, Request $request)
+    {
+        $tkr = [
+        'pengenalan_umum' => $request->pengenalan_umum,
+        'tujuan_kompetensi' => $request->tujuan_kompetensi,
+        'prospek_lulusan' => $request->prospek_lulusan,
+        'alumni' => $request->alumni
+        ];
+        DB::table('jurusan_tkr')->where('id_tkr',$request->id)->update($tkr);
+
+        return redirect('tkr');
+    }
+    //---------------------------------------------------------------------Batas TKR berita admin
 
 }
 

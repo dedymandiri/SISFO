@@ -105,3 +105,25 @@ Route::post('/struktur_sekolah/update/{id}', 'MasterController@updatestruktur_gu
 Route::get('/struktur_sekolah/hapus/{id}','MasterController@hapusstruktur_guru');
 //---------------------------------------------------------------------batas halaman struktur guru dari admin lte
 
+
+
+//---------------------------------------------------------------------halaman TKJ dari admin lte
+Route::get('/tkj','MasterController@tkj');
+//menampilkan data berita dari database
+Route::get('/tkj', 'MasterController@lihattkj');
+//edit(update) data berita ke database
+Route::get('/edit_tkj/{id}', 'MasterController@edittkj');
+Route::post('/tkj/update/{id}', 'MasterController@updatetkj');
+//---------------------------------------------------------------------batas halaman TKJ dari admin lte
+
+
+
+//---------------------------------------------------------------------halaman TKJ dari admin lte
+Route::get('/tkr','MasterController@tkr');
+//menampilkan data berita dari database
+Route::get('/tkr', 'MasterController@lihattkr');
+//edit(update) data berita ke database
+Route::get('/edit_tkr/{id}', 'MasterController@edittkr');
+Route::post('/tkr/update/{id}', 'MasterController@updatetkr');
+//---------------------------------------------------------------------batas halaman TKJ dari admin lte
+
