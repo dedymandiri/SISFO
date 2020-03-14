@@ -127,3 +127,21 @@ Route::get('/edit_tkr/{id}', 'MasterController@edittkr');
 Route::post('/tkr/update/{id}', 'MasterController@updatetkr');
 //---------------------------------------------------------------------batas halaman TKJ dari admin lte
 
+
+
+
+//---------------------------------------------------------------------halaman OSIS dari admin lte
+Route::get('/osis','MasterController@osis');
+//---------------------------------------------------------------------batas halaman OSIS dari admin lte
+
+
+
+//---------------------------------------------------------------------halaman TKJ dari admin lte
+Route::get('/jadwal_pelajaran','MasterController@jadwal');
+//menampilkan data berita dari database
+Route::get('/jadwal_pelajaran', 'MasterController@lihatjadwal');
+
+//---------------------------------------------------------------------batas halaman TKJ dari admin lte
+
+
+Route::get('/coba','MasterController@coba');

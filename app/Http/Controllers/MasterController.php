@@ -12,6 +12,7 @@ use App\Fasilitas;
 use App\Struktur_guru;
 use App\Tkj_model;
 use App\Tkr_model;
+use App\jadwalModel;
 // Batas Model buat manggil tabel di database
 
 class MasterController extends Controller
@@ -51,8 +52,7 @@ class MasterController extends Controller
 	    DB::table('berita')->insert([
 		'judul' => $request->judul,
 		'tanggal_waktu' => $request->tanggal_waktu,
-		'isi' => $request->isi,
-		'file' => $request->file
+		'isi' => $request->isi
 	]);
 	    // alihkan halaman ke halaman berita
 	    return redirect('berita');
@@ -73,7 +73,6 @@ class MasterController extends Controller
             'tanggal_waktu' => $request->tanggal_waktu,
             'isi' => $request->isi 
         ];
-        if($request->file != null) $berita['file'] = $request->file;
 	    // update data berita
         DB::table('berita')->where('id_berita',$request->id)->update($berita);
         return redirect('berita');
@@ -394,6 +393,18 @@ class MasterController extends Controller
     }
     //---------------------------------------------------------------------Batas TKR berita admin
 
+
+
+    //---------------------------------------------------------------------halaman OSIS admin
+    public function osis(){
+        return view('admin.osis');
+    }
+    //---------------------------------------------------------------------halaman OSIS admin
+
+
+    public function coba(){
+        return view('admin.coba');
+    }
 }
 
 

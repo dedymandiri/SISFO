@@ -16,23 +16,45 @@
     <label for="judul">Judul</label>
     <input type="text" id="judul" class="form-control" placeholder="Judul" required="required" name="judul" value="{{ $li->judul }}">
   </div>
+   <!-- DATETIMEPICKER -->  
+   <div class="form-group">
+      <label>Tanggal_waktu</label>
+       <div class='input-group date' id='datetimepicker'>
+        <input type='text' name="tanggal_waktu" placeholder="Tanggal waktu" class="form-control" value="{{ $li->tanggal_waktu }}" />
+        <span class="input-group-addon">
+         <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+       </div>
+    </div>
+
   <div class="form-group">
-    <label for="tanggal_waktu">Tanggal_Waktu</label>
-    <input type="text" id="tanggal_waktu" class="form-control" placeholder="Jumat, 06 Mar 2020 10:09 WIB" required="required" name="tanggal_waktu" value="{{ $li->tanggal_waktu }}">
+    <label for="judul">Deskripsi</label>
+    <textarea id="isi" class="form-control" name="isi" rows="50" cols="80">{{ $li->isi }}</textarea>
   </div>
-  <div class="form-group">
-    <label for="isi">Isi_Berita</label>
-    <textarea style="height:300px;width:850px;margin-top:10px" id="isi" class="form-control" placeholder="Masukan isi berita . . ." required="required" name="isi">{{ $li->isi }}</textarea>
-  </div>   
-  <div class="form-group">
-    <label for="file">File Saat Ini : {{ $li->file }}</label>
-    <input type="file" id="file" class="form-control-file" required="required" name="file" value="c:/passwords.txt">
- </div><br>
+ <br>
   
   <button type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
 </form>
 @endforeach
+
 </div>
 <br>
 
+<!-- CKEDITOR -->
+<script>
+  var isi = document.getElementById("isi");
+    CKEDITOR.replace(isi,{
+    language:'en-gb'
+  });
+  CKEDITOR.config.allowedContent = true;
+</script>
+
+<!-- DATETIMEPICKER -->
+<script type="text/javascript">
+   $(function () {
+    $('#datetimepicker').datetimepicker({
+     format: 'DD MMMM YYYY HH:mm',
+      });
+   });
+</script>
 @endsection

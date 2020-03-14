@@ -3,34 +3,59 @@
 @section('content') 
 
 <br>
-<div style="width:900px;height:800px;margin-left:20px;" class="card">
-
+<div style="width:900px;height:840px;margin-left:20px;" class="card">
+<div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 <h5 class="card-header info-color white-text text-center py-4">
   <strong>Form Input Berita</strong>
 </h5>
 <br>
-<form style="width:500px;margin-left:20px;" action="/berita/store" method="post">
+<form style="width:825px;margin-left:35px;" action="/berita/store" method="post">
 {{ csrf_field() }}
   <div class="form-group">
     <label for="judul">Judul</label>
     <input type="text" class="form-control" placeholder="Judul" required="required" name="judul">
   </div>
+  
+  <!-- DATETIMEPICKER -->  
+    <div class="form-group">
+      <label>Tanggal_waktu</label>
+       <div class='input-group date' id='datetimepicker'>
+        <input type='text' name="tanggal_waktu" placeholder="Tanggal waktu" class="form-control" />
+        <span class="input-group-addon">
+         <span class="glyphicon glyphicon-calendar"></span>
+        </span>
+       </div>
+    </div>
+
   <div class="form-group">
-    <label for="tgl_waktu">Tanggal_Waktu</label>
-    <input type="text" class="form-control" placeholder="Jumat, 06 Mar 2020 10:09 WIB" required="required" name="tanggal_waktu">
+    <label for="judul">Deskripsi</label>
+    <textarea id="isi" class="form-control" name="isi" placeholder="Deskripsi"></textarea>
   </div>
-  <div class="form-group">
-    <label for="isi">Isi_Berita</label>
-    <textarea style="height:300px;width:850px;margin-top:10px" class="form-control" placeholder="Masukan isi berita . . ." required="required" name="isi"></textarea>
-  </div>   
-  <div class="form-group">
-    <label for="exampleFormControlFile1">Pilih File :</label>
-    <input type="file" class="form-control-file" name="file" id="exampleFormControlFile1">
-  </div><br>
+ <br>
    
   <button type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
 </form>
 </div>
+
+<!-- CKEDITOR -->
+<script>
+  var isi = document.getElementById("isi");
+    CKEDITOR.replace(isi,{
+    language:'en-gb',
+    width: '100%',
+    height: 350
+  });
+  CKEDITOR.config.allowedContent = true;
+</script>
+
+<!-- DATETIMEPICKER -->
+<script type="text/javascript">
+   $(function () {
+    $('#datetimepicker').datetimepicker({
+     format: 'DD MMMM YYYY HH:mm',
+      });
+   });
+</script>
 <br>
 
 @endsection

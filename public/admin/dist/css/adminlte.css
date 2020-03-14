@@ -10109,6 +10109,7 @@ body,
 
 .wrapper {
   position: relative;
+  background:#3498db;
 }
 
 .wrapper .content-wrapper {
