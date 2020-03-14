@@ -25,10 +25,10 @@
    <div class="col-sm-4">
       <a href="/input_pengumuman"><button type="button" class="btn btn-success">Tambah Data</button></a>
       <!-- Search form -->
-      <input style="margin-top:-40px;margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">   
+       <!-- <input style="margin-top:-40px;margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">  --> 
    </div>
 
-<br>
+   <br><br><br>
 
   <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
@@ -40,8 +40,6 @@
       <th class="th-sm">Tanggal_Waktu
       </th>
       <th class="th-sm">Isi
-      </th>
-      <th class="th-sm">File
       </th>
       <th class="th-sm">Aksi
       </th>
@@ -55,9 +53,9 @@
         <td>{{ $li->judul }}</td>
         <td>{{ $li->tanggal_waktu }}</td>
         <td><p align="justify">{{ $li->isi }}</p></td>
-        <td>{{ $li->file }}</td>
+       
         <td>
-            <a href="/edit_info/{{ $li->id_info}}"><button style="width:70px;" title="Edit" type="button" class="btn btn-info">Edit</button></a>
+            <a href="/edit_pengumuman/{{ $li->id_info}}"><button style="width:65px;" title="Edit" type="button" class="btn btn-warning">Edit</button></a>
             <br><br>
             <a href="/pengumuman/hapus/{{ $li->id_info }}"><button onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger">Hapus</button></a>
         </td>   

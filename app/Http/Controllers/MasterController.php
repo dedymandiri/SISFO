@@ -114,8 +114,7 @@ class MasterController extends Controller
 	    DB::table('pengumuman')->insert([
 		'judul' => $request->judul,
 		'tanggal_waktu' => $request->tanggal_waktu,
-		'isi' => $request->isi,
-		'file' => $request->file
+		'isi' => $request->isi
 	]);
 	    // alihkan halaman ke halaman pegawai
 	    return redirect('pengumuman');
@@ -123,7 +122,7 @@ class MasterController extends Controller
 
     public function editinfo($id){
         $hasil = Pengumuman::where('id_info',$id)->get();
-        return view('admin.edit.edit_info',['liat'=>$hasil]);
+        return view('admin.edit.edit_pengumuman',['liat'=>$hasil]);
     }
 
     // update data berita
@@ -134,8 +133,7 @@ class MasterController extends Controller
             'tanggal_waktu' => $request->tanggal_waktu,
             'isi' => $request->isi 
         ];
-        if($request->file != null) $info['file'] = $request->file;
-	    // update data berita
+        // update data berita
         DB::table('pengumuman')->where('id_info',$request->id)->update($info);
         return redirect('pengumuman');
     }

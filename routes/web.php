@@ -45,10 +45,10 @@ Route::get('/pengumuman','MasterController@info');
 //menampilkan data berita dari database
 Route::get('/pengumuman', 'MasterController@lihatinfo');
 //tambah data berita ke database
-Route::get('/inputpengumuman', 'MasterController@tambahinfo');
+Route::get('/input_pengumuman', 'MasterController@tambahinfo');
 Route::post('/pengumuman/storeinfo','MasterController@storeinfo');
 //edit(update) data berita ke database
-Route::get('/edit_info/{id}', 'MasterController@editinfo');
+Route::get('/edit_pengumuman/{id}', 'MasterController@editinfo');
 Route::post('/pengumuman/update/{id}', 'MasterController@updateinfo');
 //hapus data berita
 Route::get('/pengumuman/hapus/{id}','MasterController@hapusinfo');

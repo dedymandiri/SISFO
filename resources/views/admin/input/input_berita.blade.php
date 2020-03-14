@@ -5,6 +5,7 @@
 <br>
 <div style="width:900px;height:840px;margin-left:20px;" class="card">
 <div style="background:#3498db;height:800px;height:10px;" class="card"></div>
+
 <h5 class="card-header info-color white-text text-center py-4">
   <strong>Form Input Berita</strong>
 </h5>

@@ -3,14 +3,16 @@
 @section('content') 
 
 <br>
-<div style="width:900px;height:820px;margin-left:20px;" class="card">
+<div style="width:900px;height:830px;margin-left:20px;" class="card">
+<div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
 <h5 class="card-header info-color white-text text-center py-4">
   <strong>Form Edit Berita</strong>
 </h5>
 <br>
+
 @foreach($liat as $li)
-<form style="width:500px;margin-left:20px;" action="/berita/update/{{ $li->id_berita }}" method="post">
+<form style="width:825px;margin-left:35px;" action="/berita/update/{{ $li->id_berita }}" method="post">
 {{ csrf_field() }}
   <div class="form-group">
     <label for="judul">Judul</label>
@@ -44,7 +46,10 @@
 <script>
   var isi = document.getElementById("isi");
     CKEDITOR.replace(isi,{
-    language:'en-gb'
+    language:'en-gb',
+    width: '100%',
+    height: 350
+    
   });
   CKEDITOR.config.allowedContent = true;
 </script>
