@@ -23,16 +23,16 @@
 
 <body>
 <div>
-   <div class="col-sm-4">
+   <div style="margin-left:7px;" class="col-sm-4">
        <a href="/inputberita"><button type="button" class="btn btn-success">Tambah Data</button></a>
        <!-- Search form 
        <input style="margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">   
        -->
    </div>
 
-   <br><br><br>
+   <br><br>
    
-<div class="berita">
+<div style="margin-top:10px;" class="berita">
   <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
     <tr align="center">

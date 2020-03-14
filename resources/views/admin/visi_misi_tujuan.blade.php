@@ -19,14 +19,13 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-<br>
 
 <body>
 <div>
    <div class="col-sm-4">
       <!--<button type="button" class="btn btn-success"> Tambah Data</button>-->
        <!-- Search form -->
-       <input style="margin-top:-40px;margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">   
+       <!--<input style="margin-top:-40px;margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search"> -->  
    </div>
 
 <br>
@@ -36,11 +35,7 @@
     <tr align="center">
       <th class="th-sm">No
       </th>
-      <th class="th-sm">Visi
-      </th>
-      <th class="th-sm">Misi
-      </th>
-      <th class="th-sm">Tujuan
+      <th class="th-sm">Visi_misi_tujuan
       </th>
       <th class="th-sm">Aksi
       </th>
@@ -52,11 +47,9 @@
     @foreach($liat as $li)
     <tr>
         <td>{{ $li->id_profil }}</td>
-        <td><p align="justify">{{ $li->visi }}</p></td>
-        <td><p align="justify">{{ $li->misi }}</p></td>
-        <td><p align="justify">{{ $li->tujuan }}</p></td>
+        <td><p align="justify">{{ $li->visi_misi_tujuan }}</p></td>
         <td>
-        <a href="/edit_visi_misi_tujuan/{{ $li->id_profil}}"><button style="width:70px;" title="Edit"  type="button" class="btn btn-info">Edit</button></a>
+        <a href="/edit_visi_misi_tujuan/{{ $li->id_profil}}"><button style="width:65px;" title="Edit"  type="button"  class="btn btn-warning">Edit</button></a>
             <br><br>
         </td>   
     </tr>

@@ -129,12 +129,47 @@ Route::post('/tkr/update/{id}', 'MasterController@updatetkr');
 
 
 
-
 //---------------------------------------------------------------------halaman OSIS dari admin lte
 Route::get('/osis','MasterController@osis');
+//menampilkan data berita dari database
+Route::get('/osis', 'MasterController@lihatosis');
+//edit(update) data berita ke database
+Route::get('/edit_osis/{id}', 'MasterController@editosis');
+Route::post('/osis/update/{id}', 'MasterController@updateosis');
 //---------------------------------------------------------------------batas halaman OSIS dari admin lte
 
 
+
+//---------------------------------------------------------------------halaman OSIS dari admin lte
+Route::get('/pramuka','MasterController@pramuka');
+//menampilkan data berita dari database
+Route::get('/pramuka', 'MasterController@lihatpramuka');
+//edit(update) data berita ke database
+Route::get('/edit_pramuka/{id}', 'MasterController@editpramuka');
+Route::post('/pramuka/update/{id}', 'MasterController@updatepramuka');
+//---------------------------------------------------------------------batas halaman OSIS dari admin lte
+
+
+
+//---------------------------------------------------------------------halaman PMR dari admin lte
+Route::get('/pmr','MasterController@pmr');
+//menampilkan data berita dari database
+Route::get('/pmr', 'MasterController@lihatpmr');
+//edit(update) data berita ke database
+Route::get('/edit_pmr/{id}', 'MasterController@editpmr');
+Route::post('/pmr/update/{id}', 'MasterController@updatepmr');
+//---------------------------------------------------------------------batas halaman PMR dari admin lte
+
+
+
+//---------------------------------------------------------------------halaman PASKIBRA dari admin lte
+Route::get('/paskibra','MasterController@paskibra');
+//menampilkan data berita dari database
+Route::get('/paskibra', 'MasterController@lihatpaskibra');
+//edit(update) data berita ke database
+Route::get('/edit_paskibra/{id}', 'MasterController@editpaskibra');
+Route::post('/paskibra/update/{id}', 'MasterController@updatepaskibra');
+//---------------------------------------------------------------------batas halaman PASKIBRA dari admin lte
 
 //---------------------------------------------------------------------halaman TKJ dari admin lte
 Route::get('/jadwal_pelajaran','MasterController@jadwal');

@@ -3,14 +3,15 @@
 @section('content') 
 
 <br>
-<div style="width:900px;height:820px;margin-left:20px;" class="card">
+<div style="width:900px;height:700px;margin-left:20px;" class="card">
+<div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
-<h5 class="card-header info-color white-text text-center py-4">
+<h4 class="card-header info-color white-text text-center py-4">
   <strong>Form Edit Fasilitas</strong>
-</h5>
+</h4>
 <br>
 @foreach($liat as $li)
-<form style="width:500px;margin-left:20px;" action="/fasilitas/update/{{ $li->id_fas }}" method="post">
+<form style="width:825px;margin-left:35px;" action="/fasilitas/update/{{ $li->id_fas }}" method="post">
 {{ csrf_field() }}
   <div class="form-group">
     <label for="judul">Nama Ruang</label>
@@ -20,7 +21,7 @@
     <label for="tanggal_waktu">Kuantitas</label>
     <input type="text" id="kuantitas" class="form-control" placeholder="Kuantitas" required="required" name="kuantitas" value="{{ $li->kuantitas }}">
   </div>
-  
+  <br>
   <button type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
 </form>
 @endforeach

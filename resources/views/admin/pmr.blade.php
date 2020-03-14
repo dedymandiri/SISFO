@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Osis</h1>
+            <h1 class="m-0 text-dark">PMR</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item">Home</li>
-              <li class="breadcrumb-item active">Osis</li>
+              <li class="breadcrumb-item active">PMR</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -43,10 +43,10 @@
     @foreach($liat as $li)
     <tr align="justify">
         <td>{{ $li->id_ekskul }}</td>
-        <td>{{ $li->deskripsi_osis }}</td>
+        <td>{{ $li->deskripsi_pmr }}</td>
        
         <td>
-            <a href="/edit_osis/{{ $li->id_ekskul }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>
+            <a href="/edit_pmr/{{ $li->id_ekskul }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>
         <br>
              </td>   
     </tr>

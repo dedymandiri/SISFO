@@ -3,13 +3,14 @@
 @section('content') 
 
 <br>
-<div style="width:900px;height:800px;margin-left:20px;" class="card">
+<div style="width:800px;height:700px;margin-left:20px;" class="card">
+<div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
-<h5 class="card-header info-color white-text text-center py-4">
+<h4 class="card-header info-color white-text text-center py-4">
   <strong>Form Input Struktur Sekolah</strong>
-</h5>
+</h4>
 <br>
-<form style="width:500px;margin-left:20px;" action="/struktur_sekolah/storestruktur_guru" method="post">
+<form style="width:730px;margin-left:35px;" action="/struktur_sekolah/storestruktur_guru" method="post">
 {{ csrf_field() }}
   <div class="form-group">
     <label for="judul">Nama Guru</label>
@@ -19,7 +20,7 @@
     <label for="tgl_waktu">Jabatan</label>
     <input type="text" class="form-control" placeholder="Jabatan " required="required" name="jabatan">
   </div>
-   
+   <br>
   <button type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
 </form>
 </div>

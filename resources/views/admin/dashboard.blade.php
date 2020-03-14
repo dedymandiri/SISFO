@@ -28,7 +28,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>13</h3>
+                <h3>13<sup style="font-size: 20px"></sup></h3>
 
                 <label>Pengguna</label>
               </div>
@@ -56,7 +56,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+                <h3>44<sup style="font-size: 20px"></sup></h3>
 
                 <label>Pengumuman</label>
               </div>
@@ -70,7 +70,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>20</h3>
+                <h3>20<sup style="font-size: 20px"></sup></h3>
 
                 <label>Pendaftar</label>
               </div>

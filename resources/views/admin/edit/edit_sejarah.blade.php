@@ -5,24 +5,36 @@
 
  
 <br>
-<div style="width:900px;height:680px;margin-left:20px;" class="card">
+<div style="width:900px;height:700px;margin-left:20px;" class="card">
+<div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
-<h5 class="card-header info-color white-text text-center py-4">
+<h4 class="card-header info-color white-text text-center py-4">
   <strong>Form Edit Sejarah</strong>
-</h5>
+</h4>
 <br>
 @foreach($liat as $li)
-<form style="width:500px;margin-left:20px;" action="/sejarah/update/{{ $li->id_profil }}" method="post">
+<form style="width:825px;margin-left:35px;" action="/sejarah/update/{{ $li->id_profil }}" method="post">
 {{ csrf_field() }}
   <div class="form-group">
-    <label for="isi">Isi_sejarah</label>
-    <textarea style="height:420px;width:860px;margin-top:10px" id="ckeditor" class="form-control" placeholder="Masukan isi sejarah . . ." name="sejarah">{{ $li->sejarah }}</textarea><br/>
-  </div>   
-   
-  <button type="submit" class="btn btn-primary" value="simpapn">Simpan</button>
+    <label for="judul">Deskripsi</label>
+    <textarea id="isi" class="form-control" name="sejarah" placeholder="Deskripsi">{{ $li->sejarah }}</textarea>
+  </div>
+   <br>
+  <button type="submit" class="btn btn-primary" value="simpan">Simpan</button>
 </form>
 @endforeach
 </div>
+
+<!-- CKEDITOR -->
+<script>
+  var isi = document.getElementById("isi");
+    CKEDITOR.replace(isi,{
+    language:'en-gb',
+    width: '100%',
+    height: 350
+  });
+  CKEDITOR.config.allowedContent = true;
+</script>
 <br>
 
 @endsection

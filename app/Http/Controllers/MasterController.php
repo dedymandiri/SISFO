@@ -13,6 +13,7 @@ use App\Struktur_guru;
 use App\Tkj_model;
 use App\Tkr_model;
 use App\jadwalModel;
+use App\Osis_Model;
 // Batas Model buat manggil tabel di database
 
 class MasterController extends Controller
@@ -194,9 +195,7 @@ class MasterController extends Controller
     public function updatevisi($id, Request $request)
     {
         DB::table('profil')->where('id_profil',$request->id)->update([
-            'visi' => $request->visi,
-            'misi' => $request->misi,
-            'Tujuan' => $request->tujuan
+            'visi_misi_tujuan' => $request->visi_misi_tujuan,
         ]);
         //diarahkan ke halaman sejarah
         return redirect('visi_misi_tujuan');
@@ -347,10 +346,7 @@ class MasterController extends Controller
     public function updatetkj($id, Request $request)
     {
         $tkj = [
-        'pengenalan_umum' => $request->pengenalan_umum,
-        'tujuan_kompetensi' => $request->tujuan_kompetensi,
-        'prospek_lulusan' => $request->prospek_lulusan,
-        'alumni' => $request->alumni
+        'deskripsi' => $request->deskripsi
         ];
         DB::table('jurusan_tkj')->where('id_tkj',$request->id)->update($tkj);
 
@@ -380,10 +376,7 @@ class MasterController extends Controller
     public function updatetkr($id, Request $request)
     {
         $tkr = [
-        'pengenalan_umum' => $request->pengenalan_umum,
-        'tujuan_kompetensi' => $request->tujuan_kompetensi,
-        'prospek_lulusan' => $request->prospek_lulusan,
-        'alumni' => $request->alumni
+        'deskripsi' => $request->deskripsi
         ];
         DB::table('jurusan_tkr')->where('id_tkr',$request->id)->update($tkr);
 
@@ -397,8 +390,120 @@ class MasterController extends Controller
     public function osis(){
         return view('admin.osis');
     }
+
+    public function lihatosis(){
+        $hasil = Osis_model::all();
+        return view('admin.osis',['liat'=>$hasil]);
+    }
+
+    //edit data berita
+    public function editosis($id){
+        $hasil = Osis_model::where('id_ekskul',$id)->get();
+        return view('admin.edit.edit_osis',['liat'=>$hasil]);
+    }
+
+    // update data berita
+    public function updateosis($id, Request $request)
+    {
+        $tkr = [
+        'deskripsi_osis' => $request->deskripsi_osis
+        ];
+        DB::table('ekskul')->where('id_ekskul',$request->id)->update($tkr);
+
+        return redirect('osis');
+    }
     //---------------------------------------------------------------------halaman OSIS admin
 
+
+
+    
+    //---------------------------------------------------------------------halaman pramuka admin
+    public function pramuka(){
+        return view('admin.pramuka');
+    }
+
+    public function lihatpramuka(){
+        $hasil = Osis_model::all();
+        return view('admin.pramuka',['liat'=>$hasil]);
+    }
+
+    //edit data berita
+    public function editpramuka($id){
+        $hasil = Osis_model::where('id_ekskul',$id)->get();
+        return view('admin.edit.edit_pramuka',['liat'=>$hasil]);
+    }
+
+    // update data berita
+    public function updatepramuka($id, Request $request)
+    {
+        $tkr = [
+        'deskripsi_pramuka' => $request->deskripsi_pramuka
+        ];
+        DB::table('ekskul')->where('id_ekskul',$request->id)->update($tkr);
+
+        return redirect('pramuka');
+    }
+    //---------------------------------------------------------------------halaman pramuka admin
+
+
+
+    //---------------------------------------------------------------------halaman PMR admin
+    public function pmr(){
+        return view('admin.pmr');
+    }
+
+    public function lihatpmr(){
+        $hasil = Osis_model::all();
+        return view('admin.pmr',['liat'=>$hasil]);
+    }
+
+    //edit data berita
+    public function editpmr($id){
+        $hasil = Osis_model::where('id_ekskul',$id)->get();
+        return view('admin.edit.edit_pmr',['liat'=>$hasil]);
+    }
+
+    // update data berita
+    public function updatepmr($id, Request $request)
+    {
+        $tkr = [
+        'deskripsi_pmr' => $request->deskripsi_pmr
+        ];
+        DB::table('ekskul')->where('id_ekskul',$request->id)->update($tkr);
+
+        return redirect('pmr');
+    }
+    //---------------------------------------------------------------------Batas halaman PMR admin
+
+
+    
+    //---------------------------------------------------------------------halaman Paskibra admin
+    public function paskibra(){
+        return view('admin.paskibra');
+    }
+
+    public function lihatpaskibra(){
+        $hasil = Osis_model::all();
+        return view('admin.paskibra',['liat'=>$hasil]);
+    }
+
+    //edit data berita
+    public function editpaskibra($id){
+        $hasil = Osis_model::where('id_ekskul',$id)->get();
+        return view('admin.edit.edit_paskibra',['liat'=>$hasil]);
+    }
+
+    // update data berita
+    public function updatepaskibra($id, Request $request)
+    {
+        $tkr = [
+        'deskripsi_paskibra' => $request->deskripsi_paskibra
+        ];
+        DB::table('ekskul')->where('id_ekskul',$request->id)->update($tkr);
+
+        return redirect('paskibra');
+    }
+    //--------------------------------------------------------------------- Batas halaman paskibra admin
 
     public function coba(){
         return view('admin.coba');

@@ -7,15 +7,15 @@
 <div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
 <h4 class="card-header info-color white-text text-center py-4">
-  <strong>Form Edit TKR</strong>
+  <strong>Form Edit Pramuka</strong>
 </h4>
 <br>
 @foreach($liat as $li)
-<form style="width:825px;margin-left:35px;" action="/tkr/update/{{ $li->id_tkr }}" method="post">
+<form style="width:825px;margin-left:35px;" action="/pramuka/update/{{ $li->id_ekskul }}" method="post">
 {{ csrf_field() }}
-<div class="form-group">
+  <div class="form-group">
     <label for="judul">Deskripsi</label>
-    <textarea id="isi" class="form-control" name="deskripsi" placeholder="Deskripsi">{{ $li->deskripsi }}</textarea>
+    <textarea id="isi" class="form-control" name="deskripsi_pramuka" placeholder="Deskripsi">{{ $li->deskripsi_pramuka }}</textarea>
   </div>
    <br>
   <button type="submit" class="btn btn-primary" value="Simpan">Simpan</button>

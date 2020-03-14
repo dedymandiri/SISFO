@@ -160,21 +160,21 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="pramuka" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Pramuka</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="s" class="nav-link">
+                <a href="pmr" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Paskibra</p>
+                  <p>PMR</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="paskibra" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>PMR</p>
+                  <p>Paskibra</p>
                 </a>
               </li>
             </ul>

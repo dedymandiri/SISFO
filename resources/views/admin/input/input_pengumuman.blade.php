@@ -6,9 +6,9 @@
 <div style="width:900px;height:830px;margin-left:20px;" class="card">
 <div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
-<h5 class="card-header info-color white-text text-center py-4">
+<h4 class="card-header info-color white-text text-center py-4">
   <strong>Form Input Pengumuman</strong>
-</h5>
+</h4>
 <br>
 <form style="width:825px;margin-left:35px;" action="/pengumuman/storeinfo" method="post">
 {{ csrf_field() }}
