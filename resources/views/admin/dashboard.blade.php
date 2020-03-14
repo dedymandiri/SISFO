@@ -30,9 +30,9 @@
               <div class="inner">
                 <h3>13</h3>
 
-                <p>Pengguna</p>
+                <label>Pengguna</label>
               </div>
-              <div class="icon">
+              <div style="height:40px;" class="icon">
                 <i class="ion ion-bag"></i>
               </div>
             </div>
@@ -44,9 +44,9 @@
               <div class="inner">
                 <h3>32<sup style="font-size: 20px"></sup></h3>
 
-                <p>Berita</p>
+                <label>Berita</label>
               </div>
-              <div class="icon">
+              <div style="height:40px;" class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
             </div>
@@ -58,9 +58,9 @@
               <div class="inner">
                 <h3>44</h3>
 
-                <p>Pengumuman</p>
+                <label>Pengumuman</label>
               </div>
-              <div class="icon">
+              <div style="height:40px;" class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
             </div>
@@ -72,9 +72,9 @@
               <div class="inner">
                 <h3>20</h3>
 
-                <p>Pendaftar</p>
+                <label>Pendaftar</label>
               </div>
-              <div class="icon">
+              <div style="height:40px;" class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
             </div>
@@ -82,6 +82,7 @@
           <!-- ./col -->
         </div>
         <!-- /.row -->
+      </div>
         <!-- Main row -->
 
 @endsection
