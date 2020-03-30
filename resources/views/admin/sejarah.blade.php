@@ -11,7 +11,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item">Home</li>
+              <a href="dashboard"><li class="breadcrumb-item">Dashboard</li></a> /
               <li class="breadcrumb-item active">Sejarah</li>
             </ol>
           </div><!-- /.col -->
@@ -50,13 +50,24 @@
         <td>
             <a href="/edit_sejarah/{{ $li->id_profil}}"><button style="width:65px;" title="Edit" type="button" class="btn btn-warning">Edit</button></a>
             <br><br>
-            
+            <a href="/detail_sejarah"><button type="button" class="btn btn-primary">Detail</button></a>
+           
         </td>   
     </tr>
     @endforeach
   </tbody>
   </table>
+
 </div>
 </body>
 
+<script>
+$(document).on('ajaxComplete ready', function () {
+    $('.modalMd').off('click').on('click', function () {
+        $('#modalMdContent').load($(this).attr('value'));
+        $('#modalMdTitle').html($(this).attr('title'));
+    });
+});
+</script>
+ 
 @endsection

@@ -11,7 +11,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item">Home</li>
+              <a href="dashboard"><li class="breadcrumb-item">Dashboard</li></a>  /
               <li class="breadcrumb-item active">Fasilitas</li>
             </ol>
           </div><!-- /.col -->
@@ -24,9 +24,9 @@
 <body>
 <div>
    <div style="margin-left:7px;" class="col-sm-4">
-       <a href="/input_fasilitas"><button type="button" class="btn btn-success">Tambah Data</button></a>
+       <a href="/input_struktur_sekolah"><button type="button" class="btn btn-success">Tambah Data</button></a>
        <!-- Search form -->
-       <!--<input style="margin-top:-40px;margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">-->   
+       <!--<input style="margin-top:-40px;margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search"> -->  
    </div>
 
 <br><br>
@@ -34,7 +34,7 @@
    <thead>
     <tr>
       <th class="th-sm">No</th>
-      <th class="th-sm">Nama Ruang</th>
+      <th class="th-sm">Nama Ruangan</th>
       <th class="th-sm">Kuantitas</th>
       <th class="th-sm">Aksi</th>
     </tr>

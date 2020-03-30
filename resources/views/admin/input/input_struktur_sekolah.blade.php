@@ -20,8 +20,11 @@
     <label for="tgl_waktu">Jabatan</label>
     <input type="text" class="form-control" placeholder="Jabatan " required="required" name="jabatan">
   </div>
-   <br>
+
+  <br><br>
   <button type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
+  <a href="/struktur_sekolah"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
+  
 </form>
 </div>
 <br>

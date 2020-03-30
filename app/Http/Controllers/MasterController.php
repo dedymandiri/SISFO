@@ -5,20 +5,24 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB; //Import database
 
 // Model buat manggil tabel di database
-use App\Berita;
-use App\Pengumuman;
-use App\Profil;
-use App\Fasilitas;
-use App\Struktur_guru;
-use App\Tkj_model;
+use App\Berita_Model;
+use App\Pengumuman_Model;
+use App\Profil_Model;
+use App\Fasilitas_Model;
+use App\Struktursklh_Model;
+use App\Multimedia_model;
 use App\Tkr_model;
-use App\jadwalModel;
-use App\Osis_Model;
+use App\Jadwal_Model;
+use App\Ekskul_model;
+use App\User_Model;
+use App\Galery_Model;
 // Batas Model buat manggil tabel di database
+
+use Storage;
 
 class MasterController extends Controller
 {
-    public function index(){
+    public function master(){
         return view('layouts.master');
     }
 
@@ -35,7 +39,7 @@ class MasterController extends Controller
     }
 
     public function lihatberita(){
-        $hasil = Berita::all();
+        $hasil = Berita_Model::all();
         return view('admin.berita',['liat'=>$hasil]);
     }
 
@@ -62,7 +66,7 @@ class MasterController extends Controller
 
     //edit data berita
     public function editberita($id){
-        $hasil = Berita::where('id_berita',$id)->get();
+        $hasil = Berita_Model::where('id_berita',$id)->get();
         return view('admin.edit.edit_berita',['liat'=>$hasil]);
     }
 
@@ -98,7 +102,7 @@ class MasterController extends Controller
     }
 
     public function lihatinfo(){
-        $hasil = Pengumuman::all();
+        $hasil = Pengumuman_Model::all();
         return view('admin.pengumuman',['liat'=>$hasil]);
     }
 
@@ -122,7 +126,7 @@ class MasterController extends Controller
     }
 
     public function editinfo($id){
-        $hasil = Pengumuman::where('id_info',$id)->get();
+        $hasil = Pengumuman_Model::where('id_info',$id)->get();
         return view('admin.edit.edit_pengumuman',['liat'=>$hasil]);
     }
 
@@ -156,12 +160,21 @@ class MasterController extends Controller
     }
 
     public function lihatsejarah(){
-        $hasil = Profil::all();
+        $hasil = Profil_Model::all();
         return view('admin.sejarah',['liat'=>$hasil]);
     }
 
+    public function detailsejarah(){
+        return view('admin.detail.detail_sejarah');
+    }
+
+    public function lihatdetailsejarah(){
+        $hasil = Profil_Model::all();
+        return view('admin.detail.detail_sejarah',['liat'=>$hasil]);
+    }
+
     public function editsejarah($id){
-        $hasil = Profil::where('id_profil',$id)->get();
+        $hasil = Profil_Model::where('id_profil',$id)->get();
         return view('admin.edit.edit_sejarah',['liat'=>$hasil]);
     }
 
@@ -182,13 +195,21 @@ class MasterController extends Controller
     }
 
     public function lihatvisi(){
-        $hasil = Profil::all();
+        $hasil = Profil_Model::all();
         return view('admin.visi_misi_tujuan',['liat'=>$hasil]);
     }
 
-    
+    public function detailvisimisi(){
+        return view('admin.detail.detail_visimisi');
+    }
+
+    public function lihatdetailvisimisi(){
+        $hasil = Profil_Model::all();
+        return view('admin.detail.detail_visimisi',['liat'=>$hasil]);
+    }
+
     public function editvisi($id){
-        $hasil = Profil::where('id_profil',$id)->get();
+        $hasil = Profil_Model::where('id_profil',$id)->get();
         return view('admin.edit.edit_visi_misi_tujuan',['liat'=>$hasil]);
     }
 
@@ -210,7 +231,7 @@ class MasterController extends Controller
     }
 
     public function lihatfas(){
-        $hasil = Fasilitas::all();
+        $hasil = Fasilitas_Model::all();
         return view('admin.fasilitas',['liat'=>$hasil]);
     }
 
@@ -236,7 +257,7 @@ class MasterController extends Controller
 
     //edit data berita
     public function editfas($id){
-        $hasil = Fasilitas::where('id_fas',$id)->get();
+        $hasil = Fasilitas_Model::where('id_fas',$id)->get();
         return view('admin.edit.edit_fasilitas',['liat'=>$hasil]);
     }
 
@@ -270,7 +291,7 @@ class MasterController extends Controller
     }
 
     public function lihatstruktur_guru(){
-        $hasil = Struktur_guru::all();
+        $hasil = Struktursklh_Model::all();
         return view('admin.struktur_sekolah',['liat'=>$hasil]);
     }
 
@@ -296,7 +317,7 @@ class MasterController extends Controller
 
     //edit data berita
     public function editstruktur_guru($id){
-        $hasil = Struktur_guru::where('id_struktur_guru',$id)->get();
+        $hasil = Struktursklh_Model::where('id_struktur_guru',$id)->get();
         return view('admin.edit.edit_struktur_sekolah',['liat'=>$hasil]);
     }
 
@@ -327,62 +348,42 @@ class MasterController extends Controller
 
       
     //---------------------------------------------------------------------halaman TKJ admin
-    public function tkj(){
-        return view('admin.tkj');
+    public function multimedia(){
+        return view('admin.multimedia');
     }
 
-    public function lihattkj(){
-        $hasil = Tkj_model::all();
-        return view('admin.tkj',['liat'=>$hasil]);
+    public function lihatmultimedia(){
+        $hasil = Multimedia_model::all();
+        return view('admin.multimedia',['liat'=>$hasil]);
     }
+
+    public function detailmultimedia(){
+        return view('admin.detail.detail_multimedia');
+    }
+
+    public function lihatdetailmultimedia(){
+        $hasil = Multimedia_model::all();
+        return view('admin.detail.detail_multimedia',['liat'=>$hasil]);
+    }
+
 
     //edit data berita
-    public function edittkj($id){
-        $hasil = Tkj_model::where('id_tkj',$id)->get();
-        return view('admin.edit.edit_tkj',['liat'=>$hasil]);
+    public function editmultimedia($id){
+        $hasil = Multimedia_model::where('id_multimedia',$id)->get();
+        return view('admin.edit.edit_multimedia',['liat'=>$hasil]);
     }
 
     // update data berita
-    public function updatetkj($id, Request $request)
+    public function updatemultimedia($id, Request $request)
     {
-        $tkj = [
+        $multimedia = [
         'deskripsi' => $request->deskripsi
         ];
-        DB::table('jurusan_tkj')->where('id_tkj',$request->id)->update($tkj);
+        DB::table('multimedia')->where('id_multimedia',$request->id)->update($multimedia);
 
-        return redirect('tkj');
+        return redirect('multimedia');
     }
     //---------------------------------------------------------------------Batas TKJ berita admin
-
-
-          
-    //---------------------------------------------------------------------halaman TKR admin
-    public function tkr(){
-        return view('admin.tkr');
-    }
-
-    public function lihattkr(){
-        $hasil = Tkr_model::all();
-        return view('admin.tkr',['liat'=>$hasil]);
-    }
-
-    //edit data berita
-    public function edittkr($id){
-        $hasil = Tkr_model::where('id_tkr',$id)->get();
-        return view('admin.edit.edit_tkr',['liat'=>$hasil]);
-    }
-
-    // update data berita
-    public function updatetkr($id, Request $request)
-    {
-        $tkr = [
-        'deskripsi' => $request->deskripsi
-        ];
-        DB::table('jurusan_tkr')->where('id_tkr',$request->id)->update($tkr);
-
-        return redirect('tkr');
-    }
-    //---------------------------------------------------------------------Batas TKR berita admin
 
 
 
@@ -392,13 +393,22 @@ class MasterController extends Controller
     }
 
     public function lihatosis(){
-        $hasil = Osis_model::all();
+        $hasil = Ekskul_model::all();
         return view('admin.osis',['liat'=>$hasil]);
+    }
+
+    public function detailosis(){
+        return view('admin.detail.detail_osis');
+    }
+
+    public function lihatdetailosis(){
+        $hasil = Ekskul_model::all();
+        return view('admin.detail.detail_osis',['liat'=>$hasil]);
     }
 
     //edit data berita
     public function editosis($id){
-        $hasil = Osis_model::where('id_ekskul',$id)->get();
+        $hasil = Ekskul_model::where('id_ekskul',$id)->get();
         return view('admin.edit.edit_osis',['liat'=>$hasil]);
     }
 
@@ -423,13 +433,23 @@ class MasterController extends Controller
     }
 
     public function lihatpramuka(){
-        $hasil = Osis_model::all();
+        $hasil = Ekskul_model::all();
         return view('admin.pramuka',['liat'=>$hasil]);
+    }
+
+    //menampilkan detail data 
+    public function detailpramuka(){
+        return view('admin.detail.detail_pramuka');
+    }
+
+    public function lihatdetailpramuka(){
+        $hasil = Ekskul_model::all();
+        return view('admin.detail.detail_pramuka',['liat'=>$hasil]);
     }
 
     //edit data berita
     public function editpramuka($id){
-        $hasil = Osis_model::where('id_ekskul',$id)->get();
+        $hasil = Ekskul_model::where('id_ekskul',$id)->get();
         return view('admin.edit.edit_pramuka',['liat'=>$hasil]);
     }
 
@@ -447,33 +467,85 @@ class MasterController extends Controller
 
 
 
-    //---------------------------------------------------------------------halaman PMR admin
-    public function pmr(){
-        return view('admin.pmr');
+    //---------------------------------------------------------------------halaman KARATE admin
+    public function karate(){
+        return view('admin.karate');
     }
 
-    public function lihatpmr(){
-        $hasil = Osis_model::all();
-        return view('admin.pmr',['liat'=>$hasil]);
+    public function lihatkarate(){
+        $hasil = Ekskul_model::all();
+        return view('admin.karate',['liat'=>$hasil]);
+    }
+
+    //menampilkan detail data
+    public function detailkarate(){
+        return view('admin.detail.detail_karate');
+    }
+
+    public function lihatdetailkarate(){
+        $hasil = Ekskul_model::all();
+        return view('admin.detail.detail_karate',['liat'=>$hasil]);
     }
 
     //edit data berita
-    public function editpmr($id){
-        $hasil = Osis_model::where('id_ekskul',$id)->get();
-        return view('admin.edit.edit_pmr',['liat'=>$hasil]);
+    public function editkarate($id){
+        $hasil = Ekskul_model::where('id_ekskul',$id)->get();
+        return view('admin.edit.edit_karate',['liat'=>$hasil]);
     }
 
     // update data berita
-    public function updatepmr($id, Request $request)
+    public function updatekarate($id, Request $request)
     {
-        $tkr = [
-        'deskripsi_pmr' => $request->deskripsi_pmr
+        $karate = [
+        'deskripsi_karate' => $request->deskripsi_karate
         ];
-        DB::table('ekskul')->where('id_ekskul',$request->id)->update($tkr);
+        DB::table('ekskul')->where('id_ekskul',$request->id)->update($karate);
 
-        return redirect('pmr');
+        return redirect('karate');
     }
-    //---------------------------------------------------------------------Batas halaman PMR admin
+    //---------------------------------------------------------------------Batas halaman KARATE admin
+
+
+
+    
+          
+    //---------------------------------------------------------------------halaman HADROH admin
+    public function hadroh(){
+        return view('admin.hadroh');
+    }
+
+    public function lihathadroh(){
+        $hasil = Ekskul_model::all();
+        return view('admin.hadroh',['liat'=>$hasil]);
+    }
+
+    //menampilkan detail data
+    public function detailhadroh(){
+        return view('admin.detail.detail_hadroh');
+    }
+
+    public function lihatdetailhadroh(){
+        $hasil = Ekskul_model::all();
+        return view('admin.detail.detail_hadroh',['liat'=>$hasil]);
+    }
+
+    //edit data berita
+    public function edithadroh($id){
+        $hasil = Ekskul_model::where('id_ekskul',$id)->get();
+        return view('admin.edit.edit_hadroh',['liat'=>$hasil]);
+    }
+
+    // update data berita
+    public function updatehadroh($id, Request $request)
+    {
+        $hadroh = [
+        'deskripsi_hadroh' => $request->deskripsi_hadroh
+        ];
+        DB::table('ekskul')->where('id_ekskul',$request->id)->update($hadroh);
+
+        return redirect('hadroh');
+    }
+    //---------------------------------------------------------------------Batas HADROH berita admin
 
 
     
@@ -483,13 +555,23 @@ class MasterController extends Controller
     }
 
     public function lihatpaskibra(){
-        $hasil = Osis_model::all();
+        $hasil = Ekskul_model::all();
         return view('admin.paskibra',['liat'=>$hasil]);
+    }
+
+    //menampilkan detail data
+    public function detailpaskibra(){
+        return view('admin.detail.detail_paskibra');
+    }
+
+    public function lihatdetailpaskibra(){
+        $hasil = Ekskul_model::all();
+        return view('admin.detail.detail_paskibra',['liat'=>$hasil]);
     }
 
     //edit data berita
     public function editpaskibra($id){
-        $hasil = Osis_model::where('id_ekskul',$id)->get();
+        $hasil = Ekskul_model::where('id_ekskul',$id)->get();
         return view('admin.edit.edit_paskibra',['liat'=>$hasil]);
     }
 
@@ -505,9 +587,287 @@ class MasterController extends Controller
     }
     //--------------------------------------------------------------------- Batas halaman paskibra admin
 
-    public function coba(){
-        return view('admin.coba');
+
+
+    //--------------------------------------------------------------------- halaman jadwal pelajaran admin
+     public function jadwal(){
+        return view('admin.jadwal_pelajaran');
     }
+
+    public function lihatjadwal(){
+        $hasil = Jadwal_Model::all();
+        return view('admin.jadwal_pelajaran',['liat'=>$hasil]);
+    }
+
+    public function tambahjadwal()
+    { 
+	    // memanggil view tambah
+	    return view('admin.input.input_jadwal_pelajaran');
+ 
+    }
+       
+    //edit data 
+    public function editjadwal($id){
+        $hasil = Jadwal_Model::where('id_jadwal',$id)->get();
+        return view('admin.edit.edit_jadwal_pelajaran',['liat'=>$hasil]);
+    }
+
+    // update data 
+    public function updatejadwal($id, Request $request)
+    {
+        $this->validate($request, [
+			'file' => 'required|file|image|mimes:pdf',
+			'keterangan' => 'required',
+		]);
+ 
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+ 
+        $jadwal = [
+            'file'=> $file->getClientOriginalName(),
+            'keterangan' => $request->keterangan
+        ];
+
+          // tujuan file disimpan di folder apa?
+        $tujuan_upload = 'data_jadwal';
+ 
+        // upload file
+        $file->move($tujuan_upload,$file->getClientOriginalName());
+               
+	    // update data 
+        DB::table('jadwal_pelajaran')->where('id_jadwal',$request->id)->update($jadwal);
+        return redirect('jadwal_pelajaran');
+    }
+
+
+    //input data ke database
+    public function proses_upload_jadwal(Request $request){
+		$this->validate($request, [
+			'file' => 'required|file|mimes:pdf|max:2048',
+			'keterangan' => 'required',
+		]);
+ 
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+ 
+      	        // nama file
+		echo 'File Name: '.$file->getClientOriginalName();
+		echo '<br>';
+ 
+      	        // ekstensi file
+		echo 'File Extension: '.$file->getClientOriginalExtension();
+		echo '<br>';
+ 
+      	        // real path
+		echo 'File Real Path: '.$file->getRealPath();
+		echo '<br>';
+ 
+      	        // ukuran file
+		echo 'File Size: '.$file->getSize();
+		echo '<br>';
+ 
+      	        // tipe mime
+		echo 'File Mime Type: '.$file->getMimeType();
+ 
+      	        // isi dengan nama folder tempat kemana file diupload
+		$tujuan_upload = 'data_jadwal';
+ 
+                // upload file
+        $file->move($tujuan_upload,$file->getClientOriginalName());
+            
+        DB::table('jadwal_pelajaran')->insert([
+            'keterangan' => $request->keterangan,
+            'file'=> $file->getClientOriginalName(),
+
+        ]);
+
+        // alihkan halaman ke halaman pegawai
+        return redirect('jadwal_pelajaran');
+    }
+    
+    //hapus data berita berdasarkan id_berita
+    public function hapusjadwal($id)
+    {
+	    // menghapus data pegawai berdasarkan id yang dipilih
+	    DB::table('jadwal_pelajaran')->where('id_jadwal',$id)->delete();
+		
+	    // alihkan halaman ke halaman pegawai
+	    return redirect('jadwal_pelajaran');
+    }     
+    
+   
+    //--------------------------------------------------------------------- Batas halaman jadwal pelajaran admin
+
+   
+
+    //---------------------------------------------------------------------halaman USER admin
+    public function user(){
+        return view('admin.datauser');
+    }
+
+    public function lihatuser(){
+        $hasil = User_Model::all();
+        return view('admin.datauser',['liat'=>$hasil]);
+    }
+
+    public function tambahuser()
+    { 
+	    // memanggil view tambah
+	    return view('admin.input.input_datauser');
+ 
+    }
+
+    //input data ke database
+    public function storeuser(Request $request)
+    {
+	    // insert data ke table berita
+	    DB::table('user')->insert([
+		'nama' => $request->nama,
+		'email' => $request->email,
+		'password' => $request->password
+	]);
+	    // alihkan halaman ke halaman berita
+	    return redirect('datauser');
+ 
+    }
+
+    //edit data berita
+    public function edituser($id){
+        $hasil = User_Model::where('id_user',$id)->get();
+        return view('admin.edit.edit_datauser',['liat'=>$hasil]);
+    }
+
+    // update data berita
+    public function updateuser($id, Request $request)
+    {
+        $user = [
+            'nama' => $request->nama,
+		    'email' => $request->email,
+		    'password' => $request->password
+        ];
+	    // update data berita
+        DB::table('user')->where('id_user',$request->id)->update($user);
+        return redirect('datauser');
+    }
+
+    
+    //hapus data berita berdasarkan id_berita
+    public function hapususer($id)
+    {
+	    // menghapus data pegawai berdasarkan id yang dipilih
+	    DB::table('user')->where('id_user',$id)->delete();
+		
+	    // alihkan halaman ke halaman pegawai
+	    return redirect('datauser');
+    }
+    //---------------------------------------------------------------------Batas halaman berita admin
+
+
+    
+    //---------------------------------------------------------------------halaman GALERY FOTO admin
+    public function gambar(){
+        return view('admin.galeryfoto');
+    }
+
+    public function lihatfoto(){
+        $hasil = Galery_Model::all();
+        return view('admin.galeryfoto',['liat'=>$hasil]);
+    }
+
+    public function tambahfoto()
+    { 
+	    // memanggil view tambah
+	    return view('admin.input.input_galeryfoto');
+ 
+    }
+    
+    //edit data 
+    public function editfoto($id){
+        $hasil = Galery_Model::where('id_galery',$id)->get();
+        return view('admin.edit.edit_galeryfoto',['liat'=>$hasil]);
+    }
+
+    // update data 
+    public function updatefoto($id, Request $request)
+    {
+        $this->validate($request, [
+			'file' => 'required|file|image|mimes:jpeg,png,jpg',
+			'keterangan' => 'required',
+		]);
+ 
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+ 
+        $galery = [
+            'file'=> $file->getClientOriginalName(),
+            'keterangan' => $request->keterangan
+        ];
+
+          // tujuan file disimpan di folder apa?
+        $tujuan_upload = 'data_file';
+ 
+        // upload file
+        $file->move($tujuan_upload,$file->getClientOriginalName());
+               
+	    // update data 
+        DB::table('galery')->where('id_galery',$request->id)->update($galery);
+        return redirect('galeryfoto');
+    }
+
+    
+    //hapus data berita berdasarkan id_berita
+    public function hapusfoto($id)
+    {
+	    // menghapus data pegawai berdasarkan id yang dipilih
+	    DB::table('galery')->where('id_galery',$id)->delete();
+		
+	    // alihkan halaman ke halaman pegawai
+	    return redirect('galeryfoto');
+    }
+
+    public function proses_upload(Request $request){
+		$this->validate($request, [
+			'file' => 'required|file|image|mimes:jpeg,png,jpg',
+			'keterangan' => 'required',
+		]);
+ 
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+ 
+      	        // nama file
+		echo 'File Name: '.$file->getClientOriginalName();
+		echo '<br>';
+ 
+      	        // ekstensi file
+		echo 'File Extension: '.$file->getClientOriginalExtension();
+		echo '<br>';
+ 
+      	        // real path
+		echo 'File Real Path: '.$file->getRealPath();
+		echo '<br>';
+ 
+      	        // ukuran file
+		echo 'File Size: '.$file->getSize();
+		echo '<br>';
+ 
+      	        // tipe mime
+		echo 'File Mime Type: '.$file->getMimeType();
+ 
+      	        // isi dengan nama folder tempat kemana file diupload
+		$tujuan_upload = 'data_file';
+ 
+                // upload file
+        $file->move($tujuan_upload,$file->getClientOriginalName());
+            
+        DB::table('galery')->insert([
+            'file'=> $file->getClientOriginalName(),
+            'keterangan' => $request->keterangan
+        ]);
+
+        // alihkan halaman ke halaman pegawai
+        return redirect('galeryfoto');
+    }
+    //---------------------------------------------------------------------Batas halaman GALERY FOTO admin
+  
+
 }
-
-

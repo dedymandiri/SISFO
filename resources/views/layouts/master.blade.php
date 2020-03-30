@@ -17,6 +17,8 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="{{ asset('admin/fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700') }}">
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -58,7 +60,7 @@
                   
           <li class="nav-item has-treeview">
             <a href="" class="nav-link" >
-              <i class="nav-icon fas fa-tree"></i>
+              <i class="nav-icon fas fa-th"></i>
               <p>
                 Beranda
                 <i class="fas fa-angle-left right"></i>
@@ -124,18 +126,18 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="tkj" class="nav-link">
+                <a href="multimedia" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>TKJ</p>
+                  <p>Multimedia</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <!--<li class="nav-item">
                 <a href="tkr" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>TKR</p>
                 </a>
               </li>
-              <!--<li class="nav-item">
+              <li class="nav-item">
                 <a href="perawat" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Perawat</p>
@@ -166,15 +168,21 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pmr" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>PMR</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="paskibra" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Paskibra</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="karate" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Karate</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="hadroh" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Hadroh</p>
                 </a>
               </li>
             </ul>
@@ -189,22 +197,17 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="galeryfoto" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Foto</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Video</p>
-                </a>
-              </li>
+             
             </ul>
           </li>
           <li class="nav-item has-treeview">
             <a href="" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
+              <i class="nav-icon fas fa-copy"></i>
               <p>
                 Kurikulum
                 <i class="fas fa-angle-left right"></i>
@@ -212,7 +215,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="jadwal_sklh" class="nav-link">
+                <a href="jadwal_pelajaran" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Jadwal Pelajaran</p>
                 </a>
@@ -227,10 +230,10 @@
           </li>
 
           <li class="nav-item has-treeview">
-            <a href="" class="nav-link">
+            <a href="datauser" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
-                Data Pengguna
+                Data User
               </p>
             </a>
           </li>

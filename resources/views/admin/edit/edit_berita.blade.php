@@ -33,9 +33,10 @@
     <label for="judul">Deskripsi</label>
     <textarea id="isi" class="form-control" name="isi" rows="50" cols="80">{{ $li->isi }}</textarea>
   </div>
- <br>
-  
+ <br><br>
   <button type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
+  <a href="/berita"><button type="button"  class="btn btn-primary">Kembali</button></a>
+  
 </form>
 @endforeach
 

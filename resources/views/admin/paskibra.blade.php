@@ -11,7 +11,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item">Home</li>
+              <a href="dashboard"><li class="breadcrumb-item">Dashboard</li></a> /
               <li class="breadcrumb-item active">Paskibra</li>
             </ol>
           </div><!-- /.col -->
@@ -47,8 +47,10 @@
        
         <td>
             <a href="/edit_paskibra/{{ $li->id_ekskul }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>
-        <br>
-             </td>   
+            <br>
+            <a href="/detail_paskibra"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Detail</button></a>
+           
+        </td>   
     </tr>
     @endforeach
   </tbody>

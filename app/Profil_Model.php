@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 
-class Struktur_guru extends Model
+class Profil_Model extends Model
 {
-    protected $table='struktur_guru';
+    protected $table='profil';
 
 }
 

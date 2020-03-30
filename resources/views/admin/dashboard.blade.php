@@ -11,7 +11,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item">Home</li>
+              <a href="dashboard"><li class="breadcrumb-item">Dashboard</li></a> /
               <li class="breadcrumb-item active">Dashboard</li>
             </ol>
           </div><!-- /.col -->
@@ -19,7 +19,7 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-    
+    <br><br>
 
     <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
@@ -55,7 +55,7 @@
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-warning">
-              <div class="inner">
+              <div style="color:white;" class="inner">
                 <h3>44<sup style="font-size: 20px"></sup></h3>
 
                 <label>Pengumuman</label>

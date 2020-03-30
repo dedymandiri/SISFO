@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Teknik Komputer dan Jaringan</h1>
+            <h1 class="m-0 text-dark">Multimedia</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item">Home</li>
-              <li class="breadcrumb-item active">Tkj</li>
+              <a href="dashboard"><li class="breadcrumb-item">Dashboard</li></a> /
+              <li class="breadcrumb-item active">Multimedia</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -46,9 +46,11 @@
         <td>{{ $li->deskripsi }}</td>
        
         <td>
-            <a href="/edit_tkj/{{ $li->id_tkj }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>
-        <br>
-             </td>   
+            <a href="/edit_multimedia/{{ $li->id_multimedia }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>
+            <br>
+            <a href="/detail_multimedia"><button type="button" class="btn btn-primary" >Detail</button></a>
+           
+        </td>   
     </tr>
     @endforeach
   </tbody>

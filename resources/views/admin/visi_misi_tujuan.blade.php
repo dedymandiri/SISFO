@@ -11,7 +11,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item">Home</li>
+              <a href="dashboard"><li class="breadcrumb-item">Dashboard</li></a> /
               <li class="breadcrumb-item active">visi_misi_tujuan</li>
             </ol>
           </div><!-- /.col -->
@@ -49,8 +49,10 @@
         <td>{{ $li->id_profil }}</td>
         <td><p align="justify">{{ $li->visi_misi_tujuan }}</p></td>
         <td>
-        <a href="/edit_visi_misi_tujuan/{{ $li->id_profil}}"><button style="width:65px;" title="Edit"  type="button"  class="btn btn-warning">Edit</button></a>
+            <a href="/edit_visi_misi_tujuan/{{ $li->id_profil}}"><button style="width:65px;" title="Edit"  type="button"  class="btn btn-warning">Edit</button></a>
             <br><br>
+            <a href="/detail_visimisi"><button type="button" class="btn btn-primary" >Detail</button></a>
+           
         </td>   
     </tr>
     @endforeach

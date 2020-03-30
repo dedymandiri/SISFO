@@ -19,8 +19,11 @@
     <label for="judul">Deskripsi</label>
     <textarea id="isi" class="form-control" name="sejarah" placeholder="Deskripsi">{{ $li->sejarah }}</textarea>
   </div>
-   <br>
+
+  <br><br>
   <button type="submit" class="btn btn-primary" value="simpan">Simpan</button>
+  <a href="/sejarah"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
+  
 </form>
 @endforeach
 </div>

@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Teknik Kendaraan Ringan</h1>
+            <h1 class="m-0 text-dark">Hadroh</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item">Home</li>
-              <li class="breadcrumb-item active">Tkr</li>
+              <a href="dashboard"><li class="breadcrumb-item">Dashboard</li></a> /
+              <li class="breadcrumb-item active">Hadroh</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -26,14 +26,14 @@
    <div class="col-sm-4">
        <!-- <a href="/input_tkj"><button type="button" class="btn btn-success">Tambah Data</button></a>-->
        <!-- Search form -->
-       <!--<input style="margin-top:-40px;margin-left:815px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">  --> 
+       <!--<input style="margin-top:-40px;margin-left:815px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search"> --> 
    </div>
 
   <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
     <tr >
       <th class="th-sm">No</th>
-      <th class="th-sm">deskripsi</th>
+      <th class="th-sm">Deskripsi</th>
       <th class="th-sm">Aksi</th>
     </tr>
   </thead>
@@ -42,13 +42,15 @@
     <!--Untuk menampilkan tabel berita dari database-->
     @foreach($liat as $li)
     <tr align="justify">
-        <td>{{ $li->id_tkr }}</td>
-        <td>{{ $li->deskripsi }}</td>
+        <td>{{ $li->id_ekskul }}</td>
+        <td>{{ $li->deskripsi_hadroh }}</td>
        
         <td>
-            <a href="/edit_tkr/{{ $li->id_tkr }}"><button style="width:65px;" title="Edit" type="button" class="btn btn-warning">Edit</button></a><br>
-        <br>
-             </td>   
+            <a href="/edit_hadroh/{{ $li->id_ekskul }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>
+            <br>
+            <a href="/detail_hadroh"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Detail</button></a>
+           
+        </td>   
     </tr>
     @endforeach
   </tbody>

@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">PMR</h1>
+            <h1 class="m-0 text-dark">Karate</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item">Home</li>
-              <li class="breadcrumb-item active">PMR</li>
+              <a href="dashboard"><li class="breadcrumb-item">Dashboard</li></a> /
+              <li class="breadcrumb-item active">Karate</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -43,12 +43,14 @@
     @foreach($liat as $li)
     <tr align="justify">
         <td>{{ $li->id_ekskul }}</td>
-        <td>{{ $li->deskripsi_pmr }}</td>
+        <td>{{ $li->deskripsi_karate }}</td>
        
         <td>
-            <a href="/edit_pmr/{{ $li->id_ekskul }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>
-        <br>
-             </td>   
+            <a href="/edit_karate/{{ $li->id_ekskul }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>
+            <br>
+            <a href="/detail_karate"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Detail</button></a>
+           
+        </td>   
     </tr>
     @endforeach
   </tbody>

@@ -20,8 +20,11 @@
     <label for="tgl_waktu">Kuantitas</label>
     <input type="text" class="form-control" placeholder="Kuantitas " required="required" name="kuantitas">
   </div>
-   <br>
+
+  <br><br>
   <button type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
+  <a href="/fasilitas"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
+  
 </form>
 </div>
 <br>

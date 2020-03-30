@@ -32,9 +32,12 @@
     <label for="judul">Deskripsi</label>
     <textarea id="isi" class="form-control" name="isi" placeholder="Deskripsi"></textarea>
   </div>
- <br>
+
+  <br><br>
    
   <button type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
+  <a href="/berita"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
+  
 </form>
 </div>
 

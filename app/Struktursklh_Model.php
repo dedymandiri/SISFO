@@ -7,9 +7,9 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Tkj_model extends Model
+class Struktursklh_Model extends Model
 {
-    protected $table='jurusan_tkj';
+    protected $table='struktur_guru';
 
 }
 
