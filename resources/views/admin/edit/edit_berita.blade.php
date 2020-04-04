@@ -3,7 +3,7 @@
 @section('content') 
 
 <br>
-<div style="width:900px;height:830px;margin-left:20px;" class="card">
+<div style="margin-left:20px;width:930px;" class="card">
 <div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
 <h4 class="card-header info-color white-text text-center py-4">
@@ -14,13 +14,14 @@
 @foreach($liat as $li)
 <form style="width:825px;margin-left:35px;" action="/berita/update/{{ $li->id_berita }}" method="post">
 {{ csrf_field() }}
+<br>
   <div class="form-group">
-    <label for="judul">Judul</label>
+    <label for="judul">Judul :</label>
     <input type="text" id="judul" class="form-control" placeholder="Judul" required="required" name="judul" value="{{ $li->judul }}">
   </div>
    <!-- DATETIMEPICKER -->  
    <div class="form-group">
-      <label>Tanggal_waktu</label>
+      <label>Tanggal waktu :</label>
        <div class='input-group date' id='datetimepicker'>
         <input type='text' name="tanggal_waktu" placeholder="Tanggal waktu" class="form-control" value="{{ $li->tanggal_waktu }}" />
         <span class="input-group-addon">
@@ -30,14 +31,18 @@
     </div>
 
   <div class="form-group">
-    <label for="judul">Deskripsi</label>
+    <label for="judul">Deskripsi :</label>
     <textarea id="isi" class="form-control" name="isi" rows="50" cols="80">{{ $li->isi }}</textarea>
   </div>
- <br><br>
-  <button type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
-  <a href="/berita"><button type="button"  class="btn btn-primary">Kembali</button></a>
-  
+ 
+ <!--bagian button-->
+  <div style="margin-top:105px;width:930px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">
+    <button style="margin-left:-700px;" type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
+    <a href="/berita"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
+  </div>
 </form>
+
+
 @endforeach
 
 </div>

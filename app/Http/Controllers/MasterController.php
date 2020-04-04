@@ -16,6 +16,11 @@ use App\Jadwal_Model;
 use App\Ekskul_model;
 use App\User_Model;
 use App\Galery_Model;
+use App\Kalender_Model;
+use App\Mapel_Model;
+use App\Rekap_Model;
+use App\Seleksi_Model;
+use App\Daftar_Model;
 // Batas Model buat manggil tabel di database
 
 use Storage;
@@ -616,16 +621,16 @@ class MasterController extends Controller
     public function updatejadwal($id, Request $request)
     {
         $this->validate($request, [
-			'file' => 'required|file|image|mimes:pdf',
-			'keterangan' => 'required',
+            'keterangan' => 'required',            
+			'file' => 'required|file|mimes:pdf',
 		]);
  
 		// menyimpan data file yang diupload ke variabel $file
 		$file = $request->file('file');
  
         $jadwal = [
+            'keterangan' => $request->keterangan,            
             'file'=> $file->getClientOriginalName(),
-            'keterangan' => $request->keterangan
         ];
 
           // tujuan file disimpan di folder apa?
@@ -643,8 +648,8 @@ class MasterController extends Controller
     //input data ke database
     public function proses_upload_jadwal(Request $request){
 		$this->validate($request, [
-			'file' => 'required|file|mimes:pdf|max:2048',
-			'keterangan' => 'required',
+            'keterangan' => 'required',            
+			'file' => 'required|file|mimes:pdf',
 		]);
  
 		// menyimpan data file yang diupload ke variabel $file
@@ -699,6 +704,118 @@ class MasterController extends Controller
     //--------------------------------------------------------------------- Batas halaman jadwal pelajaran admin
 
    
+
+     //--------------------------------------------------------------------- halaman kalender sekolah admin
+     public function kalender(){
+        return view('admin.kalender_sekolah');
+    }
+
+    public function lihatkalender(){
+        $hasil = Kalender_Model::all();
+        return view('admin.kalender_sekolah',['liat'=>$hasil]);
+    }
+
+    public function tambahkalender()
+    { 
+	    // memanggil view tambah
+	    return view('admin.input.input_kalender_sekolah');
+ 
+    }
+       
+    //edit data 
+    public function editkalender($id){
+        $hasil = Kalender_Model::where('id_kalender',$id)->get();
+        return view('admin.edit.edit_kalender_sekolah',['liat'=>$hasil]);
+    }
+
+    // update data 
+    public function updatekalender($id, Request $request)
+    {
+        $this->validate($request, [
+            'keterangan' => 'required',            
+			'file' => 'required|file|mimes:pdf',
+		]);
+ 
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+ 
+        $kalender = [
+            'keterangan' => $request->keterangan,
+            'file'=> $file->getClientOriginalName(),
+        ];
+
+          // tujuan file disimpan di folder apa?
+        $tujuan_upload = 'data_kalender';
+ 
+        // upload file
+        $file->move($tujuan_upload,$file->getClientOriginalName());
+               
+	    // update data 
+        DB::table('kalender_sekolah')->where('id_kalender',$request->id)->update($kalender);
+        return redirect('kalender_sekolah');
+    }
+
+
+    //input data ke database
+    public function proses_upload_kalender(Request $request){
+		$this->validate($request, [
+            'keterangan' => 'required',            
+			'file' => 'required|file|mimes:pdf',
+		]);
+ 
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+ 
+      	        // nama file
+		echo 'File Name: '.$file->getClientOriginalName();
+		echo '<br>';
+ 
+      	        // ekstensi file
+		echo 'File Extension: '.$file->getClientOriginalExtension();
+		echo '<br>';
+ 
+      	        // real path
+		echo 'File Real Path: '.$file->getRealPath();
+		echo '<br>';
+ 
+      	        // ukuran file
+		echo 'File Size: '.$file->getSize();
+		echo '<br>';
+ 
+      	        // tipe mime
+		echo 'File Mime Type: '.$file->getMimeType();
+ 
+      	        // isi dengan nama folder tempat kemana file diupload
+		$tujuan_upload = 'data_kalender';
+ 
+                // upload file
+        $file->move($tujuan_upload,$file->getClientOriginalName());
+            
+        DB::table('kalender_sekolah')->insert([
+            'keterangan' => $request->keterangan,
+            'file'=> $file->getClientOriginalName(),
+
+        ]);
+
+        // alihkan halaman ke halaman pegawai
+        return redirect('kalender_sekolah');
+    }
+    
+    //hapus data berita berdasarkan id_berita
+    public function hapuskalender($id)
+    {
+	    // menghapus data pegawai berdasarkan id yang dipilih
+	    DB::table('kalender_sekolah')->where('id_kalender',$id)->delete();
+		
+	    // alihkan halaman ke halaman pegawai
+	    return redirect('kalender_sekolah');
+    }     
+    
+   
+    //--------------------------------------------------------------------- Batas halaman kalender sekolah admin
+
+   
+
 
     //---------------------------------------------------------------------halaman USER admin
     public function user(){
@@ -760,7 +877,7 @@ class MasterController extends Controller
 	    // alihkan halaman ke halaman pegawai
 	    return redirect('datauser');
     }
-    //---------------------------------------------------------------------Batas halaman berita admin
+    //---------------------------------------------------------------------Batas halaman data user admin
 
 
     
@@ -791,7 +908,7 @@ class MasterController extends Controller
     public function updatefoto($id, Request $request)
     {
         $this->validate($request, [
-			'file' => 'required|file|image|mimes:jpeg,png,jpg',
+			'file' => 'required|image|mimes:jpeg,png,jpg',
 			'keterangan' => 'required',
 		]);
  
@@ -827,7 +944,7 @@ class MasterController extends Controller
 
     public function proses_upload(Request $request){
 		$this->validate($request, [
-			'file' => 'required|file|image|mimes:jpeg,png,jpg',
+			'file' => 'required|image|mimes:jpeg,png,jpg',
 			'keterangan' => 'required',
 		]);
  
@@ -868,6 +985,289 @@ class MasterController extends Controller
         return redirect('galeryfoto');
     }
     //---------------------------------------------------------------------Batas halaman GALERY FOTO admin
+  
+
+    
+    //---------------------------------------------------------------------halaman MAPEL SISWA admin
+    public function mapel(){
+        return view('admin.mapel_siswa');
+    }
+
+    public function lihatmapel(){
+        $hasil = Mapel_Model::all();
+        return view('admin.mapel_siswa',['liat'=>$hasil]);
+    }
+
+    public function tambahmapel()
+    { 
+	    // memanggil view tambah
+	    return view('admin.input.input_mapel_siswa');
+ 
+    }
+
+    //input data ke database
+    public function storemapel(Request $request)
+    {
+	    // insert data ke table berita
+	    DB::table('mapel')->insert([
+		'nama_mapel' => $request->nama_mapel
+	]);
+	    // alihkan halaman ke halaman berita
+	    return redirect('mapel_siswa');
+ 
+    }
+
+    //edit data berita
+    public function editmapel($id){
+        $hasil = Mapel_Model::where('id_mapel',$id)->get();
+        return view('admin.edit.edit_mapel_siswa',['liat'=>$hasil]);
+    }
+
+    // update data berita
+    public function updatemapel($id, Request $request)
+    {
+        $mapel = [
+            'mapel_1' => $request->mapel_1,
+            'mapel_2' => $request->mapel_2,
+            'mapel_3' => $request->mapel_3,
+            'mapel_4' => $request->mapel_4,
+            'mapel_5' => $request->mapel_5,
+            'mapel_6' => $request->mapel_6,
+            'mapel_7' => $request->mapel_7,
+            'mapel_8' => $request->mapel_8
+
+        ];
+	    // update data berita
+        DB::table('mapel')->where('id_mapel',$request->id)->update($mapel);
+        return redirect('mapel_siswa');
+    }
+
+    
+    //hapus data berita berdasarkan id_berita
+    public function hapusmapel($id)
+    {
+	    // menghapus data pegawai berdasarkan id yang dipilih
+	    DB::table('mapel')->where('id_mapel',$id)->delete();
+		
+	    // alihkan halaman ke halaman pegawai
+	    return redirect('mapel_siswa');
+    }
+    //---------------------------------------------------------------------Batas halaman MAPEL SISWA admin
+
+
+
+    
+     //--------------------------------------------------------------------- halaman HASIL SELEKSI admin
+     public function seleksi(){
+        return view('admin.hasil_seleksi');
+    }
+
+    public function lihatseleksi(){
+        $hasil = Seleksi_Model::all();
+        return view('admin.hasil_seleksi',['liat'=>$hasil]);
+    }
+
+    public function tambahseleksi()
+    { 
+	    // memanggil view tambah
+	    return view('admin.input.input_hasil_seleksi');
+ 
+    }
+       
+    //edit data 
+    public function editseleksi($id){
+        $hasil = Seleksi_Model::where('id_seleksi',$id)->get();
+        return view('admin.edit.edit_hasil_seleksi',['liat'=>$hasil]);
+    }
+
+    // update data 
+    public function updateseleksi($id, Request $request)
+    {
+        $this->validate($request, [
+            'keterangan' => 'required',            
+			'file' => 'required|file|mimes:pdf',
+		]);
+ 
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+ 
+        $seleksi = [
+            'keterangan' => $request->keterangan,
+            'file'=> $file->getClientOriginalName(),
+        ];
+
+          // tujuan file disimpan di folder apa?
+        $tujuan_upload = 'data_seleksi';
+ 
+        // upload file
+        $file->move($tujuan_upload,$file->getClientOriginalName());
+               
+	    // update data 
+        DB::table('hasil_seleksi')->where('id_seleksi',$request->id)->update($seleksi);
+        return redirect('hasil_seleksi');
+    }
+
+
+    //input data ke database
+    public function proses_upload_seleksi(Request $request){
+		$this->validate($request, [
+            'keterangan' => 'required',
+            'file' => 'required|file|mimes:pdf',
+		]);
+ 
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+ 
+      	        // nama file
+		echo 'File Name: '.$file->getClientOriginalName();
+		echo '<br>';
+ 
+      	        // ekstensi file
+		echo 'File Extension: '.$file->getClientOriginalExtension();
+		echo '<br>';
+ 
+      	        // real path
+		echo 'File Real Path: '.$file->getRealPath();
+		echo '<br>';
+ 
+      	        // ukuran file
+		echo 'File Size: '.$file->getSize();
+		echo '<br>';
+ 
+      	        // tipe mime
+		echo 'File Mime Type: '.$file->getMimeType();
+ 
+      	        // isi dengan nama folder tempat kemana file diupload
+		$tujuan_upload = 'data_seleksi';
+ 
+                // upload file
+        $file->move($tujuan_upload,$file->getClientOriginalName());
+            
+        DB::table('hasil_seleksi')->insert([
+            'keterangan' => $request->keterangan,
+            'file'=> $file->getClientOriginalName(),
+
+        ]);
+
+        // alihkan halaman ke halaman pegawai
+        return redirect('hasil_seleksi');
+    }
+    
+    //hapus data berita berdasarkan id_berita
+    public function hapusseleksi($id)
+    {
+	    // menghapus data pegawai berdasarkan id yang dipilih
+	    DB::table('hasil_seleksi')->where('id_seleksi',$id)->delete();
+		
+	    // alihkan halaman ke halaman pegawai
+	    return redirect('hasil_seleksi');
+    }     
+    
+   
+    //--------------------------------------------------------------------- Batas halaman kalender sekolah admin
+
+   
+
+    
+
+    //---------------------------------------------------------------------halaman DATA PENDAFTARAN admin
+    public function daftar(){
+        return view('admin.pendaftaran');
+    }
+
+    public function lihatdaftar(){
+        $hasil = Daftar_Model::all();
+        return view('admin.pendaftaran',['liat'=>$hasil]);
+    }
+
+    public function tambahdaftar()
+    { 
+	    // memanggil view tambah
+	    return view('admin.input.input_pendaftaran');
+ 
+    }
+
+    //input data ke database
+    public function storedaftar(Request $request)
+    {
+	    // insert data ke table berita
+	    DB::table('pendaftaran')->insert([
+            'tgl_masuk' => $request->tgl_masuk,
+		    'nama_calon_siswa' => $request->nama_calon_siswa,
+            'tmpt_lahir' => $request->tmpt_lahir,
+            'tgl_lahir' => $request->tgl_lahir,
+		    'nama_ibu' => $request->nama_ibu,
+            'nama_ayah' => $request->nama_ayah,
+            'alamat' => $request->alamat,
+		    'nisn' => $request->nisn,
+            'asal_sklh' => $request->asal_sklh,            
+            'no_hp' => $request->no_hp,
+		    'agama' => $request->agama,
+            'anak_ke' => $request->anak_ke,            
+		    'keahlian' => $request->keahlian,
+		    'alasan' => $request->alasan,
+	]);
+	    // alihkan halaman ke halaman berita
+	    return redirect('pendaftaran');
+ 
+    }
+
+    //edit data berita
+    public function editdaftar($id){
+        $hasil = Daftar_Model::where('id_daftar',$id)->get();
+        return view('admin.edit.edit_pendaftaran',['liat'=>$hasil]);
+    }
+
+    // update data berita
+    public function updatedaftar($id, Request $request)
+    {
+        $daftar = [
+            'tgl_masuk' => $request->tgl_masuk,
+		    'nama_calon_siswa' => $request->nama_calon_siswa,
+            'tmpt_lahir' => $request->tmpt_lahir,
+            'tgl_lahir' => $request->tgl_lahir,
+		    'nama_ibu' => $request->nama_ibu,
+            'nama_ayah' => $request->nama_ayah,
+            'alamat' => $request->alamat,
+		    'nisn' => $request->nisn,
+            'asal_sklh' => $request->asal_sklh,            
+            'no_hp' => $request->no_hp,
+		    'agama' => $request->agama,
+            'anak_ke' => $request->anak_ke,            
+		    'keahlian' => $request->keahlian,
+		    'alasan' => $request->alasan,
+        ];
+	    // update data berita
+        DB::table('pendaftaran')->where('id_daftar',$request->id)->update($daftar);
+        return redirect('pendaftaran');
+    }
+
+    
+    //hapus data berita berdasarkan id_berita
+    public function hapusdaftar($id)
+    {
+	    // menghapus data pegawai berdasarkan id yang dipilih
+	    DB::table('pendaftaran')->where('id_daftar',$id)->delete();
+		
+	    // alihkan halaman ke halaman pegawai
+	    return redirect('pendaftaran');
+    }
+    //---------------------------------------------------------------------Batas halaman data user admin
+
+
+
+
+    //--------------------------------------------------------------------- halaman Rekap Nilai admin
+    public function nilai(){
+        return view('admin.nilai_siswa');
+    }
+
+    public function lihatnilai(){
+        $siswa = Rekap_Model::all();
+        return view('admin.nilai_siswa',['nilai'=>$siswa]);
+    }
+
+    //---------------------------------------------------------------------Batas halaman Rekap Nilai admin
   
 
 }

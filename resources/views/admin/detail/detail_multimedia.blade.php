@@ -5,7 +5,7 @@
 
  
 <br>
-<div style="width:900px;height:700px;margin-left:20px;" class="card">
+<div style="margin-left:20px;width:930px;" class="card">
 <div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
 <h4 class="card-header info-color white-text text-center py-4">
@@ -23,15 +23,18 @@
     </tr>-->
 
        <div  class="isi">		
-			<div style="margin-left:15px;width:870px;" class="hr" align="justify">
+			<div style="margin-left:20px;width:880px;" class="hr" align="justify">
 			<?php echo $li['deskripsi'] ?></div>
 		</div>
     @endforeach
 
   </table>
-<br>
-  <a href="/multimedia"><button style="margin-left:35px;" type="submit" class="btn btn-primary" value="Simpan">Kembali</button></a>
+
+  <div style="margin-top:105px" class="card-header info-color white-text text-center py-4">
+      <a href="/multimedia"><button style="margin-left:-750px;" type="submit" class="btn btn-primary" value="Simpan">Kembali</button></a>
+  </div>
 
 </div>
+<br>
 
 @endsection

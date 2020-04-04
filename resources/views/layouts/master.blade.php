@@ -60,7 +60,7 @@
                   
           <li class="nav-item has-treeview">
             <a href="" class="nav-link" >
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-edit"></i>
               <p>
                 Beranda
                 <i class="fas fa-angle-left right"></i>
@@ -83,7 +83,7 @@
       </li>
           <li class="nav-item has-treeview">
             <a href="" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Profil Sekolah
                 <i class="fas fa-angle-left right"></i>
@@ -189,7 +189,7 @@
           </li>
           <li class="nav-item has-treeview">
             <a href="" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
+              <i class="nav-icon far fa-image"></i>
               <p>
                 Galery
                 <i class="fas fa-angle-left right"></i>
@@ -221,9 +221,57 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="kalender_sekolah" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kalender Sekolah</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                PPDB 
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pendaftaran" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Pendaftar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="hasil_seleksi" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Hasil Seleksi</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item has-treeview">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Rekap Nilai 
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="mapel_siswa" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Mapel Siswa</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="nilai_siswa" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Nilai Siswa</p>
                 </a>
               </li>
             </ul>
@@ -233,10 +281,11 @@
             <a href="datauser" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
-                Data User
+                Data Pengguna
               </p>
             </a>
           </li>
+
       </nav>
       <!-- /.sidebar-menu -->
     </div>

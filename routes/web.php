@@ -234,6 +234,21 @@ Route::get('/jadwal_pelajaran/hapus/{id}','MasterController@hapusjadwal');
 
 
 
+//---------------------------------------------------------------------halaman kalender sekolah dari admin lte
+Route::get('/kalender_sekolah','MasterController@kalender');
+//menampilkan data berita dari database
+Route::get('/kalender_sekolah', 'MasterController@lihatkalender');
+//tambah data berita ke database
+Route::get('/input_kalender_sekolah', 'MasterController@tambahkalender');
+Route::post('/kalender_sekolah/proses', 'MasterController@proses_upload_kalender');
+//edit(update) data berita ke database
+Route::get('/edit_kalender_sekolah/{id}', 'MasterController@editkalender');
+Route::post('/kalender_sekolah/update/{id}', 'MasterController@updatekalender');
+//hapus data berita
+Route::get('/kalender_sekolah/hapus/{id}','MasterController@hapuskalender');
+//---------------------------------------------------------------------batas halaman kalender sekolah dari admin lte
+
+
 //---------------------------------------------------------------------halaman DATA USER dari admin lte
 Route::get('/datauser','MasterController@user');
 //menampilkan data berita dari database
@@ -248,3 +263,58 @@ Route::post('/datauser/update/{id}', 'MasterController@updateuser');
 Route::get('/datauser/hapus/{id}','MasterController@hapususer');
 //---------------------------------------------------------------------batas halaman DATA USER dari admin lte
 
+
+//---------------------------------------------------------------------halaman MAPEL SISWA dari admin lte
+Route::get('/mapel_siswa','MasterController@mapel');
+//menampilkan data berita dari database
+Route::get('/mapel_siswa', 'MasterController@lihatmapel');
+//tambah data berita ke database
+Route::get('/input_mapel_siswa', 'MasterController@tambahmapel');
+Route::post('/mapel_siswa/storemapel','MasterController@storemapel');
+//edit(update) data berita ke database
+Route::get('/edit_mapel_siswa/{id}', 'MasterController@editmapel');
+Route::post('/mapel_siswa/update/{id}', 'MasterController@updatemapel');
+//hapus data berita
+Route::get('/mapel_siswa/hapus/{id}','MasterController@hapusmapel');
+
+//---------------------------------------------------------------------batas halamanMAPEL SISWAdari admin lte
+
+
+
+//---------------------------------------------------------------------halaman NILAI SISWA dari admin lte
+Route::get('/nilai_siswa','MasterController@nilai');
+//menampilkan data berita dari database
+Route::get('/nilai_siswa', 'MasterController@lihatnilai');
+
+//---------------------------------------------------------------------batas halaman NILAI SISWA dari admin lte
+
+
+//---------------------------------------------------------------------halaman HASIL SELEKSI dari admin lte
+Route::get('/hasil_seleksi','MasterController@seleksi');
+//menampilkan data berita dari database
+Route::get('/hasil_seleksi', 'MasterController@lihatseleksi');
+//tambah data berita ke database
+Route::get('/input_hasil_seleksi', 'MasterController@tambahseleksi');
+Route::post('/hasil_seleksi/proses', 'MasterController@proses_upload_seleksi');
+//edit(update) data berita ke database
+Route::get('/edit_hasil_seleksi/{id}', 'MasterController@editseleksi');
+Route::post('/hasil_seleksi/update/{id}', 'MasterController@updateseleksi');
+//hapus data berita
+Route::get('/hasil_seleksi/hapus/{id}','MasterController@hapusseleksi');
+//---------------------------------------------------------------------batas halaman HASIL SELEKSI dari admin lte
+
+
+
+//---------------------------------------------------------------------halaman DATA PENDAFTAR dari admin lte
+Route::get('/pendaftaran','MasterController@daftar');
+//menampilkan data berita dari database
+Route::get('/pendaftaran', 'MasterController@lihatdaftar');
+//tambah data berita ke database
+Route::get('/input_pendaftaran', 'MasterController@tambahdaftar');
+Route::post('/pendaftaran/storedaftar','MasterController@storedaftar');
+//edit(update) data berita ke database
+Route::get('/edit_pendaftaran/{id}', 'MasterController@editdaftar');
+Route::post('/pendaftaran/update/{id}', 'MasterController@updatedaftar');
+//hapus data berita
+Route::get('/pendaftaran/hapus/{id}','MasterController@hapusdaftar');
+//---------------------------------------------------------------------batas halaman DATA PENDAFTAR dari admin lte
