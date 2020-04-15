@@ -48,9 +48,9 @@
         <td>{{ $li->id_profil }}</td>
         <td><p align="justify">{{ $li->sejarah }}</p></td>
         <td>
-            <a href="/edit_sejarah/{{ $li->id_profil}}"><button style="width:65px;" title="Edit" type="button" class="btn btn-warning">Edit</button></a>
-            <br><br>
-            <a href="/detail_sejarah"><button type="button" class="btn btn-primary">Detail</button></a>
+            <a href="/edit_sejarah/{{ $li->id_profil}}"><button style="width:60px;" title="Edit" type="button" class="btn btn-warning">Edit</button></a>
+          
+            <a href="/detail_sejarah"><button style="margin-top:8px;" type="button" class="btn btn-primary">Detail</button></a>
            
         </td>   
     </tr>

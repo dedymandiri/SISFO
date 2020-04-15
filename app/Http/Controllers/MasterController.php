@@ -18,6 +18,7 @@ use App\User_Model;
 use App\Galery_Model;
 use App\Kalender_Model;
 use App\Mapel_Model;
+use App\Mapeltk2_Model;
 use App\Rekap_Model;
 use App\Seleksi_Model;
 use App\Daftar_Model;
@@ -988,33 +989,16 @@ class MasterController extends Controller
   
 
     
-    //---------------------------------------------------------------------halaman MAPEL SISWA admin
+    //---------------------------------------------------------------------halaman MAPEL SISWA TINGKAT 1 admin
     public function mapel(){
         return view('admin.mapel_siswa');
     }
 
     public function lihatmapel(){
-        $hasil = Mapel_Model::all();
+        //untuk menampilkan data dari database berdasarkan id 
+        //menggunakan limit(2) = tampil data baris dengan id 1
+        $hasil = DB::table('mapel')->Orderby('id_mapel')->limit(3)->get();
         return view('admin.mapel_siswa',['liat'=>$hasil]);
-    }
-
-    public function tambahmapel()
-    { 
-	    // memanggil view tambah
-	    return view('admin.input.input_mapel_siswa');
- 
-    }
-
-    //input data ke database
-    public function storemapel(Request $request)
-    {
-	    // insert data ke table berita
-	    DB::table('mapel')->insert([
-		'nama_mapel' => $request->nama_mapel
-	]);
-	    // alihkan halaman ke halaman berita
-	    return redirect('mapel_siswa');
- 
     }
 
     //edit data berita
@@ -1027,14 +1011,14 @@ class MasterController extends Controller
     public function updatemapel($id, Request $request)
     {
         $mapel = [
-            'mapel_1' => $request->mapel_1,
-            'mapel_2' => $request->mapel_2,
-            'mapel_3' => $request->mapel_3,
-            'mapel_4' => $request->mapel_4,
-            'mapel_5' => $request->mapel_5,
-            'mapel_6' => $request->mapel_6,
-            'mapel_7' => $request->mapel_7,
-            'mapel_8' => $request->mapel_8
+            'pel_1' => $request->pel_1,
+            'pel_2' => $request->pel_2,
+            'pel_3' => $request->pel_3,
+            'pel_4' => $request->pel_4,
+            'pel_5' => $request->pel_5,
+            'pel_6' => $request->pel_6,
+            'pel_7' => $request->pel_7,
+            'pel_8' => $request->pel_8
 
         ];
 	    // update data berita
@@ -1042,18 +1026,14 @@ class MasterController extends Controller
         return redirect('mapel_siswa');
     }
 
-    
-    //hapus data berita berdasarkan id_berita
-    public function hapusmapel($id)
-    {
-	    // menghapus data pegawai berdasarkan id yang dipilih
-	    DB::table('mapel')->where('id_mapel',$id)->delete();
-		
-	    // alihkan halaman ke halaman pegawai
-	    return redirect('mapel_siswa');
-    }
-    //---------------------------------------------------------------------Batas halaman MAPEL SISWA admin
+    //---------------------------------------------------------------------Batas halaman MAPEL SISWA TINGKAT 1 admin
 
+
+
+    
+    //---------------------------------------------------------------------halaman MAPEL SISWA TINGKAT 2 admin
+
+    //---------------------------------------------------------------------Batas halaman MAPEL SISWA TINGKAT 2 admin
 
 
     
@@ -1264,9 +1244,82 @@ class MasterController extends Controller
 
     public function lihatnilai(){
         $siswa = Rekap_Model::all();
-        return view('admin.nilai_siswa',['nilai'=>$siswa]);
+        return view('admin.nilai_siswa',['tampil'=>$siswa]);
     }
 
+    public function tambahnilai()
+    { 
+	    // memanggil view tambah
+	    return view('admin.input.input_nilai_siswa');
+    }
+
+    //input data ke database
+    public function storenilai(Request $request)
+    {
+	    // insert data ke table berita
+	    DB::table('rekap_nilai')->insert([
+            'nama' => $request->nama,
+		    'kelas' => $request->kelas,
+            'mapel_1' => $request->mapel_1,
+		    'mapel_2' => $request->mapel_2,
+            'mapel_3' => $request->mapel_3,
+            'mapel_4' => $request->mapel_4,
+		    'mapel_5' => $request->mapel_5,
+            'mapel_6' => $request->mapel_6,
+            'mapel_7' => $request->mapel_7,
+		    'mapel_8' => $request->mapel_8
+	]);
+	    // alihkan halaman ke halaman berita
+	    return redirect('nilai_siswa');
+ 
+    }
+
+    //edit data berita
+    public function editnilai($id){
+        $hasil = Rekap_Model::where('id_rekap',$id)->get();
+        return view('admin.edit.edit_nilai_siswa',['tampil'=>$hasil]);
+    }
+
+    // update data berita
+    public function updatenilai($id, Request $request)
+    {
+        $nilai = [
+            
+            'nama' => $request->nama,
+		    'kelas' => $request->kelas,
+            'mapel_1' => $request->mapel_1,
+		    'mapel_2' => $request->mapel_2,
+            'mapel_3' => $request->mapel_3,
+            'mapel_4' => $request->mapel_4,
+		    'mapel_5' => $request->mapel_5,
+            'mapel_6' => $request->mapel_6,
+            'mapel_7' => $request->mapel_7,
+		    'mapel_8' => $request->mapel_8
+        ];
+	    // update data berita
+        DB::table('rekap_nilai')->where('id_rekap',$request->id)->update($nilai);
+        return redirect('nilai_siswa');
+    }
+
+    
+    //hapus data berita berdasarkan id_berita
+    public function hapusnilai($id)
+    {
+	    // menghapus data pegawai berdasarkan id yang dipilih
+	    DB::table('rekap_nilai')->where('id_rekap',$id)->delete();
+		
+	    // alihkan halaman ke halaman pegawai
+	    return redirect('nilai_siswa');
+    }
+
+    public function detailnilai(){
+        return view('admin.detail.detail_nilai_siswa');
+    }
+
+    public function lihatdetailnilai($id){
+        $hasil = Rekap_Model::where('id_rekap',$id)->limit(1)->get();
+        return view('admin.detail.detail_nilai_siswa',['liat'=>$hasil]);
+    }
     //---------------------------------------------------------------------Batas halaman Rekap Nilai admin
   
 

@@ -46,9 +46,9 @@
         <td>{{ $li->deskripsi }}</td>
        
         <td>
-            <a href="/edit_multimedia/{{ $li->id_multimedia }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>
-            <br>
-            <a href="/detail_multimedia"><button type="button" class="btn btn-primary" >Detail</button></a>
+            <a href="/edit_multimedia/{{ $li->id_multimedia }}"><button style="width:60px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>
+           
+            <a href="/detail_multimedia"><button  style="margin-top:8px;" type="button" class="btn btn-primary" >Detail</button></a>
            
         </td>   
     </tr>

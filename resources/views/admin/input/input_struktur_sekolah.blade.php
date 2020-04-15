@@ -7,7 +7,7 @@
 <div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
 <h4 class="card-header info-color white-text text-center py-4">
-  <strong>Form Input Struktur Sekolah</strong>
+  <strong>Form Tambah Struktur Sekolah</strong>
 </h4>
 <br>
 <form style="width:730px;margin-left:35px;" action="/struktur_sekolah/storestruktur_guru" method="post">

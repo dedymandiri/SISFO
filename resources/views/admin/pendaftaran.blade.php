@@ -54,9 +54,11 @@
     
   </thead>
   <thead>
+  <?php $no = 0;?>
   @foreach($liat as $li)
+  <?php $no++ ;?>
     <tr>
-        <td>{{ $li->id_daftar }}</td>
+        <td>{{ $no }}</td>
         <td>{{ $li->tgl_masuk }}</td>
         <td>{{ $li->nama_calon_siswa }}</td>
         <td>{{ $li->tmpt_lahir }}</td>
@@ -72,9 +74,9 @@
         <td>{{ $li->keahlian }}</td>
         <td>{{ $li->alasan }}</td>
         <td>
-            <a href="/edit_pendaftaran/{{ $li->id_daftar }}"><button style="width:40px;" title="Edit" type="button"  class="btn btn-warning"><div style="margin-left:-6px;">Edit</div></button></a>
-            <br><br>
-            <a href="/pendaftaran/hapus/{{ $li->id_daftar }}"><button style="width:40px;" onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger"><div style="margin-left:-13px;">Hapus</div></button></a>
+            <a href="/edit_pendaftaran/{{ $li->id_daftar }}"><button style="width:45px;" title="Edit" type="button"  class="btn btn-warning"><div style="margin-left:-4px;">Edit</div></button></a>
+            
+            <a href="/pendaftaran/hapus/{{ $li->id_daftar }}"><button style="width:45px;margin-top:8px;" onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger"><div style="margin-left:-11px;">Hapus</div></button></a>
         </td>   
     </tr>
     @endforeach

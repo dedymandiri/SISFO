@@ -42,9 +42,11 @@
   <tbody>
 
     <!--Untuk menampilkan tabel berita dari database-->
-    @foreach($liat as $li)
+  <?php $no = 0;?>
+  @foreach($liat as $li)
+  <?php $no++ ;?>
     <tr>
-        <td>{{ $li->id_galery}}</td>
+        <td>{{ $no }}</td>
         <td><img src="{{ url('/data_file/'.$li->file) }}" style="width:250px; height:150px;"></td>
         <td>{{ $li->keterangan }}</td>
        

@@ -15,37 +15,37 @@
 {{ csrf_field() }}
 <br>
   <div class="form-group">
-    <label for="judul">Mata Pelajaran :</label>
-    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="mapel_1" value="{{ $li->mapel_1 }}">
+    <label for="judul">Mapel 1 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_1" value="{{ $li->pel_1 }}">
   </div>
   <div class="form-group">
-    <label for="judul">Mata Pelajaran :</label>
-    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="mapel_2" value="{{ $li->mapel_2 }}">
+    <label for="judul">Mapel 2 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_2" value="{{ $li->pel_2 }}">
   </div>
   <div class="form-group">
-    <label for="judul">Mata Pelajaran :</label>
-    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="mapel_3" value="{{ $li->mapel_3 }}">
+    <label for="judul">Mapel 3 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_3" value="{{ $li->pel_3 }}">
   </div>
   <div class="form-group">
-    <label for="judul">Mata Pelajaran :</label>
-    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="mapel_4" value="{{ $li->mapel_4 }}">
+    <label for="judul">Mapel 4 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_4" value="{{ $li->pel_4 }}">
   </div>
   <div class="form-group">
-    <label for="judul">Mata Pelajaran :</label>
-    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="mapel_5" value="{{ $li->mapel_5 }}">
+    <label for="judul">Mapel 5 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_5" value="{{ $li->pel_5 }}">
   </div>
   
   <div class="form-group">
-    <label for="judul">Mata Pelajaran :</label>
-    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="mapel_6" value="{{ $li->mapel_6 }}">
+    <label for="judul">Mapel 6 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_6" value="{{ $li->pel_6 }}">
   </div>
   <div class="form-group">
-    <label for="judul">Mata Pelajaran :</label>
-    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="mapel_7" value="{{ $li->mapel_7 }}">
+    <label for="judul">Mapel 7 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_7" value="{{ $li->pel_7 }}">
   </div>
   <div class="form-group">
-    <label for="judul">Mata Pelajaran :</label>
-    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="mapel_8" value="{{ $li->mapel_8 }}">
+    <label for="judul">Mapel 8 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_8" value="{{ $li->pel_8 }}">
     *Tulis " - " (strip) jika mau mengkosongkan mata pelajaran siswa.
   </div>
 

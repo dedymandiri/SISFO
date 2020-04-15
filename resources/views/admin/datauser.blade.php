@@ -43,9 +43,11 @@
   <tbody>
 
     <!--Untuk menampilkan tabel berita dari database-->
-    @foreach($liat as $li)
+  <?php $no = 0;?>
+  @foreach($liat as $li)
+  <?php $no++ ;?>
     <tr>
-        <td>{{ $li->id_user }}</td>
+        <td>{{ $no }}</td>
         <td>{{ $li->nama }}</td>
         <td>{{ $li->email }}</td>
         <td>{{ $li->password }}</td>

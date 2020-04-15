@@ -29,11 +29,12 @@
        <!--<input style="margin-top:-40px;margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search"> -->  
    </div>
 
-<br>
+<!-- Mapel untuk siswa tingkat 1 -->
+<br> 
   <table style="margin-top:10px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
     <tr>
-      <th class="th-sm">No</th>
+      <th class="th-sm">Tingkat</th>
       <th class="th-sm">Mapel 1</th>
       <th class="th-sm">Mapel 2</th>
       <th class="th-sm">Mapel 3</th>
@@ -47,18 +48,20 @@
   </thead>
   <tbody>
 
-    <!--Untuk menampilkan tabel berita dari database-->
-    @foreach($liat as $li)
+    <!--Untuk menampilkan tabel mapel dari database-->
+  <?php $no = 0;?>
+  @foreach($liat as $li)
+  <?php $no++ ;?>
     <tr>
-        <td>{{ $li->id_mapel }}</td>
-        <td>{{ $li->mapel_1 }}</td>
-        <td>{{ $li->mapel_2 }}</td>
-        <td>{{ $li->mapel_3 }}</td>
-        <td>{{ $li->mapel_4 }}</td>
-        <td>{{ $li->mapel_5 }}</td>
-        <td>{{ $li->mapel_6 }}</td>
-        <td>{{ $li->mapel_7 }}</td>
-        <td>{{ $li->mapel_8 }}</td>
+        <td align="center">{{ $no }}</td>
+        <td>{{ $li->pel_1 }}</td>
+        <td>{{ $li->pel_2 }}</td>
+        <td>{{ $li->pel_3 }}</td>
+        <td>{{ $li->pel_4 }}</td>
+        <td>{{ $li->pel_5 }}</td>
+        <td>{{ $li->pel_6 }}</td>
+        <td>{{ $li->pel_7 }}</td>
+        <td>{{ $li->pel_8 }}</td>
 
         <td>
             <a href="/edit_mapel_siswa/{{ $li->id_mapel }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a>
@@ -67,10 +70,10 @@
     </tr>
     @endforeach
   </tbody>
-  </table>
-  <br>
+</table>
+<br>
 
- </div>
+</div>
 </body>
 
 @endsection

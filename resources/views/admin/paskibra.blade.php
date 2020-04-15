@@ -46,9 +46,9 @@
         <td>{{ $li->deskripsi_paskibra }}</td>
        
         <td>
-            <a href="/edit_paskibra/{{ $li->id_ekskul }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>
-            <br>
-            <a href="/detail_paskibra"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Detail</button></a>
+            <a href="/edit_paskibra/{{ $li->id_ekskul }}"><button style="width:60px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>
+            
+            <a href="/detail_paskibra"><button  style="margin-top:8px;" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Detail</button></a>
            
         </td>   
     </tr>

@@ -264,20 +264,15 @@ Route::get('/datauser/hapus/{id}','MasterController@hapususer');
 //---------------------------------------------------------------------batas halaman DATA USER dari admin lte
 
 
-//---------------------------------------------------------------------halaman MAPEL SISWA dari admin lte
+//---------------------------------------------------------------------halaman MAPEL SISWA TK 1dari admin lte
 Route::get('/mapel_siswa','MasterController@mapel');
 //menampilkan data berita dari database
 Route::get('/mapel_siswa', 'MasterController@lihatmapel');
-//tambah data berita ke database
-Route::get('/input_mapel_siswa', 'MasterController@tambahmapel');
-Route::post('/mapel_siswa/storemapel','MasterController@storemapel');
 //edit(update) data berita ke database
 Route::get('/edit_mapel_siswa/{id}', 'MasterController@editmapel');
 Route::post('/mapel_siswa/update/{id}', 'MasterController@updatemapel');
-//hapus data berita
-Route::get('/mapel_siswa/hapus/{id}','MasterController@hapusmapel');
 
-//---------------------------------------------------------------------batas halamanMAPEL SISWAdari admin lte
+//---------------------------------------------------------------------batas halamanMAPEL SISWA TK 1dari admin lte
 
 
 
@@ -285,6 +280,17 @@ Route::get('/mapel_siswa/hapus/{id}','MasterController@hapusmapel');
 Route::get('/nilai_siswa','MasterController@nilai');
 //menampilkan data berita dari database
 Route::get('/nilai_siswa', 'MasterController@lihatnilai');
+//tambah data berita ke database
+Route::get('/input_nilai_siswa', 'MasterController@tambahnilai');
+Route::post('/nilai_siswa/storenilai','MasterController@storenilai');
+//edit(update) data berita ke database
+Route::get('/edit_nilai_siswa/{id}', 'MasterController@editnilai');
+Route::post('/nilai_siswa/update/{id}', 'MasterController@updatenilai');
+//hapus data berita
+Route::get('/nilai_siswa/hapus/{id}','MasterController@hapusnilai');
+
+Route::get('/detail_nilai_siswa/{id}','MasterController@detailnilai');
+Route::get('/detail_nilai_siswa/{id}', 'MasterController@lihatdetailnilai');
 
 //---------------------------------------------------------------------batas halaman NILAI SISWA dari admin lte
 

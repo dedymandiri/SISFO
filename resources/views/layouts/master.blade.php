@@ -8,6 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ asset('admin/plugins/fontawesome-free/css/all.min.css') }}">
+
+  <link rel="stylesheet" href="{{ asset('admin/docs/assest/img') }}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="{{ asset('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css') }}">
   <!-- Theme style -->
@@ -16,9 +18,6 @@
   <link rel="stylesheet" href="{{ asset('admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="{{ asset('admin/fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700') }}">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- 
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -118,7 +117,7 @@
           </li>
           <li class="nav-item has-treeview">
             <a href="" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+              <i  class="nav-icon fas fa-tree"></i>
               <p>
                 Keahlian
                 <i class="fas fa-angle-left right"></i>
@@ -231,7 +230,7 @@
 
           <li class="nav-item has-treeview">
             <a href="" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 PPDB 
                 <i class="fas fa-angle-left right"></i>
@@ -255,7 +254,7 @@
 
           <li class="nav-item has-treeview">
             <a href="" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+              <i  class="nav-icon fas fa-table"></i>
               <p>
                 Rekap Nilai 
                 <i class="fas fa-angle-left right"></i>
@@ -271,7 +270,19 @@
               <li class="nav-item">
                 <a href="nilai_siswa" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Nilai Siswa</p>
+                  <p>Nilai Tingkat 1</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="nilai_siswa2" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Nilai Tingkat 2</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="nilai_siswa3" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Nilai Tingkat 3</p>
                 </a>
               </li>
             </ul>
@@ -308,7 +319,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.15.35/js/bootstrap-datetimepicker.min.js"></script>
 
-    
 
     @yield('content')
         

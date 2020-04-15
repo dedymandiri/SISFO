@@ -42,9 +42,11 @@
   <tbody>
 
     <!--Untuk menampilkan tabel berita dari database-->
-    @foreach($liat as $li)
+  <?php $no = 0;?>
+  @foreach($liat as $li)
+  <?php $no++ ;?>
     <tr>
-        <td>{{ $li->id_struktur_guru }}</td>
+        <td>{{ $no }}</td>
         <td>{{ $li->nama_guru }}</td>
         <td>{{ $li->jabatan }}</td>
        

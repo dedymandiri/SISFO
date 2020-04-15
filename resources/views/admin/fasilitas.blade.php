@@ -42,9 +42,11 @@
   <tbody>
 
     <!--Untuk menampilkan tabel berita dari database-->
-    @foreach($liat as $li)
+  <?php $no = 0;?>
+  @foreach($liat as $li)
+  <?php $no++ ;?>
     <tr>
-        <td>{{ $li->id_fas }}</td>
+        <td>{{ $no }}</td>
         <td>{{ $li->nama_ruang }}</td>
         <td>{{ $li->kuantitas }}</td>
        

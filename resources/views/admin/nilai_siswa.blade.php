@@ -2,6 +2,7 @@
 
 @section('content') 
 
+
   <!-- Content Header (Page header) -->
   <div class="content-header">
       <div class="container-fluid">
@@ -44,15 +45,17 @@
       <th class="th-sm"></th>
       <th class="th-sm"></th>
       <th class="th-sm"></th>
-      <th class="th-sm"></th>  
-      <th class="th-sm">Aksi</th>
+      <th class="th-sm"></th>
+      <th style="width:115px;" class="th-sm">Aksi</th>
     </tr>
     
   </thead>
   <thead>
-  @foreach($nilai as $rekap)
+  <?php $no = 0;?>
+  @foreach($tampil as $rekap)
+  <?php $no++ ;?>
     <tr>
-        <td>{{ $rekap->id_rekap }}</td>
+        <td>{{ $no }}</td>
         <td>{{ $rekap->nama }}</td>
         <td>{{ $rekap->kelas }}</td>
         <td>{{ $rekap->mapel_1 }}</td>
@@ -64,9 +67,12 @@
         <td>{{ $rekap->mapel_7 }}</td>
         <td>{{ $rekap->mapel_8 }}</td>
         <td>
-            <a href="/edit_nilai_siswa/{{ $rekap->id_rekap }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a>
-            <br><br>
-            <a href="/nilai_siswa/hapus/{{ $rekap->id_rekap }}"><button onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger">Hapus</button></a>
+            <a href="/edit_nilai_siswa/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" title="Edit" type="button"  class="btn btn-warning"><img style="margin-left:-11px;margin-top:-9px;"  src="{{ asset('admin/docs/assets/img/edit.png') }}" height="30px" width="25px;"></button></a>
+            
+            <a href="/nilai_siswa/hapus/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger"><img style="margin-left:-15px;margin-top:-9px;" src="{{ asset('admin/docs/assets/img/hapus.png') }}" height="30px" width="30px"></button></a>
+            
+            <a href="/detail_nilai_siswa/{{ $rekap->id_rekap }}"" ><button style="width:30px;height:30px;" title="Unduh" type="button" class="btn btn-info"><img style="margin-left:-8px;margin-top:-7px;"  src="{{ asset('admin/docs/assets/img/unduh.png') }}" height="23px" width="20px;"></button></a>
+   
         </td>   
     </tr>
     @endforeach
@@ -74,7 +80,30 @@
   </table>
   <br>
 
- </div>
+</div>
+
+<!-- Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Batas Modal-->
+
 </body>
 <br>
 

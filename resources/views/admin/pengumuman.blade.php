@@ -47,17 +47,19 @@
   </thead>
   <tbody>
      <!--Untuk menampilkan tabel berita dari database-->
-     @foreach($liat as $li)
+  <?php $no = 0;?>
+  @foreach($liat as $li)
+  <?php $no++ ;?>
     <tr>
-        <td>{{ $li->id_info }}</td>
+        <td>{{ $no }}</td>
         <td>{{ $li->judul }}</td>
         <td>{{ $li->tanggal_waktu }}</td>
         <td><p align="justify">{{ $li->isi }}</p></td>
        
         <td>
             <a href="/edit_pengumuman/{{ $li->id_info}}"><button style="width:65px;" title="Edit" type="button" class="btn btn-warning">Edit</button></a>
-            <br><br>
-            <a href="/pengumuman/hapus/{{ $li->id_info }}"><button onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger">Hapus</button></a>
+            
+            <a href="/pengumuman/hapus/{{ $li->id_info }}"><button style="margin-top:8px;" onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger">Hapus</button></a>
         </td>   
     </tr>
     @endforeach
