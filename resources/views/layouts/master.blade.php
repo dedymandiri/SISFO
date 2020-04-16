@@ -23,7 +23,7 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
   <!-- Navbar -->
-  <nav style="background:#3498db;border-radius:0px;" class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav style="background:#3498db;border-radius:0px;width:1340px;" class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li style="margin-top:-20px;margin-left:10px;" class="nav-item">
@@ -304,7 +304,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div style="margin-top:-20px;" class="content-wrapper">
+  <div style="margin-top:-20px;width:1340px;" class="content-wrapper">
     <!-- Main content -->
     <section class="content">
 

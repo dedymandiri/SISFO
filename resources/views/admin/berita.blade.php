@@ -36,16 +36,11 @@
   <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
     <tr align="center">
-      <th class="th-sm">No
-      </th>
-      <th class="th-sm">Judul
-      </th>
-      <th class="th-sm">Tanggal_Waktu
-      </th>
-      <th class="th-sm">Isi
-      </th>
-      <th class="th-sm">Aksi
-      </th>
+      <th class="th-sm">No</th>
+      <th class="th-sm">Judul</th>
+      <th class="th-sm">Tanggal_Waktu</th>
+      <th class="th-sm">Isi</th>
+      <th class="th-sm">Aksi</th>
     </tr>
   </thead>
   <tbody>

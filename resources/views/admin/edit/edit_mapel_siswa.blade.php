@@ -34,7 +34,6 @@
     <label for="judul">Mapel 5 :</label>
     <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_5" value="{{ $li->pel_5 }}">
   </div>
-  
   <div class="form-group">
     <label for="judul">Mapel 6 :</label>
     <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_6" value="{{ $li->pel_6 }}">
@@ -46,7 +45,26 @@
   <div class="form-group">
     <label for="judul">Mapel 8 :</label>
     <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_8" value="{{ $li->pel_8 }}">
-    *Tulis " - " (strip) jika mau mengkosongkan mata pelajaran siswa.
+  </div>
+  <div class="form-group">
+    <label for="judul">Mapel 9 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_9" value="{{ $li->pel_9 }}">
+  </div>
+  <div class="form-group">
+    <label for="judul">Mapel 10 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_10" value="{{ $li->pel_10 }}">
+  </div>
+  <div class="form-group">
+    <label for="judul">Mapel 11 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_11" value="{{ $li->pel_11 }}">
+  </div>
+  <div class="form-group">
+    <label for="judul">Mapel 12 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_12" value="{{ $li->pel_12 }}">
+  </div>
+  <div class="form-group">
+    <label for="judul">Mapel 13 :</label>
+    <input type="text" class="form-control" placeholder="Mata Pelajaran" name="pel_13" value="{{ $li->pel_13 }}">
   </div>
 
   <div style="margin-top:105px;width:930px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">

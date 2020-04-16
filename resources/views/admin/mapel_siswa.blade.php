@@ -2,8 +2,8 @@
 
 @section('content') 
 
-  <!-- Content Header (Page header) -->
-  <div class="content-header">
+   <!-- Content Header (Page header) -->
+  <div class="content-header" style="width:1320px;">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
@@ -20,7 +20,6 @@
     </div>
     <!-- /.content-header -->
 
-
 <body>
 <div>
    <div style="margin-left:7px;" class="col-sm-4">
@@ -31,18 +30,23 @@
 
 <!-- Mapel untuk siswa tingkat 1 -->
 <br> 
-  <table style="margin-top:10px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <table style="margin-top:10px;margin-left:5px;width:1320px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
     <tr>
       <th class="th-sm">Tingkat</th>
-      <th class="th-sm">Mapel 1</th>
-      <th class="th-sm">Mapel 2</th>
-      <th class="th-sm">Mapel 3</th>
-      <th class="th-sm">Mapel 4</th>
-      <th class="th-sm">Mapel 5</th>
-      <th class="th-sm">Mapel 6</th>
-      <th class="th-sm">Mapel 7</th>
-      <th class="th-sm">Mapel 8</th>
+      <th class="th-sm">Pel_1</th>
+      <th class="th-sm">Pel_2</th>
+      <th class="th-sm">Pel_3</th>
+      <th class="th-sm">Pel_4</th>
+      <th class="th-sm">Pel_5</th>
+      <th class="th-sm">Pel_6</th>
+      <th class="th-sm">Pel_7</th>
+      <th class="th-sm">Pel_8</th>      
+      <th class="th-sm">Pel_9</th>
+      <th class="th-sm">Pel_10</th>
+      <th class="th-sm">Pel_11</th>
+      <th class="th-sm">Pel_12</th>
+      <th class="th-sm">Pel_13</th>
       <th class="th-sm">Aksi</th>
     </tr>
   </thead>
@@ -62,10 +66,15 @@
         <td>{{ $li->pel_6 }}</td>
         <td>{{ $li->pel_7 }}</td>
         <td>{{ $li->pel_8 }}</td>
+        <td>{{ $li->pel_9 }}</td>
+        <td>{{ $li->pel_10 }}</td>
+        <td>{{ $li->pel_11 }}</td>
+        <td>{{ $li->pel_12 }}</td>
+        <td>{{ $li->pel_13 }}</td>
 
         <td>
-            <a href="/edit_mapel_siswa/{{ $li->id_mapel }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a>
-             
+             <a href="/edit_mapel_siswa/{{ $li->id_mapel }}"><button style="width:45px;" title="Edit" type="button"  class="btn btn-warning"><div style="margin-left:-4px;">Edit</div></button></a>
+            
         </td>   
     </tr>
     @endforeach

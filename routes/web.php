@@ -289,8 +289,10 @@ Route::post('/nilai_siswa/update/{id}', 'MasterController@updatenilai');
 //hapus data berita
 Route::get('/nilai_siswa/hapus/{id}','MasterController@hapusnilai');
 
-Route::get('/detail_nilai_siswa/{id}','MasterController@detailnilai');
-Route::get('/detail_nilai_siswa/{id}', 'MasterController@lihatdetailnilai');
+Route::get('/cetak_nilai_siswa/{id}','MasterController@cetaknilai');
+Route::get('/cetak_nilai_siswa/{id}', 'MasterController@lihatcetaknilai');
+
+Route::get('/cetak_nilai_siswa', 'MasterController@tampilmapel');
 
 //---------------------------------------------------------------------batas halaman NILAI SISWA dari admin lte
 

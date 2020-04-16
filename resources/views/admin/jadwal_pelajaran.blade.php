@@ -42,9 +42,11 @@
   <tbody>
 
     <!--Untuk menampilkan tabel berita dari database-->
-    @foreach($liat as $li)
+  <?php $no = 0;?>
+  @foreach($liat as $li)
+  <?php $no++ ;?>
     <tr>
-        <td>{{ $li->id_jadwal}}</td>
+        <td>{{ $no }}</td>
         <td>{{ $li->keterangan }}</td>
         <td><embed src="{{ url('/data_jadwal/'.$li->file) }}" type="application/pdf" width="100%" height="600px"></td>
                

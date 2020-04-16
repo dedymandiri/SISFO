@@ -31,21 +31,26 @@
    </div>
 
 <br><br>
-  <table style="margin-top:10px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <table style="margin-top:10px;margin-left:5px;width:1320px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
    
     <tr>
-      <th class="th-sm">No</th>
+      <th class="th-sm" width="25px">No</th>
       <th class="th-sm">Nama</th>
       <th class="th-sm">Kelas</th>
-      <th class="th-sm"></th>
-      <th class="th-sm"></th>
-      <th class="th-sm"></th>
-      <th class="th-sm"></th>
-      <th class="th-sm"></th>
-      <th class="th-sm"></th>
-      <th class="th-sm"></th>
-      <th class="th-sm"></th>
+      <th class="th-sm">{{ $mapel[0]->pel_1 }}</th>
+      <th class="th-sm">{{ $mapel[0]->pel_2 }}</th>
+      <th class="th-sm">{{ $mapel[0]->pel_3 }}</th>
+      <th class="th-sm">{{ $mapel[0]->pel_4 }}</th>
+      <th class="th-sm">{{ $mapel[0]->pel_5 }}</th>
+      <th class="th-sm">{{ $mapel[0]->pel_6 }}</th>
+      <th class="th-sm">{{ $mapel[0]->pel_7 }}</th>
+      <th class="th-sm">{{ $mapel[0]->pel_8 }}</th>
+      <th class="th-sm">{{ $mapel[0]->pel_9 }}</th>
+      <th class="th-sm">{{ $mapel[0]->pel_10 }}</th>
+      <th class="th-sm">{{ $mapel[0]->pel_11 }}</th>
+      <th class="th-sm">{{ $mapel[0]->pel_12 }}</th>
+      <th class="th-sm">{{ $mapel[0]->pel_13 }}</th>
       <th style="width:115px;" class="th-sm">Aksi</th>
     </tr>
     
@@ -66,12 +71,17 @@
         <td>{{ $rekap->mapel_6 }}</td>
         <td>{{ $rekap->mapel_7 }}</td>
         <td>{{ $rekap->mapel_8 }}</td>
+        <td>{{ $rekap->mapel_9 }}</td>
+        <td>{{ $rekap->mapel_10 }}</td>
+        <td>{{ $rekap->mapel_11 }}</td>
+        <td>{{ $rekap->mapel_12 }}</td>
+        <td>{{ $rekap->mapel_13 }}</td>
         <td>
             <a href="/edit_nilai_siswa/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" title="Edit" type="button"  class="btn btn-warning"><img style="margin-left:-11px;margin-top:-9px;"  src="{{ asset('admin/docs/assets/img/edit.png') }}" height="30px" width="25px;"></button></a>
             
             <a href="/nilai_siswa/hapus/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger"><img style="margin-left:-15px;margin-top:-9px;" src="{{ asset('admin/docs/assets/img/hapus.png') }}" height="30px" width="30px"></button></a>
             
-            <a href="/detail_nilai_siswa/{{ $rekap->id_rekap }}"" ><button style="width:30px;height:30px;" title="Unduh" type="button" class="btn btn-info"><img style="margin-left:-8px;margin-top:-7px;"  src="{{ asset('admin/docs/assets/img/unduh.png') }}" height="23px" width="20px;"></button></a>
+            <a href="/cetak_nilai_siswa/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" target="_BLANK" title="Unduh" type="button" class="btn btn-info"><img style="margin-left:-8px;margin-top:-7px;"  src="{{ asset('admin/docs/assets/img/unduh.png') }}" height="23px" width="20px;"></button></a>
    
         </td>   
     </tr>
@@ -81,29 +91,6 @@
   <br>
 
 </div>
-
-<!-- Modal-->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Batas Modal-->
-
 </body>
 <br>
 

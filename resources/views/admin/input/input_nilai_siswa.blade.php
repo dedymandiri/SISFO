@@ -23,36 +23,56 @@
     <input type="text" class="form-control" placeholder="Masukan Kelas" required="required" name="kelas">
   </div>
   <div class="form-group">
-    <label for="mapel_1">Mapel 1</label>
+    <label for="mapel_1">{{ $mapel[0]->pel_1 }} :</label>
     <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_1">
   </div>
   <div class="form-group">
-    <label for="mapel_2">Mapel 2</label>
+    <label for="mapel_2">{{ $mapel[0]->pel_2 }} :</label>
     <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_2">
   </div>
   <div class="form-group">
-    <label for="mapel_3">Mapel 3</label>
+    <label for="mapel_3">{{ $mapel[0]->pel_3 }} :</label>
     <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_3">
   </div>
    <div class="form-group">
-    <label for="mapel_4">Mapel 4</label>
+    <label for="mapel_4">{{ $mapel[0]->pel_4 }} :</label>
     <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_4">
   </div>
   <div class="form-group">
-    <label for="mapel_5">Mapel 5</label>
+    <label for="mapel_5">{{ $mapel[0]->pel_5 }} :</label>
     <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_5">
 </div>
   <div class="form-group">
-    <label for="mapel_6">Mapel 6</label>
+    <label for="mapel_6">{{ $mapel[0]->pel_6 }} :</label>
     <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_6">
  </div>
   <div class="form-group">
-    <label for="mapel_7">Mapel 7</label>
+    <label for="mapel_7">{{ $mapel[0]->pel_7 }} :</label>
     <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_7">
 </div>
   <div class="form-group">
-    <label for="mapel_8">Mapel 8</label>
+    <label for="mapel_8">{{ $mapel[0]->pel_8 }} :</label>
     <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_8">
+ </div>
+ <div class="form-group">
+    <label for="mapel_4">{{ $mapel[0]->pel_9 }} :</label>
+    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_9">
+  </div>
+  <div class="form-group">
+    <label for="mapel_5">{{ $mapel[0]->pel_10 }} :</label>
+    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_10">
+</div>
+  <div class="form-group">
+    <label for="mapel_6">{{ $mapel[0]->pel_11 }} :</label>
+    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_11">
+ </div>
+  <div class="form-group">
+    <label for="mapel_7">{{ $mapel[0]->pel_12 }} :</label>
+    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_12">
+</div>
+  <div class="form-group">
+    <label for="mapel_8">{{ $mapel[0]->pel_13 }} :</label>
+    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_13">
  </div>
 
    <!--bagian button-->
