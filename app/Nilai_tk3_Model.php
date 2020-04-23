@@ -7,9 +7,9 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User_Model extends Model
+class Nilai_tk3_Model extends Model
 {
-    protected $table='user';
+    protected $table='nilai_tk3';
 
 }
 

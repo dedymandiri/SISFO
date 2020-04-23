@@ -7,7 +7,7 @@
 <div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
 <h4 class="card-header info-color white-text text-center py-4">
-  <strong>Form Tambah Berita</strong>
+  <strong>TAMBAH BERITA</strong>
 </h4>
 <br>
 <form style="width:825px;margin-left:35px;" action="/berita/store" method="post">

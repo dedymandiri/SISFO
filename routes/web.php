@@ -250,17 +250,17 @@ Route::get('/kalender_sekolah/hapus/{id}','MasterController@hapuskalender');
 
 
 //---------------------------------------------------------------------halaman DATA USER dari admin lte
-Route::get('/datauser','MasterController@user');
+Route::get('/pengguna','MasterController@pengguna');
 //menampilkan data berita dari database
-Route::get('/datauser', 'MasterController@lihatuser');
+Route::get('/pengguna', 'MasterController@lihatpengguna');
 //tambah data berita ke database
-Route::get('/input_datauser', 'MasterController@tambahuser');
-Route::post('/datauser/storeuser','MasterController@storeuser');
+Route::get('/input_pengguna', 'MasterController@tambahpengguna');
+Route::post('/pengguna/storepengguna','MasterController@storepengguna');
 //edit(update) data berita ke database
-Route::get('/edit_datauser/{id}', 'MasterController@edituser');
-Route::post('/datauser/update/{id}', 'MasterController@updateuser');
+Route::get('/edit_pengguna/{id}', 'MasterController@editpengguna');
+Route::post('/pengguna/update/{id}', 'MasterController@updatepengguna');
 //hapus data berita
-Route::get('/datauser/hapus/{id}','MasterController@hapususer');
+Route::get('/pengguna/hapus/{id}','MasterController@hapuspengguna');
 //---------------------------------------------------------------------batas halaman DATA USER dari admin lte
 
 
@@ -292,9 +292,47 @@ Route::get('/nilai_siswa/hapus/{id}','MasterController@hapusnilai');
 Route::get('/cetak_nilai_siswa/{id}','MasterController@cetaknilai');
 Route::get('/cetak_nilai_siswa/{id}', 'MasterController@lihatcetaknilai');
 
-Route::get('/cetak_nilai_siswa', 'MasterController@tampilmapel');
+//---------------------------------------------------------------------batas halaman NILAI TINGKAT 1 dari admin lte
 
-//---------------------------------------------------------------------batas halaman NILAI SISWA dari admin lte
+
+//---------------------------------------------------------------------halaman NILAI TINGKAT 2 admin lte
+Route::get('/nilai_siswa_tk2','MasterController@nilai_tk2');
+//menampilkan data berita dari database
+Route::get('/nilai_siswa_tk2', 'MasterController@lihatnilai_tk2');
+//tambah data berita ke database
+Route::get('/input_nilai_siswa_tk2', 'MasterController@tambahnilai_tk2');
+Route::post('/nilai_siswa_tk2/storenilai_tk2','MasterController@storenilai_tk2');
+//edit(update) data berita ke database
+Route::get('/edit_nilai_siswa_tk2/{id}', 'MasterController@editnilai_tk2');
+Route::post('/nilai_siswa_tk2/update/{id}', 'MasterController@updatenilai_tk2');
+//hapus data berita
+Route::get('/nilai_siswa_tk2/hapus/{id}','MasterController@hapusnilai_tk2');
+
+Route::get('/cetak_nilai_siswa_tk2/{id}','MasterController@cetaknilai_tk2');
+Route::get('/cetak_nilai_siswa_tk2/{id}', 'MasterController@lihatcetaknilai_tk2');
+
+//---------------------------------------------------------------------batas halaman NILAI TINGKAT 2 dari admin lte
+
+
+
+//---------------------------------------------------------------------halaman NILAI TINGKAT 3 admin lte
+Route::get('/nilai_siswa_tk3','MasterController@nilai_tk3');
+//menampilkan data berita dari database
+Route::get('/nilai_siswa_tk3', 'MasterController@lihatnilai_tk3');
+//tambah data berita ke database
+Route::get('/input_nilai_siswa_tk3', 'MasterController@tambahnilai_tk3');
+Route::post('/nilai_siswa_tk3/storenilai_tk3','MasterController@storenilai_tk3');
+//edit(update) data berita ke database
+Route::get('/edit_nilai_siswa_tk3/{id}', 'MasterController@editnilai_tk3');
+Route::post('/nilai_siswa_tk3/update/{id}', 'MasterController@updatenilai_tk3');
+//hapus data berita
+Route::get('/nilai_siswa_tk3/hapus/{id}','MasterController@hapusnilai_tk3');
+
+Route::get('/cetak_nilai_siswa_tk3/{id}','MasterController@cetaknilai_tk3');
+Route::get('/cetak_nilai_siswa_tk3/{id}', 'MasterController@lihatcetaknilai_tk3');
+
+//---------------------------------------------------------------------batas halaman NILAI TINGKAT 3 dari admin lte
+
 
 
 //---------------------------------------------------------------------halaman HASIL SELEKSI dari admin lte

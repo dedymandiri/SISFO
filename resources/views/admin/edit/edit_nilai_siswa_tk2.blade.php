@@ -7,11 +7,11 @@
 <div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
 <h4 class="card-header info-color white-text text-center py-4">
-  <strong>EDIT NILAI TINGKAT 1</strong>
+  <strong>EDIT NILAI TINGKAT 2</strong>
 </h4>
 <br>
 @foreach($tampil as $li)
-<form style="width:730px;margin-left:35px;" action="/nilai_siswa/update/{{ $li->id_rekap }}" method="post">
+<form style="width:730px;margin-left:35px;" action="/nilai_siswa_tk2/update/{{ $li->id_rekap }}" method="post">
 {{ csrf_field() }}
 <br>
 <div class="form-group">
@@ -62,24 +62,10 @@
     <label for="mapel_5">{{ $mapel[0]->pel_10 }} :</label>
     <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_10" value="{{ $li->mapel_10 }}">
 </div>
-  <div class="form-group">
-    <label for="mapel_6">{{ $mapel[0]->pel_11 }} :</label>
-    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_11" value="{{ $li->mapel_11 }}">
- </div>
-  <div class="form-group">
-    <label for="mapel_7">{{ $mapel[0]->pel_12 }} :</label>
-    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_12" value="{{ $li->mapel_12 }}">
-</div>
-  <div class="form-group">
-    <label for="mapel_8">{{ $mapel[0]->pel_13 }} :</label>
-    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_13" value="{{ $li->mapel_13 }}">
- </div>
-
-
-
+  
   <div style="margin-top:105px;width:930px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">
     <button style="margin-left:-700px;" type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
-    <a href="/nilai_siswa"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
+    <a href="/nilai_siswa_tk2"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
   </div>
 
 </form>

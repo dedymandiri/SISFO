@@ -24,12 +24,12 @@
 <body>
 <div>
    <div style="margin-left:7px;" class="col-sm-4">
-       <a href="/input_jadwal_pelajaran"><button type="button" class="btn btn-success">Tambah Data</button></a>
-       <!-- Search form -->
+       <!-- <a href="/input_jadwal_pelajaran"><button type="button" class="btn btn-success">Tambah Data</button></a>
+       Search form -->
        <!--<input style="margin-top:-40px;margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search"> -->  
    </div>
 
-  <br><br>
+  <br>
   <table style="margin-top:10px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
     <tr>
@@ -51,9 +51,7 @@
         <td><embed src="{{ url('/data_jadwal/'.$li->file) }}" type="application/pdf" width="100%" height="600px"></td>
                
         <td>
-            <a href="/edit_jadwal_pelajaran/{{ $li->id_jadwal }}"><button style="width:65px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a>
-        
-            <a href="/jadwal_pelajaran/hapus/{{ $li->id_jadwal }}"><button onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger">Hapus</button></a>
+            <a href="/edit_jadwal_pelajaran/{{ $li->id_jadwal }}"><button style="width:100px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a>
         </td>  
 
     </tr>

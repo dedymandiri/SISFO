@@ -7,11 +7,11 @@
 <div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
 <h4 class="card-header info-color white-text text-center py-4">
-  <strong>EDIT NILAI TINGKAT 1</strong>
+  <strong>EDIT NILAI TINGKAT 3</strong>
 </h4>
 <br>
 @foreach($tampil as $li)
-<form style="width:730px;margin-left:35px;" action="/nilai_siswa/update/{{ $li->id_rekap }}" method="post">
+<form style="width:730px;margin-left:35px;" action="/nilai_siswa_tk3/update/{{ $li->id_rekap }}" method="post">
 {{ csrf_field() }}
 <br>
 <div class="form-group">
@@ -79,7 +79,7 @@
 
   <div style="margin-top:105px;width:930px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">
     <button style="margin-left:-700px;" type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
-    <a href="/nilai_siswa"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
+    <a href="/nilai_siswa_tk3"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
   </div>
 
 </form>

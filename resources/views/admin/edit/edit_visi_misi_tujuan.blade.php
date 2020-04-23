@@ -7,7 +7,7 @@
 <div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
 <h4 class="card-header info-color white-text text-center py-4">
-  <strong>Edit Visi Misi Tujuan</strong>
+  <strong>EDIT VISI-MISI</strong>
 </h4>
 <br>
 @foreach($liat as $li)

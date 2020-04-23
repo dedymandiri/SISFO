@@ -7,32 +7,34 @@
 <div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
 <h4 class="card-header info-color white-text text-center py-4">
-  <strong>Form Tambah Pengguna</strong>
+  <strong>EDIT DATA PENGGUNA</strong>
 </h4>
 <br>
-<form style="width:730px;margin-left:35px;" action="/datauser/storeuser" method="post">
+@foreach($liat as $li)
+<form style="width:730px;margin-left:35px;" action="/pengguna/update/{{ $li->id_pengguna }}" method="post">
 {{ csrf_field() }}
 <br>
   <div class="form-group">
     <label for="judul">Nama :</label>
-    <input type="text" class="form-control" placeholder="Nama Lengkap" required="required" name="nama">
+    <input type="text" class="form-control" placeholder="Nama Lengkap" required="required" name="nama" value="{{ $li->nama }}">
   </div>
   <div class="form-group">
     <label for="tgl_waktu">Email :</label>
-    <input type="email" class="form-control" placeholder="Email " required="required" name="email">
+    <input type="email" class="form-control" placeholder="Email " required="required" name="email" value="{{ $li->email }}">
   </div>
   <div class="form-group">
     <label for="tgl_waktu">Password :</label>
-    <input type="password" class="form-control" placeholder="Password " required="required" name="password">
+    <input type="password" class="form-control" placeholder="Password " required="required" name="password" value="{{ $li->password }}">
   </div>
-  
-<!--bagian button-->
-<div style="margin-top:105px;width:930px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">
+
+  <div style="margin-top:105px;width:930px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">
     <button style="margin-left:-700px;" type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
     <a href="/datauser"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
   </div>
 
 </form>
+
+@endforeach
 </div>
 <br>
 

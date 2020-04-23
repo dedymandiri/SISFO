@@ -9,7 +9,7 @@
 <div style="background:#3498db;height:800px;height:10px;" class="card"></div>
 
 <h4 class="card-header info-color white-text text-center py-4">
-  <strong>Detail Halaman Hadroh</strong>
+  <strong>DETAIL HADROH</strong>
 </h4>
 <br>
 <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">

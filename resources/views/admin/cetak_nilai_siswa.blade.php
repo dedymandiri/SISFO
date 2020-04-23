@@ -2,7 +2,16 @@
 
 @section('content') 
 
- 
+ <!--bagian button-->
+  <div style="width:1335px;" class="card-header info-color white-text text-center py-4">
+    <a onClick="print_d()" target="_BLANK"><button style="margin-left:-300px;width:100px;" type="submit" value="Simpan" class="btn btn-secondary">Unduh</button></a>
+    <a href="/nilai_siswa"><button style="margin-left:700px;width:100px;" type="button" class="btn btn-primary">Kembali</button></a>
+  </div>
+
+  <script>
+		window.print();
+	</script>
+
 <br><div style="margin-left:18px;width:1000px;height:1500px;" class="card"><br>
   
   <!--Bagian logo sekolah-->
@@ -18,7 +27,7 @@
   </div>
   <!--Bagian logo pendidikan-->
   <div class="logo_pendidikan">
-      <img style="margin-left:800px;margin-top:-140px;" src="{{ asset('admin/docs/assets/img/indramayu.png') }}" height="115px" width="115px;">
+      <img style="margin-left:800px;margin-top:-140px;" src="{{ asset('admin/docs/assets/img/indramayu.png') }}" height="115px" width="120px;">
   </div>
   <!--Bagian garis inline judul-->
   <div class="garis-inlane" style="margin-top:-10px;">
@@ -30,7 +39,7 @@
 
   <table style="margin-left:50px;" class="identitas-siswa">
     <tbody>
-        <tr><td width="130px">Nama</td><td width="30px">:</td><td>{{ $li->nama }}</td></tr>
+        <tr><td width="105px">Nama</td><td width="30px">:</td><td>{{ $li->nama }}</td></tr>
         <tr><td>Kelas</td><td>:</td><td>{{ $li->kelas }}</td></tr>        
         <tr><td>Jurusan</td><td>:</td><td>Multimedia</td></tr>
     </tbody>
@@ -123,20 +132,8 @@
 </div>
 @endforeach
 
-<!--bagian button-->
-  <div style="margin-top:25px;width:930px;margin-left:50px;" class="card-header info-color white-text text-center py-4">
-    <button style="margin-left:-700px;width:125px;" type="submit" value="Simpan" onClick="print_d()" class="btn btn-primary">Cetak</button>
-    <a href="/nilai_siswa"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
-  </div>
+<div style="width:1335px;" class="card-header info-color white-text text-center py-4"></div>
 
 </div>
-<br>
-
-  <script>
-		window.load = print_d();
-		function print_d(){
-			window.print();
-		}
-	</script>
 
 @endsection

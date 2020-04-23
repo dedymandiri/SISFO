@@ -264,7 +264,7 @@
               <li class="nav-item">
                 <a href="mapel_siswa" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Mapel Siswa</p>
+                  <p>Pelajaran</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -274,13 +274,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="nilai_siswa2" class="nav-link">
+                <a href="nilai_siswa_tk2" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Nilai Tingkat 2</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="nilai_siswa3" class="nav-link">
+                <a href="nilai_siswa_tk3" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Nilai Tingkat 3</p>
                 </a>
@@ -289,7 +289,7 @@
           </li>
 
           <li class="nav-item has-treeview">
-            <a href="datauser" class="nav-link">
+            <a href="pengguna" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
                 Data Pengguna
