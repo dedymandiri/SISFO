@@ -22,7 +22,7 @@
        
     </tr>-->
 
-       <div  class="isi">		
+    <div  class="isi">		
 			<div style="margin-left:20px;width:880px;" class="hr" align="justify">
 			<?php echo $li['sejarah'] ?></div>
 		</div>

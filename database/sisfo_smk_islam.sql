@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Apr 2020 pada 07.23
+-- Waktu pembuatan: 23 Apr 2020 pada 23.23
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 7.3.3
 
@@ -178,42 +178,22 @@ CREATE TABLE `mapel` (
   `pel_5` varchar(225) NOT NULL,
   `pel_6` varchar(225) NOT NULL,
   `pel_7` varchar(225) NOT NULL,
-  `pel_8` varchar(225) NOT NULL
+  `pel_8` varchar(225) NOT NULL,
+  `pel_9` varchar(225) NOT NULL,
+  `pel_10` varchar(225) NOT NULL,
+  `pel_11` varchar(255) NOT NULL,
+  `pel_12` varchar(225) NOT NULL,
+  `pel_13` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `mapel`
 --
 
-INSERT INTO `mapel` (`id_mapel`, `pel_1`, `pel_2`, `pel_3`, `pel_4`, `pel_5`, `pel_6`, `pel_7`, `pel_8`) VALUES
-(1, 'Arsitektur Komputer', 'Sistem Terdistribusi', 'Pengolahan Citra', 'Sistem Komputer', 'Algoritma', 'Desing Grafis', 'Mutimedia', 'Proyek 3'),
-(4, 'Analisi Design', 'Design Grafis', 'Jaringan 2', 'Pemrogramman Dasar', 'Multimedia', 'Struktur Program', 'Perancangan Sistem', 'Kewirausahaan'),
-(5, 'Penjaskes', 'PPKN', 'Agama Islam', 'Perangkat Lunak', 'Pemrogramman Web', 'Design Grafis', 'Bahasa Inggris', 'Kewirausahaan\r\n');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `mapel_tk2`
---
-
-CREATE TABLE `mapel_tk2` (
-  `id_mapel_tk2` int(7) NOT NULL,
-  `mapel_1` varchar(225) NOT NULL,
-  `mapel_2` varchar(255) NOT NULL,
-  `mapel_3` varchar(225) NOT NULL,
-  `mapel_4` varchar(225) NOT NULL,
-  `mapel_5` varchar(225) NOT NULL,
-  `mapel_6` varchar(225) NOT NULL,
-  `mapel_7` varchar(225) NOT NULL,
-  `mapel_8` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `mapel_tk2`
---
-
-INSERT INTO `mapel_tk2` (`id_mapel_tk2`, `mapel_1`, `mapel_2`, `mapel_3`, `mapel_4`, `mapel_5`, `mapel_6`, `mapel_7`, `mapel_8`) VALUES
-(1, 'bjh', 'kjjb', 'kkjb', 'jkb', 'bk', 'bk', 'bk', 'bbk');
+INSERT INTO `mapel` (`id_mapel`, `pel_1`, `pel_2`, `pel_3`, `pel_4`, `pel_5`, `pel_6`, `pel_7`, `pel_8`, `pel_9`, `pel_10`, `pel_11`, `pel_12`, `pel_13`) VALUES
+(1, 'Rekayasa Perangkat Lunak', 'Sistem Terdistribusi', 'Pengolahan Citra', 'Sistem Komputer', 'Algoritma', 'Desing Grafis', 'Mutimedia', 'Proyek 3', 'Bhs Indonesia', 'Bhs Inggris', 'Bhs Daerah', 'Seni Budaya', 'Agama Islam'),
+(6, 'bahasa inggris', 'agama islam', 'budi pekerti', 'bahasa arab', 'akidah akhlak', 'tarikh', 'quran hadist', 'bahasa indonesia', 'Ppkn', 'Keterampilan', '-', '-', '-'),
+(7, 'Bhs Indonesia', 'Bhs Inggris', 'Multimedia', 'Design Grafis', 'Jaringan Komputer', 'Pemrogramman Web', 'Kewirausahaan', '-', '-', '-', '-', '-', '-');
 
 -- --------------------------------------------------------
 
@@ -248,6 +228,104 @@ INSERT INTO `multimedia` (`id_multimedia`, `deskripsi`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `nilai_tk1`
+--
+
+CREATE TABLE `nilai_tk1` (
+  `id_rekap` int(7) NOT NULL,
+  `nama` varchar(225) NOT NULL,
+  `kelas` varchar(50) NOT NULL,
+  `jurusan` varchar(225) NOT NULL,
+  `mapel_1` varchar(100) NOT NULL,
+  `mapel_2` varchar(100) NOT NULL,
+  `mapel_3` varchar(100) NOT NULL,
+  `mapel_4` varchar(100) NOT NULL,
+  `mapel_5` varchar(100) NOT NULL,
+  `mapel_6` varchar(100) NOT NULL,
+  `mapel_7` varchar(100) NOT NULL,
+  `mapel_8` varchar(100) NOT NULL,
+  `mapel_9` varchar(225) NOT NULL,
+  `mapel_10` varchar(225) NOT NULL,
+  `mapel_11` varchar(255) NOT NULL,
+  `mapel_12` varchar(225) NOT NULL,
+  `mapel_13` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `nilai_tk1`
+--
+
+INSERT INTO `nilai_tk1` (`id_rekap`, `nama`, `kelas`, `jurusan`, `mapel_1`, `mapel_2`, `mapel_3`, `mapel_4`, `mapel_5`, `mapel_6`, `mapel_7`, `mapel_8`, `mapel_9`, `mapel_10`, `mapel_11`, `mapel_12`, `mapel_13`) VALUES
+(1, 'Dedi Maulana', 'D4RPL.3', '', '80', '80', '80', '80', '80', '80', '80', '80', '87', '87', '79', '08', '86'),
+(3, 'Joko', 'D4RPL.4', '', '78', '87', '87', '87', '97', '87', '67', '78', '80', '76', '87', '96', '87'),
+(4, 'Mahmud', 'D4RPL.4', '', '76', '89', '76', '85', '68', '98', '98', '87', '07', '98', '80', '90', '79'),
+(6, 'Sholeh', 'D4RPL.4', '', '98', '76', '78', '98', '68', '79', '68', '97', '60', '78', '08', '97', '86');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `nilai_tk2`
+--
+
+CREATE TABLE `nilai_tk2` (
+  `id_rekap` int(7) NOT NULL,
+  `nama` varchar(225) NOT NULL,
+  `kelas` varchar(50) NOT NULL,
+  `jurusan` varchar(225) NOT NULL,
+  `mapel_1` varchar(100) NOT NULL,
+  `mapel_2` varchar(100) NOT NULL,
+  `mapel_3` varchar(100) NOT NULL,
+  `mapel_4` varchar(100) NOT NULL,
+  `mapel_5` varchar(100) NOT NULL,
+  `mapel_6` varchar(100) NOT NULL,
+  `mapel_7` varchar(100) NOT NULL,
+  `mapel_8` varchar(100) NOT NULL,
+  `mapel_9` varchar(225) NOT NULL,
+  `mapel_10` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `nilai_tk2`
+--
+
+INSERT INTO `nilai_tk2` (`id_rekap`, `nama`, `kelas`, `jurusan`, `mapel_1`, `mapel_2`, `mapel_3`, `mapel_4`, `mapel_5`, `mapel_6`, `mapel_7`, `mapel_8`, `mapel_9`, `mapel_10`) VALUES
+(1, 'Dedi Maulana', 'D4RPL.3', '', '100', '80', '80', '80', '80', '80', '80', '80', '87', '87'),
+(3, 'Joko', 'D4RPL.4', '', '78', '87', '87', '87', '97', '87', '67', '78', '80', '76'),
+(4, 'Mahmud', 'D4RPL.4', '', '76', '89', '76', '85', '68', '98', '98', '87', '07', '98');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `nilai_tk3`
+--
+
+CREATE TABLE `nilai_tk3` (
+  `id_rekap` int(7) NOT NULL,
+  `nama` varchar(225) NOT NULL,
+  `kelas` varchar(50) NOT NULL,
+  `jurusan` varchar(225) NOT NULL,
+  `mapel_1` varchar(100) NOT NULL,
+  `mapel_2` varchar(100) NOT NULL,
+  `mapel_3` varchar(100) NOT NULL,
+  `mapel_4` varchar(100) NOT NULL,
+  `mapel_5` varchar(100) NOT NULL,
+  `mapel_6` varchar(100) NOT NULL,
+  `mapel_7` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `nilai_tk3`
+--
+
+INSERT INTO `nilai_tk3` (`id_rekap`, `nama`, `kelas`, `jurusan`, `mapel_1`, `mapel_2`, `mapel_3`, `mapel_4`, `mapel_5`, `mapel_6`, `mapel_7`) VALUES
+(1, 'Dedi Maulana', 'D4RPL.3', '', '80', '80', '80', '80', '80', '80', '80'),
+(3, 'Joko', 'D4RPL.4', '', '78', '100', '87', '87', '97', '87', '67'),
+(4, 'Mahmud', 'D4RPL.4', '', '76', '89', '76', '85', '68', '98', '98'),
+(6, 'Sholeh', 'D4RPL.4', '', '98', '76', '78', '98', '68', '79', '68');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `pendaftaran`
 --
 
@@ -275,6 +353,27 @@ CREATE TABLE `pendaftaran` (
 
 INSERT INTO `pendaftaran` (`id_daftar`, `tgl_masuk`, `nama_calon_siswa`, `tmpt_lahir`, `tgl_lahir`, `nama_ibu`, `nama_ayah`, `alamat`, `nisn`, `asal_sklh`, `no_hp`, `agama`, `anak_ke`, `keahlian`, `alasan`) VALUES
 (2, '20 January 2020', 'Solihin', 'Bangka Belitung', '15 January 2004', 'Markona', 'Siswanto', 'Bangkaloa', 123456789, 'SMPN 1 Prapatan', 123456789, 'Islam', 5, 'Mulitmedia', 'Ya pengen masuk aja emang gak boleh ya!');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pengguna`
+--
+
+CREATE TABLE `pengguna` (
+  `id_pengguna` int(7) NOT NULL,
+  `nama` varchar(225) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `pengguna`
+--
+
+INSERT INTO `pengguna` (`id_pengguna`, `nama`, `email`, `password`) VALUES
+(1, 'Dedi Maulana', 'dedymaniri992@gmail.com', 'user123'),
+(2, 'Rezha agascha p.', 'maemunahajah@gmail.com', 'rz123');
 
 -- --------------------------------------------------------
 
@@ -318,37 +417,6 @@ INSERT INTO `profil` (`id_profil`, `sejarah`, `visi_misi_tujuan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `rekap_nilai`
---
-
-CREATE TABLE `rekap_nilai` (
-  `id_rekap` int(7) NOT NULL,
-  `nama` varchar(225) NOT NULL,
-  `kelas` varchar(50) NOT NULL,
-  `mapel_1` varchar(100) NOT NULL,
-  `mapel_2` varchar(100) NOT NULL,
-  `mapel_3` varchar(100) NOT NULL,
-  `mapel_4` varchar(100) NOT NULL,
-  `mapel_5` varchar(100) NOT NULL,
-  `mapel_6` varchar(100) NOT NULL,
-  `mapel_7` varchar(100) NOT NULL,
-  `mapel_8` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `rekap_nilai`
---
-
-INSERT INTO `rekap_nilai` (`id_rekap`, `nama`, `kelas`, `mapel_1`, `mapel_2`, `mapel_3`, `mapel_4`, `mapel_5`, `mapel_6`, `mapel_7`, `mapel_8`) VALUES
-(1, 'Dedi Maulana', 'D4RPL.3', '80', '80', '80', '80', '80', '80', '80', '80'),
-(3, 'Joko', 'D4RPL.4', '78', '87', '87', '87', '97', '87', '67', '78'),
-(4, 'Mahmud', 'D4RPL.4', '76', '89', '76', '85', '68', '98', '98', '87'),
-(5, 'Rezha agascha p.', 'D4RPL.4', '67', '78', '87', '87', '67', '78', '97', '97'),
-(6, 'Sholeh', 'D4RPL.4', '98', '76', '78', '98', '68', '79', '68', '97');
-
--- --------------------------------------------------------
-
---
 -- Struktur dari tabel `struktur_guru`
 --
 
@@ -365,27 +433,6 @@ CREATE TABLE `struktur_guru` (
 INSERT INTO `struktur_guru` (`id_struktur_guru`, `nama_guru`, `jabatan`) VALUES
 (1, 'Dedi Maulana, S.ST', 'Kepala Sekolah'),
 (3, 'Rezha Agascha Permana,S.ST', 'Wakil Kepala Sekolah');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `user`
---
-
-CREATE TABLE `user` (
-  `id_user` int(7) NOT NULL,
-  `nama` varchar(225) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` varchar(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `user`
---
-
-INSERT INTO `user` (`id_user`, `nama`, `email`, `password`) VALUES
-(2, 'Dedi Maulana', 'dedimaulana882@gmail.com', 'admin123'),
-(3, 'Rezha agascha p.', 'rezha123@gmail.com', 'rezha123');
 
 -- --------------------------------------------------------
 
@@ -457,12 +504,6 @@ ALTER TABLE `mapel`
   ADD PRIMARY KEY (`id_mapel`);
 
 --
--- Indeks untuk tabel `mapel_tk2`
---
-ALTER TABLE `mapel_tk2`
-  ADD PRIMARY KEY (`id_mapel_tk2`);
-
---
 -- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
@@ -481,6 +522,12 @@ ALTER TABLE `pendaftaran`
   ADD PRIMARY KEY (`id_daftar`);
 
 --
+-- Indeks untuk tabel `pengguna`
+--
+ALTER TABLE `pengguna`
+  ADD PRIMARY KEY (`id_pengguna`);
+
+--
 -- Indeks untuk tabel `pengumuman`
 --
 ALTER TABLE `pengumuman`
@@ -493,22 +540,10 @@ ALTER TABLE `profil`
   ADD PRIMARY KEY (`id_profil`);
 
 --
--- Indeks untuk tabel `rekap_nilai`
---
-ALTER TABLE `rekap_nilai`
-  ADD PRIMARY KEY (`id_rekap`);
-
---
 -- Indeks untuk tabel `struktur_guru`
 --
 ALTER TABLE `struktur_guru`
   ADD PRIMARY KEY (`id_struktur_guru`);
-
---
--- Indeks untuk tabel `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
 
 --
 -- Indeks untuk tabel `users`
@@ -566,13 +601,7 @@ ALTER TABLE `kalender_sekolah`
 -- AUTO_INCREMENT untuk tabel `mapel`
 --
 ALTER TABLE `mapel`
-  MODIFY `id_mapel` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT untuk tabel `mapel_tk2`
---
-ALTER TABLE `mapel_tk2`
-  MODIFY `id_mapel_tk2` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_mapel` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -593,6 +622,12 @@ ALTER TABLE `pendaftaran`
   MODIFY `id_daftar` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT untuk tabel `pengguna`
+--
+ALTER TABLE `pengguna`
+  MODIFY `id_pengguna` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT untuk tabel `pengumuman`
 --
 ALTER TABLE `pengumuman`
@@ -605,22 +640,10 @@ ALTER TABLE `profil`
   MODIFY `id_profil` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `rekap_nilai`
---
-ALTER TABLE `rekap_nilai`
-  MODIFY `id_rekap` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
 -- AUTO_INCREMENT untuk tabel `struktur_guru`
 --
 ALTER TABLE `struktur_guru`
   MODIFY `id_struktur_guru` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT untuk tabel `user`
---
-ALTER TABLE `user`
-  MODIFY `id_user` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`

@@ -364,3 +364,33 @@ Route::post('/pendaftaran/update/{id}', 'MasterController@updatedaftar');
 //hapus data berita
 Route::get('/pendaftaran/hapus/{id}','MasterController@hapusdaftar');
 //---------------------------------------------------------------------batas halaman DATA PENDAFTAR dari admin lte
+
+
+
+
+
+
+// ---------------------- //
+// BATAS HALAMAN WEB USER
+// ---------------------- //
+
+//---------------------------------------------------------------------halaman BERANDA dari user web
+Route::get('/user_master','UserController@user');
+
+//---------------------------------------------------------------------batas halaman BERANDA dari user web
+
+//---------------------------------------------------------------------halaman PROFIL dari user web
+Route::get('/user-sejarah','UserController@profilsejarah');
+Route::get('/user-sejarah','UserController@profildetailsejarah');
+
+Route::get('/user-visimisi','UserController@profilvisimisi');
+Route::get('/user-visimisi','UserController@profildetailvisimisi');
+
+Route::get('/user-struktursek','UserController@profilstruktursek');
+Route::get('/user-struktursek','UserController@profildetailstruktursek');
+
+
+Route::get('/user-fasilitas','UserController@profilfasilitas');
+Route::get('/user-fasilitas','UserController@profildetailfasilitas');
+
+//---------------------------------------------------------------------batas halaman PROFIL dari user web
