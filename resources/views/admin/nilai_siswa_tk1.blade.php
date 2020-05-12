@@ -25,19 +25,20 @@
 <body>
 <div>
    <div style="margin-left:7px;" class="col-sm-4">
-       <a href="/input_nilai_siswa"><button type="button" class="btn btn-success">Tambah Data</button></a>
+       <a href="/input_nilai_siswa_tk1"><button type="button" class="btn btn-success">Tambah Data</button></a>
        <!-- Search form -->
        <!--<input style="margin-top:-40px;margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search"> -->  
    </div>
 
 <br><br>
-  <table style="margin-top:10px;margin-left:5px;width:1320px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <table style="margin-left:20px;margin-top:10px;width:1065px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
    
     <tr>
       <th class="th-sm" width="25px">No</th>
       <th class="th-sm">Nama</th>
-      <th class="th-sm">Kelas</th>
+      <th class="th-sm">Kelas</th>      
+      <th class="th-sm">Keahlian</th>
       <th class="th-sm">{{ $mapel[0]->pel_1 }}</th>
       <th class="th-sm">{{ $mapel[0]->pel_2 }}</th>
       <th class="th-sm">{{ $mapel[0]->pel_3 }}</th>
@@ -62,7 +63,8 @@
     <tr>
         <td>{{ $no }}</td>
         <td>{{ $rekap->nama }}</td>
-        <td>{{ $rekap->kelas }}</td>
+        <td>{{ $rekap->kelas }}</td>         
+        <td>{{ $rekap->jurusan }}</td>    
         <td>{{ $rekap->mapel_1 }}</td>
         <td>{{ $rekap->mapel_2 }}</td>
         <td>{{ $rekap->mapel_3 }}</td>
@@ -77,13 +79,13 @@
         <td>{{ $rekap->mapel_12 }}</td>
         <td>{{ $rekap->mapel_13 }}</td>
         <td>
-            <a href="/edit_nilai_siswa/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" title="Edit" type="button"  class="btn btn-warning"><img style="margin-left:-11px;margin-top:-9px;"  src="{{ asset('admin/docs/assets/img/edit.png') }}" height="30px" width="25px;"></button></a>
+            <a href="/edit_nilai_siswa_tk1/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" title="Edit" type="button"  class="btn btn-warning"><img style="margin-left:-11px;margin-top:-9px;"  src="{{ asset('admin/docs/assets/img/edit.png') }}" height="30px" width="25px;"></button></a>
             
-            <a href="/nilai_siswa/hapus/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger"><img style="margin-left:-15px;margin-top:-9px;" src="{{ asset('admin/docs/assets/img/hapus.png') }}" height="30px" width="30px"></button></a>
+            <a href="/nilai_siswa_tk1/hapus/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger"><img style="margin-left:-15px;margin-top:-9px;" src="{{ asset('admin/docs/assets/img/hapus.png') }}" height="30px" width="30px"></button></a>
             
             <a href="/cetak_nilai_siswa/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" target="_BLANK" title="Unduh" type="button" class="btn btn-info"><img style="margin-left:-8px;margin-top:-7px;"  src="{{ asset('admin/docs/assets/img/unduh.png') }}" height="23px" width="20px;"></button></a>
    
-        </td>   
+        </td>  
     </tr>
     @endforeach
 </thead>

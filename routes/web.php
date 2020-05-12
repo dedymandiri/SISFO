@@ -25,6 +25,22 @@ Route::get('/dashboard','MasterController@dashboard');
 //---------------------------------------------------------------------batas halaman dashboard dari admin lte
 
 
+
+//---------------------------------------------------------------------halaman SAMBUTAN dari admin lte
+Route::get('/sambutan','MasterController@sambutan');
+//menampilkan data berita dari database
+Route::get('/sambutan', 'MasterController@lihatsambutan');
+
+Route::get('/detail_sambutan','MasterController@detailsambutan');
+Route::get('/detail_sambutan', 'MasterController@lihatdetailsambutan');
+
+//edit(update) data berita ke database
+Route::get('/edit_sambutan/{id}', 'MasterController@editsambutan');
+Route::post('/sambutan/update/{id}', 'MasterController@updatesambutan');
+//---------------------------------------------------------------------batas halaman SAMBUTAN dari admin lte
+
+
+
 //---------------------------------------------------------------------halaman berita dari admin lte
 Route::get('/berita','MasterController@berita');
 //menampilkan data berita dari database
@@ -37,6 +53,10 @@ Route::get('/edit_berita/{id}', 'MasterController@editberita');
 Route::post('/berita/update/{id}', 'MasterController@updateberita');
 //hapus data berita
 Route::get('/berita/hapus/{id}','MasterController@hapusberita');
+
+Route::get('/detail_berita','MasterController@detailberita');
+Route::get('/detail_berita', 'MasterController@lihatdetailberita');
+
 //---------------------------------------------------------------------batas halaman berita dari admin lte
 
 
@@ -52,6 +72,10 @@ Route::get('/edit_pengumuman/{id}', 'MasterController@editinfo');
 Route::post('/pengumuman/update/{id}', 'MasterController@updateinfo');
 //hapus data berita
 Route::get('/pengumuman/hapus/{id}','MasterController@hapusinfo');
+
+Route::get('/detail_pengumuman','MasterController@detailinfo');
+Route::get('/detail_pengumuman', 'MasterController@lihatdetailinfo');
+
 //---------------------------------------------------------------------batas halaman pengumuman dari admin lte
 
 
@@ -277,17 +301,17 @@ Route::post('/mapel_siswa/update/{id}', 'MasterController@updatemapel');
 
 
 //---------------------------------------------------------------------halaman NILAI SISWA dari admin lte
-Route::get('/nilai_siswa','MasterController@nilai');
+Route::get('/nilai_siswa_tk1','MasterController@nilai');
 //menampilkan data berita dari database
-Route::get('/nilai_siswa', 'MasterController@lihatnilai');
+Route::get('/nilai_siswa_tk1', 'MasterController@lihatnilai');
 //tambah data berita ke database
-Route::get('/input_nilai_siswa', 'MasterController@tambahnilai');
-Route::post('/nilai_siswa/storenilai','MasterController@storenilai');
+Route::get('/input_nilai_siswa_tk1', 'MasterController@tambahnilai');
+Route::post('/nilai_siswa_tk1/storenilai_tk1','MasterController@storenilai_tk1');
 //edit(update) data berita ke database
-Route::get('/edit_nilai_siswa/{id}', 'MasterController@editnilai');
-Route::post('/nilai_siswa/update/{id}', 'MasterController@updatenilai');
+Route::get('/edit_nilai_siswa_tk1/{id}', 'MasterController@editnilai');
+Route::post('/nilai_siswa_tk1/update/{id}', 'MasterController@updatenilai');
 //hapus data berita
-Route::get('/nilai_siswa/hapus/{id}','MasterController@hapusnilai');
+Route::get('/nilai_siswa_tk1/hapus/{id}','MasterController@hapusnilai');
 
 Route::get('/cetak_nilai_siswa/{id}','MasterController@cetaknilai');
 Route::get('/cetak_nilai_siswa/{id}', 'MasterController@lihatcetaknilai');
@@ -374,12 +398,12 @@ Route::get('/pendaftaran/hapus/{id}','MasterController@hapusdaftar');
 // BATAS HALAMAN WEB USER
 // ---------------------- //
 
-//---------------------------------------------------------------------halaman BERANDA dari user web
+//---------------------------------------------------------------------halaman User website dari user web
 Route::get('/user_master','UserController@user');
+Route::get('/beranda','UserController@beranda');
+Route::get('/user_master', 'UserController@tampilsambutan');
 
-//---------------------------------------------------------------------batas halaman BERANDA dari user web
 
-//---------------------------------------------------------------------halaman PROFIL dari user web
 Route::get('/user-sejarah','UserController@profilsejarah');
 Route::get('/user-sejarah','UserController@profildetailsejarah');
 
@@ -389,8 +413,51 @@ Route::get('/user-visimisi','UserController@profildetailvisimisi');
 Route::get('/user-struktursek','UserController@profilstruktursek');
 Route::get('/user-struktursek','UserController@profildetailstruktursek');
 
-
 Route::get('/user-fasilitas','UserController@profilfasilitas');
 Route::get('/user-fasilitas','UserController@profildetailfasilitas');
+
+Route::get('/user-multimedia','UserController@jurusanmultimedia');
+Route::get('/user-multimedia','UserController@detailjurusanmultimedia');
+
+Route::get('/user-osis','UserController@kesiswaanosis');
+Route::get('/user-osis','UserController@kesiswaandetailosis');
+
+Route::get('/user-pramuka','UserController@kesiswaanpramuka');
+Route::get('/user-pramuka','UserController@kesiswaandetailpramuka');
+
+Route::get('/user-paskibra','UserController@kesiswaanpaskibra');
+Route::get('/user-paskibra','UserController@kesiswaandetailpaskibra');
+
+Route::get('/user-karate','UserController@kesiswaankarate');
+Route::get('/user-karate','UserController@kesiswaandetailkarate');
+
+Route::get('/user-hadroh','UserController@kesiswaanhadroh');
+Route::get('/user-hadroh','UserController@kesiswaandetailhadroh');
+
+Route::get('/user-galery','UserController@kesiswaangalery');
+Route::get('/user-galery','UserController@kesiswaandetailgalery');
+
+Route::get('/user-pendaftaran', 'UserController@ppdbdaftar');
+Route::post('/user-pendaftaran/daftar','UserController@adddaftar');
+
+Route::get('/user-nilai_tk1', 'UserController@rekap_nilai_tk1');
+Route::get('/user-nilai_tk1','UserController@lihat_rekap_nilai_tk1');
+
+
+Route::get('/user-nilai_tk2', 'UserController@rekap_nilai_tk2');
+Route::get('/user-nilai_tk2','UserController@lihat_rekap_nilai_tk2');
+
+Route::get('/user-nilai_tk3', 'UserController@rekap_nilai_tk3');
+Route::get('/user-nilai_tk3','UserController@lihat_rekap_nilai_tk3');
+
+Route::get('/user-jadwal_pelajaran', 'UserController@tampiljadwal');
+Route::get('/user-kalender_sekolah', 'UserController@tampilkalender');
+Route::get('/user-hasil_seleksi', 'UserController@tampilhasilseleksi');
+
+Route::get('/konseling','UserController@konseling');
+Route::get('/hubungi_kami','UserController@hubungi_kami');
+
+
+
 
 //---------------------------------------------------------------------batas halaman PROFIL dari user web

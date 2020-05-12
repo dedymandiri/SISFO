@@ -1,18 +1,15 @@
-@extends('layouts.master')
-
-@section('content') 
-
  <!--bagian button-->
+ <!--
   <div style="width:1335px;" class="card-header info-color white-text text-center py-4">
     <a onClick="print_d()" target="_BLANK"><button style="margin-left:-300px;width:100px;" type="submit" value="Simpan" class="btn btn-secondary">Unduh</button></a>
     <a href="/nilai_siswa_tk1"><button style="margin-left:700px;width:100px;" type="button" class="btn btn-primary">Kembali</button></a>
   </div>
-
+ -->
   <script>
 		window.print();
 	</script>
 
-<br><div style="margin-left:18px;width:1000px;height:1500px;" class="card"><br>
+   <br><div style="margin-left:18px;width:1000px;height:1500px;" class="card"><br>
   
   <!--Bagian logo sekolah-->
   <div class="logo_sekolah">
@@ -41,7 +38,7 @@
     <tbody>
         <tr><td width="105px">Nama</td><td width="30px">:</td><td>{{ $li->nama }}</td></tr>
         <tr><td>Kelas</td><td>:</td><td>{{ $li->kelas }}</td></tr>        
-        <tr><td>Jurusan</td><td>:</td><td>{{ $li->kelas }}</td></tr>
+        <tr><td>Jurusan</td><td>:</td><td>Multimedia</td></tr>
     </tbody>
   </table>
 
@@ -136,4 +133,3 @@
 
 </div>
 
-@endsection

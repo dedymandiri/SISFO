@@ -38,16 +38,17 @@
       <th class="th-sm" width="25px">No</th>
       <th class="th-sm">Nama</th>
       <th class="th-sm">Kelas</th>
-      <th class="th-sm">{{ $mapel[0]->pel_1 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_2 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_3 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_4 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_5 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_6 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_7 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_8 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_9 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_10 }}</th>
+      <th class="th-sm">Keahlian</th>
+      <th class="th-sm">{{ $mapel[1]->pel_1 }}</th>
+      <th class="th-sm">{{ $mapel[1]->pel_2 }}</th>
+      <th class="th-sm">{{ $mapel[1]->pel_3 }}</th>
+      <th class="th-sm">{{ $mapel[1]->pel_4 }}</th>
+      <th class="th-sm">{{ $mapel[1]->pel_5 }}</th>
+      <th class="th-sm">{{ $mapel[1]->pel_6 }}</th>
+      <th class="th-sm">{{ $mapel[1]->pel_7 }}</th>
+      <th class="th-sm">{{ $mapel[1]->pel_8 }}</th>
+      <th class="th-sm">{{ $mapel[1]->pel_9 }}</th>
+      <th class="th-sm">{{ $mapel[1]->pel_10 }}</th>
       <th style="width:115px;" class="th-sm">Aksi</th>
     </tr>
     
@@ -59,7 +60,8 @@
     <tr>
         <td>{{ $no }}</td>
         <td>{{ $rekap->nama }}</td>
-        <td>{{ $rekap->kelas }}</td>
+        <td>{{ $rekap->kelas }}</td>        
+        <td>{{ $rekap->jurusan }}</td>
         <td>{{ $rekap->mapel_1 }}</td>
         <td>{{ $rekap->mapel_2 }}</td>
         <td>{{ $rekap->mapel_3 }}</td>

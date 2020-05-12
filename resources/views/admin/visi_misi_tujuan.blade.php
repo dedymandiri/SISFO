@@ -30,7 +30,7 @@
 
 <br>
 
-  <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <table style="margin-left:20px;margin-top:10px;width:1065px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
     <tr align="center">
       <th class="th-sm">No

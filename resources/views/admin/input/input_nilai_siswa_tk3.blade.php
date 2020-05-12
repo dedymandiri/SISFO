@@ -23,6 +23,12 @@
     <input type="text" class="form-control" placeholder="Masukan Kelas" required="required" name="kelas">
   </div>
   <div class="form-group">
+    <label for="tgl_waktu">Keahlian :</label>
+    <select class="form-control" id="exampleFormControlSelect1" class="form-control" required="required" name="jurusan">
+      <option>Mulitmedia</option>
+    </select>
+  </div>
+  <div class="form-group">
     <label for="mapel_1">{{ $mapel[0]->pel_1 }} :</label>
     <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_1">
   </div>
@@ -50,31 +56,7 @@
     <label for="mapel_7">{{ $mapel[0]->pel_7 }} :</label>
     <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_7">
 </div>
-  <div class="form-group">
-    <label for="mapel_8">{{ $mapel[0]->pel_8 }} :</label>
-    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_8">
- </div>
- <div class="form-group">
-    <label for="mapel_4">{{ $mapel[0]->pel_9 }} :</label>
-    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_9">
-  </div>
-  <div class="form-group">
-    <label for="mapel_5">{{ $mapel[0]->pel_10 }} :</label>
-    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_10">
-</div>
-  <div class="form-group">
-    <label for="mapel_6">{{ $mapel[0]->pel_11 }} :</label>
-    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_11">
- </div>
-  <div class="form-group">
-    <label for="mapel_7">{{ $mapel[0]->pel_12 }} :</label>
-    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_12">
-</div>
-  <div class="form-group">
-    <label for="mapel_8">{{ $mapel[0]->pel_13 }} :</label>
-    <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_13">
- </div>
-
+  
    <!--bagian button-->
    <div style="margin-top:105px;width:930px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">
     <button style="margin-left:-700px;" type="submit" class="btn btn-primary" value="Simpan">Simpan</button>

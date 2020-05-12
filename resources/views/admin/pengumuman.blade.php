@@ -30,7 +30,7 @@
 
    <br><br>
 
-  <table style="margin-top:10px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <table style="margin-left:20px;margin-top:10px;width:1055px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
     <tr align="center">
       <th class="th-sm">No
@@ -60,6 +60,8 @@
             <a href="/edit_pengumuman/{{ $li->id_info}}"><button style="width:65px;" title="Edit" type="button" class="btn btn-warning">Edit</button></a>
             
             <a href="/pengumuman/hapus/{{ $li->id_info }}"><button style="margin-top:8px;" onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger">Hapus</button></a>
+          
+            <a href="/detail_pengumuman"><button  style="margin-top:8px;width:65px;" type="button" class="btn btn-primary" >Detail</button></a>        
         </td>   
     </tr>
     @endforeach

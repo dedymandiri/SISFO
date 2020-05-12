@@ -1,29 +1,24 @@
-@extends('layouts.master')
+@extends('layouts.user_master')
 
 @section('content') 
 
-<br>
-<div style="margin-left:20px;width:930px;" class="card">
-<div style="background:#3498db;height:800px;height:10px;" class="card"></div>
+<div class="judul_halaman" style="margin-left:20px;margin-top:-1030px;">
+<strong><h6>Form Pendaftaran</h6></strong><br></div>
 
-<h4 class="card-header info-color white-text text-center py-4">
-  <strong>TAMBAH PENDAFTAR</strong>
-</h4>
-<br>
-<form style="width:730px;margin-left:35px;" action="/pendaftaran/storedaftar" method="post">
+<form style="width:750px;margin-left:20px;color:black;" action="/user-pendaftaran/daftar" method="post">
 {{ csrf_field() }}
 <br> 
   <div class="form-group">
     <label>Tanggal Daftar :</label>
-      <div class='input-group date' id='datetimepicker'>
-       <input type="date" class="form-control" placeholder="Tanggal Daftar" required="required" name="tgl_masuk">
+      <div class='input-group date' id='datetimepicker1'>
+       <input type="text" class="form-control" placeholder="Tanggal Daftar" required="required" name="tgl_masuk">
          <span class="input-group-addon">
            <span class="glyphicon glyphicon-calendar"></span>
         </span>
       </div>
   </div>
   <div class="form-group">
-    <label for="tgl_waktu">Nama Siswa :</label>
+    <label for="tgl_waktu">Nama Calon Siswa :</label>
     <input type="text" class="form-control" placeholder="Nama Calon Siswa " required="required" name="nama_calon_siswa">
   </div>
   <div class="form-group">
@@ -33,7 +28,7 @@
   <div class="form-group">
     <label>Tanggal Lahir :</label>
       <div class='input-group date' id='datetimepicker2'>
-       <input type="date" class="form-control" placeholder="Tanggal Lahir" required="required" name="tgl_lahir">
+       <input type="text" class="form-control" placeholder="Tanggal Lahir" required="required" name="tgl_lahir">
          <span class="input-group-addon">
            <span class="glyphicon glyphicon-calendar"></span>
         </span>
@@ -53,7 +48,7 @@
   </div>
   <div class="form-group">
     <label for="tgl_waktu">NISN :</label>
-    <input type="number" min="1" max="15" class="form-control" placeholder="Nisn " required="required" name="nisn">
+    <input type="number" class="form-control" placeholder="Nisn " required="required" name="nisn">
   </div>
   <div class="form-group">
     <label for="tgl_waktu">Asal Sekolah :</label>
@@ -61,7 +56,7 @@
   </div>
   <div class="form-group">
     <label for="judul">No Handphone :</label>
-    <input type="telp" min="1" max="15" class="form-control" placeholder="No Handphone" required="required" name="no_hp">
+    <input type="telp" class="form-control" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="No Handphone" required="required" name="no_hp">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Agama :</label>
@@ -96,19 +91,18 @@
   </div>
   <div class="form-group">
     <label for="judul">Alasan :</label>
-    <input type="text" class="form-control" placeholder="Alasan " required="required" name="alasan">
+    <textarea type="text" class="form-control" placeholder="Alasan " required="required" name="alasan"></textarea>
   </div>
   
   
 <!--bagian button-->
-<div style="margin-top:105px;width:930px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">
-    <button style="margin-left:-700px;" type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
-    <a href="/pendaftaran"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
-  </div>
+<div style="margin-top:50px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">
+    <button style="margin-left:-600px;width:100px;" type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
+</div>
 
 </form>
-</div>
-<br>
+
+<br><br>
 
 <!-- DATETIMEPICKER -->
 <script type="text/javascript">

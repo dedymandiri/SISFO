@@ -2,16 +2,16 @@
 
 @section('content') 
 
-<div class="judul_halaman" style="margin-left:20px;">
+<div class="judul_halaman" style="margin-left:20px;margin-top:-1030px;">
 <strong><h6>Struktur Sekolah</h6></strong><br></div>
 
-<table class="table table-bordered" style="margin-left:20px;width:700px;">
+<table border="solid 1px black" style="margin-left:20px;width:650px;">
   <thead>
     <tr>
-      <th scope="col">No</th>
-      <th scope="col">Nama Guru</th>
-      <th scope="col">Jabatan</th>
-    </tr>
+      <th width="30px" align="center">No</th>
+      <th >Nama Guru/Staff</th>
+      <th >Jabatan</th>
+    </tr> 
   </thead>
   <tbody>
 
@@ -26,7 +26,8 @@
 </tr>
 @endforeach
 </tbody>
-  
 </table>
+
+<br><br>
 
 @endsection

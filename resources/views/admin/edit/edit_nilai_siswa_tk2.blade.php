@@ -23,6 +23,12 @@
     <input type="text" class="form-control" placeholder="Masukan Kelas" required="required" name="kelas" value="{{ $li->kelas }}">
   </div>
   <div class="form-group">
+    <label for="tgl_waktu">Keahlian :</label>
+    <select class="form-control" id="exampleFormControlSelect1" class="form-control" required="required" name="jurusan">
+      <option>Mulitmedia</option>
+    </select>
+  </div>
+  <div class="form-group">
     <label for="mapel_1">{{ $mapel[0]->pel_1 }} :</label>
     <input type="number" class="form-control" placeholder="Masukan Nilai Ujian" required="required" name="mapel_1" value="{{ $li->mapel_1 }}">
   </div>

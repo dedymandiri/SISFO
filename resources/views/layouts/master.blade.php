@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SISFO ADMIN</title>
+  <link rel="icon" type="image/png" href="{{ asset('admin/docs/assets/img/logo sekolah.png') }}">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -37,9 +38,9 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo --><br>
     <a href="" class="brand-link">
-      <img style="margin-top:-18px;" src="{{ asset('admin/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img style="margin-top:-18px;" src="{{ asset('admin/dist/img/avatar5.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <h4 style="margin-top:-10px;" class="brand-text font-weight-light">SISFO ADMIN</h4>
+      <h4 style="margin-top:-10px;margin-left:40px;" class="brand-text font-weight-light">SISFO ADMIN</h4>
     </a>
 <br>
     <!--  Halaman Sidebar -->
@@ -66,6 +67,12 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="sambutan" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Sambutan</p>
+                </a>
+              </li>
               <li class="nav-item">
                 <a href="berita" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -268,7 +275,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="nilai_siswa" class="nav-link">
+                <a href="nilai_siswa_tk1" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Nilai Tingkat 1</p>
                 </a>

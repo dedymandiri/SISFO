@@ -33,7 +33,7 @@
    <br><br>
    
 <div style="margin-top:10px;" class="berita">
-  <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <table style="margin-left:20px;margin-top:10px;width:1065px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
     <tr align="center">
       <th class="th-sm">No</th>
@@ -59,6 +59,9 @@
             <a href="/edit_berita/{{ $li->id_berita }}"><button style="width:65px;" title="Edit" type="button" class="btn btn-warning">Edit</button></a>
         
             <a href="/berita/hapus/{{ $li->id_berita }}"><button style="margin-top:8px;" onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger">Hapus</button></a>
+      
+            <a href="/detail_berita"><button  style="margin-top:8px;width:65px;" type="button" class="btn btn-primary" >Detail</button></a>
+           
         </td>   
     </tr>
     @endforeach

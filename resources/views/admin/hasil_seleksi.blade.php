@@ -30,7 +30,7 @@
    </div>
 
   <br>
-  <table style="margin-top:10px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <table style="margin-left:20px;margin-top:10px;width:1055px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
     <tr>
       <th class="th-sm">No</th>

@@ -38,19 +38,14 @@
       <th class="th-sm" width="25px">No</th>
       <th class="th-sm">Nama</th>
       <th class="th-sm">Kelas</th>
-      <th class="th-sm">{{ $mapel[0]->pel_1 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_2 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_3 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_4 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_5 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_6 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_7 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_8 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_9 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_10 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_11 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_12 }}</th>
-      <th class="th-sm">{{ $mapel[0]->pel_13 }}</th>
+      <th class="th-sm">Keahlian</th>
+      <th class="th-sm">{{ $mapel[2]->pel_1 }}</th>
+      <th class="th-sm">{{ $mapel[2]->pel_2 }}</th>
+      <th class="th-sm">{{ $mapel[2]->pel_3 }}</th>
+      <th class="th-sm">{{ $mapel[2]->pel_4 }}</th>
+      <th class="th-sm">{{ $mapel[2]->pel_5 }}</th>
+      <th class="th-sm">{{ $mapel[2]->pel_6 }}</th>
+      <th class="th-sm">{{ $mapel[2]->pel_7 }}</th>
       <th style="width:115px;" class="th-sm">Aksi</th>
     </tr>
     
@@ -63,6 +58,7 @@
         <td>{{ $no }}</td>
         <td>{{ $rekap->nama }}</td>
         <td>{{ $rekap->kelas }}</td>
+        <td>{{ $rekap->jurusan }}</td>
         <td>{{ $rekap->mapel_1 }}</td>
         <td>{{ $rekap->mapel_2 }}</td>
         <td>{{ $rekap->mapel_3 }}</td>
@@ -70,12 +66,6 @@
         <td>{{ $rekap->mapel_5 }}</td>
         <td>{{ $rekap->mapel_6 }}</td>
         <td>{{ $rekap->mapel_7 }}</td>
-        <td>{{ $rekap->mapel_8 }}</td>
-        <td>{{ $rekap->mapel_9 }}</td>
-        <td>{{ $rekap->mapel_10 }}</td>
-        <td>{{ $rekap->mapel_11 }}</td>
-        <td>{{ $rekap->mapel_12 }}</td>
-        <td>{{ $rekap->mapel_13 }}</td>
         <td>
             <a href="/edit_nilai_siswa_tk3/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" title="Edit" type="button"  class="btn btn-warning"><img style="margin-left:-11px;margin-top:-9px;"  src="{{ asset('admin/docs/assets/img/edit.png') }}" height="30px" width="25px;"></button></a>
             

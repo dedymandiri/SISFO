@@ -29,7 +29,7 @@
        <!--<input style="margin-top:-40px;margin-left:815px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search"> --> 
    </div>
 
-  <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <table style="margin-left:20px;margin-top:10px;width:1065px;" id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
     <tr >
       <th class="th-sm">No</th>
@@ -40,9 +40,11 @@
   <tbody>
 
     <!--Untuk menampilkan tabel berita dari database-->
-    @foreach($liat as $li)
-    <tr align="justify">
-        <td>{{ $li->id_tkj }}</td>
+  <?php $no = 0;?>
+  @foreach($liat as $li)
+  <?php $no++ ;?>
+    <tr>
+        <td>{{ $no }}</td>
         <td>{{ $li->deskripsi }}</td>
        
         <td>

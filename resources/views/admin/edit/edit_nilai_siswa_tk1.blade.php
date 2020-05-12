@@ -11,7 +11,7 @@
 </h4>
 <br>
 @foreach($tampil as $li)
-<form style="width:730px;margin-left:35px;" action="/nilai_siswa/update/{{ $li->id_rekap }}" method="post">
+<form style="width:730px;margin-left:35px;" action="/nilai_siswa_tk1/update/{{ $li->id_rekap }}" method="post">
 {{ csrf_field() }}
 <br>
 <div class="form-group">
@@ -21,6 +21,12 @@
   <div class="form-group">
     <label for="mapel_2">Kelas :</label>
     <input type="text" class="form-control" placeholder="Masukan Kelas" required="required" name="kelas" value="{{ $li->kelas }}">
+  </div>
+  <div class="form-group">
+    <label for="tgl_waktu">Keahlian :</label>
+    <select class="form-control" id="exampleFormControlSelect1" class="form-control" required="required" name="jurusan">
+      <option>Mulitmedia</option>
+    </select>
   </div>
   <div class="form-group">
     <label for="mapel_1">{{ $mapel[0]->pel_1 }} :</label>
@@ -79,7 +85,7 @@
 
   <div style="margin-top:105px;width:930px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">
     <button style="margin-left:-700px;" type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
-    <a href="/nilai_siswa"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
+    <a href="/nilai_siswa_tk1"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
   </div>
 
 </form>

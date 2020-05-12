@@ -23,6 +23,7 @@ use App\Nilai_tk2_Model;
 use App\Nilai_tk3_Model;
 use App\Seleksi_Model;
 use App\Daftar_Model;
+use App\Sambutan_Model;
 // Batas Model buat manggil tabel di database
 
 use Storage;
@@ -39,6 +40,49 @@ class MasterController extends Controller
         return view('admin.dashboard');
     }
     //---------------------------------------------------------------------Batas halaman dashboard admin
+
+
+    
+    //---------------------------------------------------------------------halaman SAMBUTAN admin
+    public function sambutan(){
+        return view('admin.sambutan');
+    }
+
+    public function lihatsambutan(){
+        $hasil = Sambutan_Model::all();
+        return view('admin.sambutan',['liat'=>$hasil]);
+    }
+
+    //edit data sambutan
+    public function editsambutan($id){
+        $hasil = Sambutan_Model::where('id_sam',$id)->get();
+        return view('admin.edit.edit_sambutan',['liat'=>$hasil]);
+    }
+
+    // update data sambutan
+    public function updatesambutan($id, Request $request)
+    {
+        $sambutan = [
+            'nama' => $request->nama,
+            'isi' => $request->isi 
+        ];
+	    // update data sambutan
+        DB::table('sambutan')->where('id_sam',$request->id)->update($sambutan);
+        return redirect('sambutan');
+    }
+    
+    public function detailsambutan(){
+        return view('admin.detail.detail_sambutan');
+    }
+
+    public function lihatdetailsambutan(){
+        $hasil = Sambutan_Model::all();
+        return view('admin.detail.detail_sambutan',['liat'=>$hasil]);
+    }
+
+    
+    //---------------------------------------------------------------------Batas halaman SAMBUTAN admin
+
 
 
     //---------------------------------------------------------------------halaman berita admin
@@ -101,6 +145,16 @@ class MasterController extends Controller
 	    // alihkan halaman ke halaman pegawai
 	    return redirect('berita');
     }
+
+    
+    public function detailberita(){
+        return view('admin.detail.detail_berita');
+    }
+
+    public function lihatdetailberita(){
+        $hasil = Berita_Model::all();
+        return view('admin.detail.detail_berita',['liat'=>$hasil]);
+    }
     //---------------------------------------------------------------------Batas halaman berita admin
 
 
@@ -159,6 +213,16 @@ class MasterController extends Controller
 		
 	    // alihkan halaman ke halaman pegawai
 	    return redirect('pengumuman');
+    }
+
+    
+    public function detailinfo(){
+        return view('admin.detail.detail_pengumuman');
+    }
+
+    public function lihatdetailinfo(){
+        $hasil = Pengumuman_Model::all();
+        return view('admin.detail.detail_pengumuman',['liat'=>$hasil]);
     }
     //---------------------------------------------------------------------Batas halaman pengumuman admin
 
@@ -1248,29 +1312,30 @@ class MasterController extends Controller
 
     //--------------------------------------------------------------------- halaman Nilai TK 1 admin
     public function nilai(){
-        return view('admin.nilai_siswa');
+        return view('admin.nilai_siswa_tk1');
     }
 
     public function lihatnilai(){
         $siswa = Nilai_tk1_Model::all();
         $mapel = Mapel_Model::all();
-        return view('admin.nilai_siswa',['tampil'=>$siswa, "mapel"=>$mapel]);
+        return view('admin.nilai_siswa_tk1',['tampil'=>$siswa, "mapel"=>$mapel]);
     }
 
     public function tambahnilai()
     { 
         // memanggil view tambah
         $mapel = Mapel_Model::all();
-	    return view('admin.input.input_nilai_siswa',["mapel"=>$mapel]);
+	    return view('admin.input.input_nilai_siswa_tk1',["mapel"=>$mapel]);
     }
 
     //input data ke database
-    public function storenilai(Request $request)
+    public function storenilai_tk1(Request $request)
     {
 	    // insert data ke table berita
-	    DB::table('rekap_nilai')->insert([
+	    DB::table('nilai_tk1')->insert([
             'nama' => $request->nama,
-		    'kelas' => $request->kelas,
+            'kelas' => $request->kelas,
+            'jurusan' => $request->jurusan,
             'mapel_1' => $request->mapel_1,
 		    'mapel_2' => $request->mapel_2,
             'mapel_3' => $request->mapel_3,
@@ -1286,7 +1351,7 @@ class MasterController extends Controller
 		    'mapel_13' => $request->mapel_13
 	]);
 	    // alihkan halaman ke halaman berita
-	    return redirect('nilai_siswa');
+	    return redirect('nilai_siswa_tk1');
  
     }
 
@@ -1294,17 +1359,18 @@ class MasterController extends Controller
     public function editnilai($id){
         $hasil = Nilai_tk1_Model::where('id_rekap',$id)->get();
         $mapel = Mapel_Model::all();
-        return view('admin.edit.edit_nilai_siswa',['tampil'=>$hasil, "mapel"=>$mapel]);
+        return view('admin.edit.edit_nilai_siswa_tk1',['tampil'=>$hasil, "mapel"=>$mapel]);
        
     }
 
     // update data berita
     public function updatenilai($id, Request $request)
     {
-        $nilai = [
+        $tk1 = [
             
             'nama' => $request->nama,
-		    'kelas' => $request->kelas,
+            'kelas' => $request->kelas,
+            'jurusan' => $request->jurusan,
             'mapel_1' => $request->mapel_1,
 		    'mapel_2' => $request->mapel_2,
             'mapel_3' => $request->mapel_3,
@@ -1320,8 +1386,8 @@ class MasterController extends Controller
 		    'mapel_13' => $request->mapel_13
         ];
 	    // update data berita
-        DB::table('rekap_nilai')->where('id_rekap',$request->id)->update($nilai);
-        return redirect('nilai_siswa');
+        DB::table('nilai_tk1')->where('id_rekap',$request->id)->update($tk1);
+        return redirect('nilai_siswa_tk1');
     }
 
     
@@ -1329,10 +1395,10 @@ class MasterController extends Controller
     public function hapusnilai($id)
     {
 	    // menghapus data pegawai berdasarkan id yang dipilih
-	    DB::table('rekap_nilai')->where('id_rekap',$id)->delete();
+	    DB::table('nilai_tk1')->where('id_rekap',$id)->delete();
 		
 	    // alihkan halaman ke halaman pegawai
-	    return redirect('nilai_siswa');
+	    return redirect('nilai_siswa_tk1');
     }
 
     public function cetaknilai(){
@@ -1382,7 +1448,8 @@ class MasterController extends Controller
 	    // insert data ke table berita
 	    DB::table('nilai_tk2')->insert([
             'nama' => $request->nama,
-		    'kelas' => $request->kelas,
+            'kelas' => $request->kelas,
+            'jurusan' => $request->jurusan,
             'mapel_1' => $request->mapel_1,
 		    'mapel_2' => $request->mapel_2,
             'mapel_3' => $request->mapel_3,
@@ -1410,10 +1477,11 @@ class MasterController extends Controller
     // update data berita
     public function updatenilai_tk2($id, Request $request)
     {
-        $nilai = [
+        $tk2 = [
             
             'nama' => $request->nama,
-		    'kelas' => $request->kelas,
+            'kelas' => $request->kelas,            
+            'jurusan' => $request->jurusan,
             'mapel_1' => $request->mapel_1,
 		    'mapel_2' => $request->mapel_2,
             'mapel_3' => $request->mapel_3,
@@ -1426,7 +1494,7 @@ class MasterController extends Controller
 		    'mapel_10' => $request->mapel_10
         ];
 	    // update data berita
-        DB::table('nilai_tk2')->where('id_rekap',$request->id)->update($nilai);
+        DB::table('nilai_tk2')->where('id_rekap',$request->id)->update($tk2);
         return redirect('nilai_siswa_tk2');
     }
 
@@ -1482,20 +1550,15 @@ class MasterController extends Controller
 	    // insert data ke table berita
 	    DB::table('nilai_tk3')->insert([
             'nama' => $request->nama,
-		    'kelas' => $request->kelas,
+            'kelas' => $request->kelas,            
+            'jurusan' => $request->jurusan,
             'mapel_1' => $request->mapel_1,
 		    'mapel_2' => $request->mapel_2,
             'mapel_3' => $request->mapel_3,
             'mapel_4' => $request->mapel_4,
 		    'mapel_5' => $request->mapel_5,
             'mapel_6' => $request->mapel_6,
-            'mapel_7' => $request->mapel_7,
-            'mapel_8' => $request->mapel_8,
-            'mapel_9' => $request->mapel_9,
-		    'mapel_10' => $request->mapel_10,
-            'mapel_11' => $request->mapel_11,
-            'mapel_12' => $request->mapel_12,
-		    'mapel_13' => $request->mapel_13
+            'mapel_7' => $request->mapel_7
 	]);
 	    // alihkan halaman ke halaman berita
 	    return redirect('nilai_siswa_tk3');
@@ -1513,26 +1576,21 @@ class MasterController extends Controller
     // update data berita
     public function updatenilai_tk3($id, Request $request)
     {
-        $nilai = [
+        $tk3 = [
             
             'nama' => $request->nama,
-		    'kelas' => $request->kelas,
+            'kelas' => $request->kelas,            
+            'jurusan' => $request->jurusan,
             'mapel_1' => $request->mapel_1,
 		    'mapel_2' => $request->mapel_2,
             'mapel_3' => $request->mapel_3,
             'mapel_4' => $request->mapel_4,
 		    'mapel_5' => $request->mapel_5,
             'mapel_6' => $request->mapel_6,
-            'mapel_7' => $request->mapel_7,
-            'mapel_8' => $request->mapel_8,
-            'mapel_9' => $request->mapel_9,
-		    'mapel_10' => $request->mapel_10,
-            'mapel_11' => $request->mapel_11,
-            'mapel_12' => $request->mapel_12,
-		    'mapel_13' => $request->mapel_13
+            'mapel_7' => $request->mapel_7
         ];
 	    // update data berita
-        DB::table('nilai_tk3')->where('id_rekap',$request->id)->update($nilai);
+        DB::table('nilai_tk3')->where('id_rekap',$request->id)->update($tk3);
         return redirect('nilai_siswa_tk3');
     }
 
