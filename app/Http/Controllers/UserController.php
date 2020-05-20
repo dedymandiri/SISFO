@@ -180,4 +180,9 @@ class UserController extends Controller
     }
 
     
+    public function tampildetailsambutan(){
+        $hasil = Sambutan_Model::all();
+        return view('user.user-sambutan',['liat'=>$hasil]);
+    }
+
 }

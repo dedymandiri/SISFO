@@ -194,11 +194,10 @@
 								<div class="slide_content">
 									<div class="container gambar-gerak">
                                     <div class="hold-text pull-right">
-											<strong class="title animate0 rotateIn" style="opacity: 0;">Biru, Hijau, Asri</strong>
 											<div class="hold animate1 rotateIn" style="opacity: 0;">
 												<p>Dengan sangat bangga kami dedikasikan keindahan serta kecantikan sekolah kami dari dunia oleh dunia dan untuk dunia.</p>
 											</div>
-											<a href="" class="btn btn-default btn-lg btn-white animate2 rotateIn" style="opacity: 0;background:white;color:black;">Sambutan</a>
+											<a href="user-sambutan" class="btn btn-default btn-lg btn-white animate2 rotateIn" style="opacity: 0;background:white;color:black;">Sambutan</a>
 										</div>
 									</div>
 								</div>
@@ -208,11 +207,10 @@
 								<div class="slide_content">
 									<div class="container gambar-gerak">
 										<div class="hold-text pull-right">
-											<strong class="title animate0 rotateIn" style="opacity: 0;">Biru, Hijau, Asri</strong>
 											<div class="hold animate1 rotateIn" style="opacity: 0;">
 												<p>Dengan sangat bangga kami dedikasikan keindahan serta kecantikan sekolah kami dari dunia oleh dunia dan untuk dunia.</p>
 											</div>
-											<a href="" class="btn btn-default btn-lg btn-white animate2 rotateIn" style="opacity: 0;background:white;color:black;">Sambutan</a>
+											<a href="user-sambutan" class="btn btn-default btn-lg btn-white animate2 rotateIn" style="opacity: 0;background:white;color:black;">Sambutan</a>
 										</div>
 									</div>
 								</div>
@@ -246,29 +244,27 @@
 				<div class="col-md-4 col-sm-6 col-xs-12" style="height:100px;width:300px;margin-top:10px;">
 					<div class="crewman crewman-center">
 						<div class="frame sambutan" id="kepala-sekolah">
+							
 							<div class="hold-line">
 								<span class="hold-img">
-									<img  style="height:150px;width:150px;margin-left:30px;" class="img-circle" src="{{ asset('user-web/aset/img/img103.jpg') }}" alt="image" width="210" height="210">
+									<img  style="height:150px;width:150px;margin-left:30px;margin-top:20px;" class="img-circle" src="{{ asset('user-web/aset/img/dedim.png') }}" alt="image" width="210" height="210">
 								</span>
-								<strong class="title">Dedi Maulana</strong>
+								<label class="title">Dedi Maulana S.ST</label>
 								<strong class="office">Kepala Sekolah</strong>
 							</div>
-							<div class="hold-line">
-								<a href="" class="btn btn-default btn-lg btn-white animate2 rotateIn" style="opacity: 0;background:#ff7f50;color:white;">Sambutan</a>
-									
-							</div>
+
 						</div>
 					</div>
 				</div> 
 				<!--Batas Bagian sambutan kepala sekolah-->
 			
 				<!-- link kampus-->
-				<div class="col-md-4 col-sm-6 col-xs-12" style="margin-top:215px;height:100px;width:300px;">
+				<div class="col-md-4 col-sm-6 col-xs-12" style="margin-top:190px;height:100px;width:300px;">
 					<div class="crewman crewman-center">
 						<div class="frame sambutan">
 							<div style="margin-top:-120px;">                                
 								<strong class="office">Keahlian</strong><br>
-								<a href="" class="link-jurusan">Multimedia</a>
+								<a href="user-multimedia" class="link-jurusan">Multimedia</a>
 							</div>							
 						</div>
 					</div>
@@ -276,7 +272,7 @@
 				<!--Batas link kampus-->
 	
 				<!-- link jurusan-->
-				<div class="col-md-4 col-sm-6 col-xs-12" style="margin-top:70px;height:200px;width:300px;">
+				<div class="col-md-4 col-sm-6 col-xs-12" style="margin-top:80px;height:200px;width:300px;">
 					<div class="crewman crewman-center">
 						<div class="frame sambutan">
                             <div class="hold-line" style="margin-top:-120px;">                                
@@ -324,8 +320,8 @@
 											<br><strong style="margin-left:-855px;"><font size="3">Kontak Kami  :</font></strong>									
 											<p align="left" style="margin-left:75px;font-size: 12px;"><br>Ponpes Arribathul Mustofa Terisi
 											<br>JL. Jangga Cikamurang, Terisi, Rajasinga, Kabupaten Indramayu, Jawa Barat 45262
-											<br>NPSN: 20215995
-											<br>No.Telepon; (0234) 9141819</p>
+											<br>NPSN : 20215995
+											<br>No.Telepon : (0234) 9141819</p>
 										</div>			
 										<!--footer Follow-us-->
 										
@@ -356,7 +352,7 @@
 								<div class="container">
 									<div class="row">
 										<div class="col-md-5 col-sm-6">
-											<p align="center" style="width:1000px;">&copy; 2020 Hak Cipta Dilindungi. Develop oleh Kelompok 5 Proyek 3 D4 Rekayasa Perangkay Lunak, Politeknik Negeri Indramayu (POLINDRA) </p>
+											<p align="center" style="width:1000px;">&copy; 2020 Hak Cipta Dilindungi. Develop oleh Kelompok 5 Proyek 3 D4 Rekayasa Perangkay Lunak, Teknik Informatika, Politeknik Negeri Indramayu (POLINDRA) </p>
 										</div>
 							
 									</div>

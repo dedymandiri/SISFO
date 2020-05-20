@@ -15,7 +15,10 @@
 <div class="judul_halaman" style="margin-left:20px;margin-top:-1030px;">
 <strong><h6>Nilai Siswa Tingkat 3</h6></strong><br>
 
-<table border="solid 1px black" style="width:650px;height:30px;text-align:center;">
+Dibawah ini merupakan rekapitulasi nilai hasil ujian untuk tingkat 3 atau kelas 12 di semester ini, 
+silahkan download nilai untuk mencetak hasil ujiannya.<br><br>
+
+<table border="solid 1px black" style="width:700px;height:30px;text-align:center;">
   <thead style="color:black;">
     <tr>
       <th width="30px" height="40px" style="text-align:center;">No</th>
@@ -37,7 +40,7 @@
         <td>{{ $nilai->kelas }}</td>
           
 		<td>           
-            <a class="unduh" href="">Download</a>
+            <a class="unduh" href=""  title="Download">Download</a>
             
         </td>            
     </tr>

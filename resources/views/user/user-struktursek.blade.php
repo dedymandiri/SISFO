@@ -6,9 +6,9 @@
 <strong><h6>Struktur Sekolah</h6></strong><br></div>
 
 <table border="solid 1px black" style="margin-left:20px;width:650px;">
-  <thead>
+  <thead style="color:black;">
     <tr>
-      <th width="30px" align="center">No</th>
+      <th width="30px">No</th>
       <th >Nama Guru/Staff</th>
       <th >Jabatan</th>
     </tr> 

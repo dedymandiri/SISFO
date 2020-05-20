@@ -457,7 +457,8 @@ Route::get('/user-hasil_seleksi', 'UserController@tampilhasilseleksi');
 Route::get('/konseling','UserController@konseling');
 Route::get('/hubungi_kami','UserController@hubungi_kami');
 
-
+Route::get('/user-sambutan','UserController@tampilsambutan');
+Route::get('/user-sambutan', 'UserController@tampildetailsambutan');
 
 
 //---------------------------------------------------------------------batas halaman PROFIL dari user web

@@ -10,7 +10,7 @@
 											<span class="hold-img"><a href="kabar-sekolah-detail.html"><img src="{{ asset('user-web/aset/paket/images/img165.jpg') }}" alt="image" width="85" height="87"></a></span>
 											<small>Oleh <a href="404.html">Administrator</a></small>
 										</cite>
-										<div class="block" style="width:650px;">
+										<div class="block" style="width:640px;">
 											<span class="nook">&nbsp;</span>
 											<strong class="title"><a href="kabar-sekolah-detail.html"><b>SEMANGAT BELAJAR MENGHADAPI UJIAN SEKOLAH</b></a>
 											<small>Terbit pada tanggal 29 Desember 2013 | <a href="kabar-sekolah-detail.html#komentar">5 Komentar</a></small>
@@ -28,7 +28,7 @@
 											<span class="hold-img"><a href="kabar-sekolah-detail.html"><img src="{{ asset('user-web/aset/paket/images/img165.jpg') }}" alt="image" width="85" height="87"></a></span>
 											<small>Oleh <a href="404.html">Administrator</a></small>
 										</cite>
-										<div class="block" style="width:650px;">
+										<div class="block" style="width:640px;">
 											<span class="nook">&nbsp;</span>
 											<strong class="title"><a href="kabar-sekolah-detail.html"><b>SEMANGAT BELAJAR MENGHADAPI UJIAN SEKOLAH</b></a>
 											<small>Terbit pada tanggal 29 Desember 2013 | <a href="kabar-sekolah-detail.html#komentar">5 Komentar</a></small>
@@ -43,7 +43,7 @@
 											<span class="hold-img"><a href="kabar-sekolah-detail.html"><img src="{{ asset('user-web/aset/paket/images/img165.jpg') }}" alt="image" width="85" height="87"></a></span>
 											<small>Oleh <a href="404.html">Administrator</a></small>
 										</cite>
-										<div class="block" style="width:650px;">
+										<div class="block" style="width:640px;">
 											<span class="nook">&nbsp;</span>
 											<strong class="title"><a href="kabar-sekolah-detail.html"><b>SEMANGAT BELAJAR MENGHADAPI UJIAN SEKOLAH</b></a>
 											<small>Terbit pada tanggal 29 Desember 2013 | <a href="kabar-sekolah-detail.html#komentar">5 Komentar</a></small>
