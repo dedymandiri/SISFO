@@ -24,17 +24,15 @@
 		<link rel="shortcut icon" href="{{ asset('user-web/aset/img/favicon.ico') }}" />
 	</head>
 
-
-
 	<body>
-		<div style="background: linear-gradient(#7bed9f, #ffffff);width:1100px;margin-left:120px;" class="kerangka-website">
+		<div style="background: linear-gradient(#7bed9f, #ffffff);width:1100px;margin-left:125px;border: 1px solid black;margin-top:-4px;" class="kerangka-website">
 			<header id="header">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-4 kiri">
 						<br>
 						<div class="col-sm-8 kanan">
-							<section class="user-navigation"style="background:#ff7f50;color:white;width:1100px;margin-left:-30px;margin-top:-30px;">
+							<section class="user-navigation"style="background:#ff7f50;color:white;width:1098px;margin-left:-30px;margin-top:-30px;">
 								<div align="center" style="margin-top:-10px;" class="container">
 								
 								<!--Tanggal dan waktu sekarang-->
@@ -73,13 +71,13 @@
 
 							<br><br>
 
-							<section class="header-section" style="background:#7bed9f;width:1100px;margin-left:-30px;margin-top:-15px;">
+							<section class="header-section" style="background:#7bed9f;width:1098px;margin-left:-30px;margin-top:-15px;">
 								<div class="container">
 									<div class="row">
 										<div class="col-sm-12">
 											
 											<!--  navbar start -->
-											<nav class="navbar navbar-default navbar-business" role="navigation" style="width:1100px;height:95px;margin-left:-15px;">
+											<nav class="navbar navbar-default navbar-business" role="navigation" style="width:1098px;height:95px;margin-left:-15px;">
 												<div class="navbar-header">
 													<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 														<span class="sr-only">Toggle Navigasi</span>
@@ -96,7 +94,7 @@
 												<img style="width:320px;height:100px;margin-top:15px;" src="{{ asset('admin/docs/assets/img/smk islam terisi.png') }}" alt="Logo">
 
 												<span class="nook">&nbsp;</span>
-													<ul style="margin-left:350px;margin-top:-25px;" class="nav navbar-nav">
+													<ul style="margin-left:350px;margin-top:-30px;" class="nav navbar-nav">
 														<li><a href="beranda">Beranda</a>
 															
 														</li>
@@ -168,7 +166,7 @@
 														</div>
 														<div class="profiles-box pull-left active">
 															<ul class="tools tools-middle pull-right">
-																<li><a href="#"><span class="fa-icon-facebook-sign"></span></a></li>
+																<li><a href=""><span class="fa-icon-facebook-sign"></span></a></li>
 															</ul>
 														</div>
 													</div>
@@ -247,7 +245,7 @@
 							
 							<div class="hold-line">
 								<span class="hold-img">
-									<img  style="height:150px;width:150px;margin-left:30px;margin-top:20px;" class="img-circle" src="{{ asset('user-web/aset/img/dedim.png') }}" alt="image" width="210" height="210">
+									<img style="height:150px;width:150px;margin-left:30px;margin-top:20px;" class="img-circle" src="{{ asset('user-web/aset/img/dedim.png') }}" alt="image" width="210" height="210">
 								</span>
 								<label class="title">Dedi Maulana S.ST</label>
 								<strong class="office">Kepala Sekolah</strong>
@@ -278,16 +276,16 @@
                             <div class="hold-line" style="margin-top:-120px;">                                
 								<strong class="office">Kampus Indramayu </strong>
 								<div align="left">
-								1. <a href="" class="link-jurusan">Universitas Wiralodra</a><br>
-								2. <a href="" class="link-jurusan">Politeknik Negeri Indramayu</a><br>
-								3. <a href="" class="link-jurusan">Universitas Islam Dharma Kusuma</a><br>
-								4. <a href="" class="link-jurusan">STIT Al Amin Kandanghaur</a><br>
-								5. <a href="" class="link-jurusan">Akamigas Balongan</a><br>
-								6. <a href="" class="link-jurusan">STAI dan Akbid Sayid Sabiq</a><br>
-								7. <a href="" class="link-jurusan">STIKes Indramayu</a><br>
-								8. <a href="" class="link-jurusan">AMIK Purnama Niaga Indramayu</a><br>
-								9. <a href="" class="link-jurusan">IAI Al Zaytun Indonesia</a><br>
-								10.<a href="" class="link-jurusan">STKIP NU Kaplongan</a><br>
+								1. <a href="https://unwir.ac.id/" class="link-jurusan">Universitas Wiralodra</a><br>
+								2. <a href="https://polindra.ac.id" class="link-jurusan">Politeknik Negeri Indramayu</a><br>
+								3. <a href="https://ayokuliah.id/universitas/stai-pangeran-dharma-kusuma-segaran-indramayu/" class="link-jurusan">Universitas Islam Dharma Kusuma</a><br>
+								4. <a href="http://stitalaminindramayu.ac.id/" class="link-jurusan">STIT Al Amin Kandanghaur</a><br>
+								5. <a href="https://pmb.akamigasbalongan.ac.id/" class="link-jurusan">Akamigas Balongan</a><br>
+								6. <a href="https://indas.id/kampus-774akademi-kebidanan-sayid-sabiq-indramayu" class="link-jurusan">STAI dan Akbid Sayid Sabiq</a><br>
+								7. <a href="http://www.stikesindramayu.ac.id/" class="link-jurusan">STIKes Indramayu</a><br>
+								8. <a href="https://ayokuliah.id/universitas/amik-purnama-niaga/" class="link-jurusan">AMIK Purnama Niaga Indramayu</a><br>
+								9. <a href="http://iai-alzaytun.ac.id/" class="link-jurusan">IAI Al Zaytun Indonesia</a><br>
+								10.<a href="https://stkipnu.ac.id/" class="link-jurusan">STKIP NU Kaplongan</a><br>
 								</div>
 							</div>							
 						</div>
@@ -317,7 +315,7 @@
 									<div class="gallery-holder">
 										<!--footer kontak-kami-->
 										<div class="alamat">
-											<br><strong style="margin-left:-855px;"><font size="3">Kontak Kami  :</font></strong>									
+											<br><strong style="margin-left:-835px;"><font size="3">Contact Person  :</font></strong>									
 											<p align="left" style="margin-left:75px;font-size: 12px;"><br>Ponpes Arribathul Mustofa Terisi
 											<br>JL. Jangga Cikamurang, Terisi, Rajasinga, Kabupaten Indramayu, Jawa Barat 45262
 											<br>NPSN : 20215995
@@ -335,7 +333,7 @@
 										</div>
 										<!--footer Link-terkait-->
 										<div class="follow-us" style="margin-top:-20px;">
-											<strong style="margin-left:700px;"><font size="3">Link Terkait  :</font></strong><br>
+											<strong style="margin-left:700px;"><font size="3">About us  :</font></strong><br>
 																						
 										</div>
 									</div>									
