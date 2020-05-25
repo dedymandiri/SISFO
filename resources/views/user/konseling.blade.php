@@ -2,10 +2,10 @@
 
 @section('content') 
 
-<div class="judul_halaman" style="margin-left:20px;margin-top:-1030px;">
+<div class="judul_halaman" style="margin-left:25px;margin-top:-1030px;">
 <strong><h6>Bimbingan Konseling</h6></strong><br></div>
 
-<p align="justify" style="width:740px;margin-left:20px;">
+<p align="justify" style="width:715px;margin-left:25px;">
 Bagi siswa/siswi smk islam terisi indramayu terkait masalah bimbingan ke guru BK bisa langsung klik tombol dibawah ini.
 Secara otomatis kalian akan langsung diarahkan ke halaman whatsapp dengan dilengkapi format chat tertentu, kami harap agar para siswa/
 siswi dapat melakukan bimbingan ataupun konsultasi dengan baik dan sopan.

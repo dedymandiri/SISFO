@@ -2,15 +2,15 @@
 
 @section('content') 
 
-<div class="judul_halaman" style="margin-left:20px;margin-top:-1030px;">
+<div class="judul_halaman" style="margin-left:25px;margin-top:-1030px;">
 <strong><h6>Form Pendaftaran</h6></strong><br></div>
 
-<form style="width:750px;margin-left:20px;color:black;" action="/user-pendaftaran/daftar" method="post">
+<form style="width:715px;margin-left:25px;color:black;" action="/user-pendaftaran/daftar" method="post">
 {{ csrf_field() }}
 <br> 
   <div class="form-group">
     <label>Tanggal Daftar :</label>
-      <div class='input-group date' id='datetimepicker1'>
+      <div class='input-group date' id='datetimepicker5'>
        <input type="text" class="form-control" placeholder="Tanggal Daftar" required="required" name="tgl_masuk">
          <span class="input-group-addon">
            <span class="glyphicon glyphicon-calendar"></span>
@@ -27,7 +27,7 @@
   </div>
   <div class="form-group">
     <label>Tanggal Lahir :</label>
-      <div class='input-group date' id='datetimepicker2'>
+      <div class='input-group date' id='datetimepicker6'>
        <input type="text" class="form-control" placeholder="Tanggal Lahir" required="required" name="tgl_lahir">
          <span class="input-group-addon">
            <span class="glyphicon glyphicon-calendar"></span>
@@ -107,13 +107,13 @@
 <!-- DATETIMEPICKER -->
 <script type="text/javascript">
    $(function () {
-    $('#datetimepicker').datetimepicker({
+    $('#datetimepicker5').datetimepicker({
      format: 'DD MMMM YYYY',
       });
    });
 
    $(function () {
-    $('#datetimepicker2').datetimepicker({
+    $('#datetimepicker6').datetimepicker({
      format: 'DD MMMM YYYY',
       });
    });

@@ -2,13 +2,13 @@
 
 @section('content') 
 
-<div class="judul_halaman" style="margin-left:20px;margin-top:-1030px;">
+<div class="judul_halaman" style="margin-left:25px;margin-top:-1030px;">
 <strong><h6>Osis</h6></strong><br></div>
 
 <!--Untuk menampilkan tabel berita dari database-->
 @foreach($liat as $li)
     <div  class="isi">		
-		<div style="margin-left:20px;width:750px;color:black;" class="hr" align="justify">
+		<div style="margin-left:25px;width:715px;color:black;" class="hr" align="justify">
             <?php echo $li['deskripsi_osis'] ?>
         </div>
 	</div>

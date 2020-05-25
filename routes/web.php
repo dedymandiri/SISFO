@@ -460,5 +460,8 @@ Route::get('/hubungi_kami','UserController@hubungi_kami');
 Route::get('/user-sambutan','UserController@tampilsambutan');
 Route::get('/user-sambutan', 'UserController@tampildetailsambutan');
 
+Route::get('/beranda', 'UserController@tampildetailinfo');
+Route::get('/user-pengumuman', 'UserController@selengkapnyainfo');
+
 
 //---------------------------------------------------------------------batas halaman PROFIL dari user web

@@ -12,13 +12,13 @@
 	}
 </style>
                                 
-<div class="judul_halaman" style="margin-left:20px;margin-top:-1030px;">
+<div class="judul_halaman" style="margin-left:25px;margin-top:-1030px;">
 <strong><h6>Nilai Siswa Tingkat 1</h6></strong><br>
 
-Dibawah ini merupakan rekapitulasi nilai hasil ujian untuk tingkat 3 atau kelas 12 di semester ini, 
-silahkan download nilai untuk mencetak hasil ujiannya.<br><br>
+<p align="justify" style="width:715px;">Dibawah ini merupakan rekapitulasi nilai hasil ujian untuk tingkat 3 atau kelas 12 di semester ini, 
+silahkan download nilai untuk mencetak hasil ujiannya.</p>
 
-<table border="solid 1px black" style="width:700px;height:30px;text-align:center;">
+<table border="solid 1px black" style="width:715px;height:30px;text-align:center;">
   <thead style="color:black;">
     <tr>
       <th width="30px" height="40px" style="text-align:center;">No</th>

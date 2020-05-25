@@ -185,4 +185,14 @@ class UserController extends Controller
         return view('user.user-sambutan',['liat'=>$hasil]);
     }
 
+
+    public function tampildetailinfo(){
+        $hasil = Pengumuman_Model::all();
+        return view('user.beranda',['liat'=>$hasil]);
+    }
+
+    public function selengkapnyainfo(){
+        $hasil = Pengumuman_Model::all();
+        return view('user.user-pengumuman',['liat'=>$hasil]);
+    }
 }
