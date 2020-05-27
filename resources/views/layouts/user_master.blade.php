@@ -147,7 +147,7 @@
                                                         <li style="margin-left:18px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Hubungi Kami</a>
                                                             <ul class="dropdown-menu">
                                                               <li><a href="konseling">Konsultasi</a></li>
-                                                              <li><a href="hubungi_kami">Hubungi Kami</a></li>
+                                                              <li><a href="buku_tamu">Buku Tamu</a></li>
                                                             </ul>
                                                         </li>
                                                         

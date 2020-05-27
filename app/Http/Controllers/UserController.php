@@ -24,6 +24,7 @@ use App\Nilai_tk3_Model;
 use App\Seleksi_Model;
 use App\Daftar_Model;
 use App\Sambutan_Model;
+use App\Bukutamu_Model;
 
 // Batas Model buat manggil tabel di database
 
@@ -175,8 +176,22 @@ class UserController extends Controller
         return view('user.konseling');
     }
 
-    public function hubungi_kami(){
-        return view('user.hubungi_kami');
+    public function bukutamu(){
+        return view('user.buku_tamu');
+    }
+
+    //input data ke database
+    public function storetamu(Request $request)
+    {
+	    // insert data ke table berita
+	    DB::table('buku_tamu')->insert([
+		'nama' => $request->nama,
+		'email' => $request->email,
+		'komentar' => $request->komentar
+	]);
+	    // alihkan halaman ke halaman berita
+	    return redirect('buku_tamu');
+ 
     }
 
     
@@ -195,4 +210,14 @@ class UserController extends Controller
         $hasil = Pengumuman_Model::all();
         return view('user.user-pengumuman',['liat'=>$hasil]);
     }
+
+    public function tampildetailtamu(){
+        $hasil = Bukutamu_Model::all();
+        return view('user.buku_tamu',['liat'=>$hasil]);
+    }
+
+
+
+
+
 }

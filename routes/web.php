@@ -455,13 +455,17 @@ Route::get('/user-kalender_sekolah', 'UserController@tampilkalender');
 Route::get('/user-hasil_seleksi', 'UserController@tampilhasilseleksi');
 
 Route::get('/konseling','UserController@konseling');
-Route::get('/hubungi_kami','UserController@hubungi_kami');
+
+Route::get('/buku_tamu','UserController@bukutamu');
+Route::post('/buku_tamu/storetamu','UserController@storetamu');
+Route::get('/buku_tamu', 'UserController@tampildetailtamu');
 
 Route::get('/user-sambutan','UserController@tampilsambutan');
 Route::get('/user-sambutan', 'UserController@tampildetailsambutan');
 
 Route::get('/beranda', 'UserController@tampildetailinfo');
 Route::get('/user-pengumuman', 'UserController@selengkapnyainfo');
+
 
 
 //---------------------------------------------------------------------batas halaman PROFIL dari user web

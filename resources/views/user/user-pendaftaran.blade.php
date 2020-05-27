@@ -5,7 +5,8 @@
 <div class="judul_halaman" style="margin-left:25px;margin-top:-1030px;">
 <strong><h6>Form Pendaftaran</h6></strong><br></div>
 
-<form style="width:715px;margin-left:25px;color:black;" action="/user-pendaftaran/daftar" method="post">
+<div class="form-input" style="margin-left:25px;border : 2px solid #b2bec3;width:725px;"><br>
+<form style="margin-left:25px;width:673px;color:black;" action="/user-pendaftaran/daftar" method="post">
 {{ csrf_field() }}
 <br> 
   <div class="form-group">
@@ -96,12 +97,11 @@
   
   
 <!--bagian button-->
-<div style="margin-top:50px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">
-    <button style="margin-left:-600px;width:100px;" type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
-</div>
+<div style="margin-top:35px;margin-left:25px;" class="card-header info-color white-text text-center py-4">
+    <button style="margin-left:-600px;width:100px;" type="submit" class="btn btn-primary" value="Simpan">Daftar</button>
+</div><br>
 
-</form>
-
+</form></div>
 <br><br>
 
 <!-- DATETIMEPICKER -->
