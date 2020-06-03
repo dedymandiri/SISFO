@@ -5,21 +5,21 @@
 <div class="judul_halaman" style="margin-left:25px;margin-top:-1030px;">
 <strong><h6>Form Pendaftaran</h6></strong><br></div>
 
-<div class="form-input" style="margin-left:25px;border : 2px solid #b2bec3;width:725px;"><br>
+<div class="form-input" style="margin-left:25px;border : 1px solid white;width:725px;"><br>
 <form style="margin-left:25px;width:673px;color:black;" action="/user-pendaftaran/daftar" method="post">
 {{ csrf_field() }}
 <br> 
-  <div class="form-group">
+<div class="form-group">
     <label>Tanggal Daftar :</label>
-      <div class='input-group date' id='datetimepicker5'>
-       <input type="text" class="form-control" placeholder="Tanggal Daftar" required="required" name="tgl_masuk">
+      <div class='input-group date' id='datepicker'>
+       <input type="date" class="form-control" placeholder="Tanggal Daftar" required="required" name="tgl_masuk">
          <span class="input-group-addon">
            <span class="glyphicon glyphicon-calendar"></span>
         </span>
       </div>
   </div>
   <div class="form-group">
-    <label for="tgl_waktu">Nama Calon Siswa :</label>
+    <label for="tgl_waktu">Nama Siswa :</label>
     <input type="text" class="form-control" placeholder="Nama Calon Siswa " required="required" name="nama_calon_siswa">
   </div>
   <div class="form-group">
@@ -28,8 +28,8 @@
   </div>
   <div class="form-group">
     <label>Tanggal Lahir :</label>
-      <div class='input-group date' id='datetimepicker6'>
-       <input type="text" class="form-control" placeholder="Tanggal Lahir" required="required" name="tgl_lahir">
+      <div class='input-group date' id='datepicker2'>
+       <input type="date" class="form-control" placeholder="Tanggal Lahir" required="required" name="tgl_lahir">
          <span class="input-group-addon">
            <span class="glyphicon glyphicon-calendar"></span>
         </span>
@@ -57,7 +57,7 @@
   </div>
   <div class="form-group">
     <label for="judul">No Handphone :</label>
-    <input type="telp" class="form-control" pattern="^\d{3}-\d{3}-\d{4}$" placeholder="No Handphone" required="required" name="no_hp">
+    <input type="number" class="form-control" placeholder="No Handphone" required="required" name="no_hp">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Agama :</label>
@@ -92,13 +92,13 @@
   </div>
   <div class="form-group">
     <label for="judul">Alasan :</label>
-    <textarea type="text" class="form-control" placeholder="Alasan " required="required" name="alasan"></textarea>
+    <input type="text" class="form-control" placeholder="Alasan " required="required" name="alasan">
   </div>
   
   
 <!--bagian button-->
 <div style="margin-top:35px;margin-left:25px;" class="card-header info-color white-text text-center py-4">
-    <button style="margin-left:-600px;width:100px;" type="submit" class="btn btn-primary" value="Simpan">Daftar</button>
+    <button style="margin-left:-600px;width:100px;" alert="berhasil di input" type="submit" class="btn btn-primary" value="Simpan">Daftar</button>
 </div><br>
 
 </form></div>
@@ -107,13 +107,13 @@
 <!-- DATETIMEPICKER -->
 <script type="text/javascript">
    $(function () {
-    $('#datetimepicker5').datetimepicker({
+    $('#datepicker').datetimepicker({
      format: 'DD MMMM YYYY',
       });
    });
 
    $(function () {
-    $('#datetimepicker6').datetimepicker({
+    $('#datepicker2').datetimepicker({
      format: 'DD MMMM YYYY',
       });
    });

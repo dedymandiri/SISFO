@@ -15,6 +15,10 @@
 <form style="width:825px;margin-left:35px;" action="/sambutan/update/{{ $li->id_sam }}" method="post">
 {{ csrf_field() }}
 <br>
+<div class="form-group">
+    <label for="judul">Foto:</label>
+    <input type="text" id="jufotodul" class="form-control" placeholder="foto" required="required" name="foto" value="{{ $li->foto }}">
+  </div>
   <div class="form-group">
     <label for="judul">Nama Lengkap :</label>
     <input type="text" id="judul" class="form-control" placeholder="nama" required="required" name="nama" value="{{ $li->nama }}">

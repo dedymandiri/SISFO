@@ -27,7 +27,8 @@
   <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
     <tr align="center">
-      <th class="th-sm">No</th>
+      <th class="th-sm">No</th>      
+      <th class="th-sm">Foto</th>
       <th class="th-sm">Nama Lengkap</th>
       <th class="th-sm">Isi Sambutan</th>
       <th class="th-sm">Aksi</th>
@@ -40,7 +41,8 @@
   @foreach($liat as $li)
   <?php $no++ ;?>
     <tr>
-        <td>{{ $no }}</td>
+        <td>{{ $no }}</td>        
+        <td>{{ $li->foto }}</td>
         <td>{{ $li->nama }}</td>
         <td><p align="justify">{{ $li->isi }}</p></td>
       

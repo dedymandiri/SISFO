@@ -48,7 +48,7 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => 'localhost',
             'port' => env('DB_PORT', '3306'),
-            'database' => 'sisfo_smk_islam',
+            'database' => 'sisfo-master',
             'username' => 'root',
             'password' => '',
             'unix_socket' => env('DB_SOCKET', ''),

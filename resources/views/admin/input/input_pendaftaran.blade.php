@@ -16,7 +16,7 @@
   <div class="form-group">
     <label>Tanggal Daftar :</label>
       <div class='input-group date' id='datetimepicker'>
-       <input type="date" class="form-control" placeholder="Tanggal Daftar" required="required" name="tgl_masuk">
+       <input class="form-control" placeholder="Tanggal Daftar" required="required" name="tgl_masuk">
          <span class="input-group-addon">
            <span class="glyphicon glyphicon-calendar"></span>
         </span>
@@ -33,18 +33,18 @@
   <div class="form-group">
     <label>Tanggal Lahir :</label>
       <div class='input-group date' id='datetimepicker2'>
-       <input type="date" class="form-control" placeholder="Tanggal Lahir" required="required" name="tgl_lahir">
+       <input class="form-control" placeholder="Tanggal Lahir" required="required" name="tgl_lahir">
          <span class="input-group-addon">
            <span class="glyphicon glyphicon-calendar"></span>
         </span>
       </div>
   </div>
   <div class="form-group">
-    <label for="tgl_waktu">Nama Ibu :</label>
+    <label for="ibu">Nama Ibu :</label>
     <input type="text" class="form-control" placeholder="Nama Ibu " required="required" name="nama_ibu">
   </div>
   <div class="form-group">
-    <label for="tgl_waktu">Nama Ayah :</label>
+    <label for="ayah">Nama Ayah :</label>
     <input type="text" class="form-control" placeholder="Nama Ayah " required="required" name="nama_ayah">
   </div>
   <div class="form-group">
@@ -52,16 +52,16 @@
     <input type="text" class="form-control" placeholder="Alamat" required="required" name="alamat">
   </div>
   <div class="form-group">
-    <label for="tgl_waktu">NISN :</label>
-    <input type="number" min="1" max="15" class="form-control" placeholder="Nisn " required="required" name="nisn">
+    <label for="nisn">NISN :</label>
+    <input type="number" class="form-control" placeholder="Nisn " required="required" name="nisn">
   </div>
   <div class="form-group">
-    <label for="tgl_waktu">Asal Sekolah :</label>
+    <label for="asalsekolah">Asal Sekolah :</label>
     <input type="text" class="form-control" placeholder="Asal Sekolah " required="required" name="asal_sklh">
   </div>
   <div class="form-group">
-    <label for="judul">No Handphone :</label>
-    <input type="telp" min="1" max="15" class="form-control" placeholder="No Handphone" required="required" name="no_hp">
+    <label for="nohp">No Handphone :</label>
+    <input type="number" class="form-control" placeholder="No Handphone" required="required" name="no_hp">
   </div>
   <div class="form-group">
     <label for="exampleFormControlSelect1">Agama :</label>
@@ -89,13 +89,13 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="tgl_waktu">Keahlian :</label>
+    <label for="jurusan">Keahlian :</label>
     <select class="form-control" id="exampleFormControlSelect1" class="form-control" required="required" name="keahlian">
       <option>Mulitmedia</option>
     </select>
   </div>
   <div class="form-group">
-    <label for="judul">Alasan :</label>
+    <label for="alasan">Alasan :</label>
     <input type="text" class="form-control" placeholder="Alasan " required="required" name="alasan">
   </div>
   

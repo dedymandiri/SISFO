@@ -5,12 +5,12 @@
 <div class="judul_halaman" style="margin-left:25px;margin-top:-1030px;">
 <strong><h6>Struktur Sekolah</h6></strong><br></div>
 
-<table border="solid 1px black" style="margin-left:25px;width:700px;">
+<table border="solid 1px black" style="margin-left:25px;width:700px;text-align:center;">
   <thead style="color:black;">
     <tr>
-      <th width="30px">No</th>
-      <th >Nama Guru/Staff</th>
-      <th >Jabatan</th>
+      <th width="30px" height="40px" style="text-align:center;">No</th>
+      <th style="text-align:center;">Nama Guru/Staff</th>
+      <th style="text-align:center;">Jabatan</th>
     </tr> 
   </thead>
   <tbody>

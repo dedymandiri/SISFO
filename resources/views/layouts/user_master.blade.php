@@ -22,62 +22,43 @@
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="{{ asset('user-web/aset/img/favicon.ico') }}" />
+		
 	</head>
 
-	<body>
-		<div style="background: linear-gradient(#7bed9f, #ffffff);width:1100px;margin-left:125px;border: 1px solid black;margin-top:-4px;" class="kerangka-website">
+	<body style="background:#ff7f50;">
+		<div class="user-navigation"style="background:#ff7f50;color:white;height:40px;margin-top:5px;">
+			<div align="center" style="margin-top:-10px;" class="container">
+						
+				<!--Tanggal dan waktu sekarang-->
+					<?php 
+    					$tanggal = mktime(date('m'), date("d"), date('Y'));
+   						echo "Tanggal : <b> " . date("d-m-Y", $tanggal ) . "</b>";
+    					date_default_timezone_set("Asia/Jakarta");
+    					$jam = date ("H:i:s");
+    					echo " | Pukul : <b> " . $jam . " " ." </b> ";
+    					
+ 					?>
+			</div>
+		</div>
+
+		<div style="background: linear-gradient(#74b9ff, #ffffff);border: 2px solid white;width:1100px;margin-left:125px;margin-top:-15px;" class="kerangka-website">
 			<header id="header">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-4 kiri">
 						<br>
-						<div class="col-sm-8 kanan">
-							<section class="user-navigation"style="background:#ff7f50;color:white;width:1098px;margin-left:-30px;margin-top:-30px;">
-								<div align="center" style="margin-top:-10px;" class="container">
-								
-								<!--Tanggal dan waktu sekarang-->
-								<?php 
-    								$tanggal = mktime(date('m'), date("d"), date('Y'));
-   									echo "Tanggal : <b> " . date("d-m-Y", $tanggal ) . "</b>";
-    								date_default_timezone_set("Asia/Jakarta");
-    								$jam = date ("H:i:s");
-    								echo " | Pukul : <b> " . $jam . " " ." </b> ";
-    								
- 								?>
-								<!--Batas akhir tanggal dan waktu sekarang-->
-
-									<!--<div class="frame pull-right" style="margin-top:-10px;">
-										<div class="form-search pull-right">
-											<form>
-												<fieldset>
-													<div class="field-search">
-														<input type="text" class="form-control input-sm" placeholder="Cari" />
-														<button class="btn-search" type="submit"><span class="fa-icon-search"></span></button>
-													</div>
-												</fieldset>
-											</form>
-										</div>
-										<div class="profiles-box pull-right active">
-											<a href="" class="link-profiles pull-left">Akun Resmi</a>
-											<ul style="width:100px;" class="tools tools-middle pull-left">
-												<li><a href="" target="_blank"><img style="width:22px;height:21px;margin-top:2px;" src="{{ asset('user-web/aset/img/facebook.png') }}" alt="Logo"></li>
-												<li><a href="" target="_blank"><img style="width:25px;height:25px;" src="{{ asset('user-web/aset/img/instagram.png') }}" alt="Logo"></a></li>
-												<li><a href="" target="_blank"><img style="width:28px;height:22px;margin-top:1px;" src="{{ asset('user-web/aset/img/youtube.png') }}" alt="Logo"></a></li>
-											</ul>
-										</div>
-									</div>-->
-								</div>
-							</section>
+						<div class="col-sm-8 kanan">						
+							<section class="user-navigation"></section>
 
 							<br><br>
-
-							<section class="header-section" style="background:#7bed9f;width:1098px;margin-left:-30px;margin-top:-15px;">
+				
+							<section class="header-section" style="width:1096px;margin-left:-30px;margin-top:-50px;">
 								<div class="container">
 									<div class="row">
 										<div class="col-sm-12">
-											
+										
 											<!--  navbar start -->
-											<nav class="navbar navbar-default navbar-business" role="navigation" style="width:1098px;height:95px;margin-left:-15px;">
+											<nav class="navbar navbar-default navbar-business" role="navigation" style="width:1096px;height:95px;margin-left:-15px;">
 												<div class="navbar-header">
 													<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 														<span class="sr-only">Toggle Navigasi</span>
@@ -89,16 +70,14 @@
 														</span>
 													</button>
 												</div>
-												<div class="collapse navbar-collapse" style="background:#7bed9f;margin-top:-50px;">
+												<div class="collapse navbar-collapse" style="background:#00a8ff;margin-top:-60px;">
 												<!--  logo sekolah header -->
-												<img style="width:320px;height:100px;margin-top:15px;" src="{{ asset('admin/docs/assets/img/smk islam terisi.png') }}" alt="Logo">
-
+												<img style="width:1096px;height:150px;margin-left:-15px;" src="{{ asset('user-web/aset/img/Banner website.png') }}" alt="Logo">
+									
 												<span class="nook">&nbsp;</span>
-													<ul style="margin-left:350px;margin-top:-30px;" class="nav navbar-nav">
-														<li><a href="beranda">Beranda</a>
-															
-														</li>
-														<li style="margin-left:20px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Profil</a>
+													<ul style="margin-left:350px;margin-top:20px;margin-left:40px;font-weight:bold;" class="nav navbar-nav">
+														<li><a href="beranda">Beranda</a></li>
+														<li style="margin-left:50px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Profil</a>
 														    <ul class="dropdown-menu">
 														      <li><a href="user-sejarah">Sejarah</a></li>
 														      <li><a href="user-visimisi">Visi &amp; Misi</a></li>
@@ -106,12 +85,12 @@
 														      <li><a href="user-fasilitas">Fasilitas</a></li>
 														    </ul>
 													    </li>
-                                                        <li style="margin-left:18px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Keahlian</a>
+                                                        <li style="margin-left:50px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Keahlian</a>
                                                             <ul class="dropdown-menu">
                                                               <li><a href="user-multimedia">Multimedia</a></li>
                                                             </ul>
                                                         </li>
-														<li style="margin-left:18px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Kesiswaan</a>
+														<li style="margin-left:50px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Kesiswaan</a>
 														    <ul class="dropdown-menu">
 														      <li><a href="user-osis">Osis</a></li>
                                                               <li><a href="user-pramuka">Pramuka</a></li>
@@ -120,38 +99,38 @@
                                                               <li><a href="user-hadroh">Hadroh</a></li>
 														    </ul>
 													    </li>
-                                                        <li style="margin-left:18px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Galery</a>
+                                                        <li style="margin-left:50px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Galery</a>
                                                             <ul class="dropdown-menu">
                                                               <li><a href="user-galery">Foto</a></li>
                                                             </ul>
                                                         </li>
-                                                        <li style="margin-left:18px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Kurikulum</a>
+                                                        <li style="margin-left:50px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Kurikulum</a>
                                                             <ul class="dropdown-menu">
                                                               <li><a href="user-jadwal_pelajaran">Jadwal Pelajaran</a></li>
                                                               <li><a href="user-kalender_sekolah">Kalender Sekolah</a></li>
                                                             </ul>
                                                         </li>														
-                                                        <li style="margin-left:18px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">PPDB</a>
+                                                        <li style="margin-left:50px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">PPDB</a>
                                                             <ul class="dropdown-menu">
                                                               <li><a href="user-pendaftaran">Pendaftaran</a></li>
                                                               <li><a href="user-hasil_seleksi">Hasil Seleksi</a></li>
                                                             </ul>
                                                         </li>
-                                                        <li style="margin-left:18px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Rekap Nilai</a>
+                                                        <li style="margin-left:50px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Rekap Nilai</a>
                                                             <ul class="dropdown-menu">
                                                               <li><a href="user-nilai_tk1">Nilai Tingkat 1</a></li>
                                                               <li><a href="user-nilai_tk2">Nilai Tingkat 2</a></li>
                                                               <li><a href="user-nilai_tk3">Nilai Tingkat 3</a></li>
                                                             </ul>
                                                         </li>
-                                                        <li style="margin-left:18px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Hubungi Kami</a>
+                                                        <li style="margin-left:50px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Hubungi Kami</a>
                                                             <ul class="dropdown-menu">
                                                               <li><a href="konseling">Konsultasi</a></li>
                                                               <li><a href="buku_tamu">Buku Tamu</a></li>
                                                             </ul>
-                                                        </li>
-                                                        
+                                                        </li>												                                                     
 													</ul>
+
 													<!--  frame pull-right start -->
 													<div class="frame">
 														<div class="form-search pull-right">
@@ -164,11 +143,7 @@
 																</fieldset>
 															</form>
 														</div>
-														<div class="profiles-box pull-left active">
-															<ul class="tools tools-middle pull-right">
-																<li><a href=""><span class="fa-icon-facebook-sign"></span></a></li>
-															</ul>
-														</div>
+														
 													</div>
 												</div>
 											</nav>
@@ -180,22 +155,22 @@
 					</div>
 				</div>
 			</header>
-
+		<br><br><br>
 			<!-- Bagian Tengah -->
 			<div class="tengah" id="main">
                 <!-- Bagian Tampilan Slide Web -->
-				<section style="margin-top:-80px;" class="gallery">
+				<section style="margin-top:-100px;" class="gallery">
 					<div id="onebyone_carousel" class="carousel slide gallery-holder">
 						<div class="carousel-inner">
 							<div class="item active">
-								<img style="height:300px;" src="{{ asset('user-web/aset/img/slide01.jpeg') }}" alt="">
+								<img style="height:280px;" src="{{ asset('user-web/aset/img/slide01.jpeg') }}" alt="">
 								<div class="slide_content">
 									<div class="container gambar-gerak">
-                                    <div class="hold-text pull-right">
+                                    <div class="hold-text pull-right"><br>
 											<div class="hold animate1 rotateIn" style="opacity: 0;">
 												<p>Dengan sangat bangga kami dedikasikan keindahan serta kecantikan sekolah kami dari dunia oleh dunia dan untuk dunia.</p>
 											</div>
-											<a href="user-sambutan" class="btn btn-default btn-lg btn-white animate2 rotateIn" style="opacity: 0;background:white;color:black;">Sambutan</a>
+											<a href="user-sambutan"><button type="button" class="btn btn-light">Sambutan</button></a>
 										</div>
 									</div>
 								</div>
@@ -204,11 +179,11 @@
 								<img style="height:300px;"  src="{{ asset('user-web/aset/img/slide02.jpeg') }}" alt="">
 								<div class="slide_content">
 									<div class="container gambar-gerak">
-										<div class="hold-text pull-right">
+										<div class="hold-text pull-right"><br>
 											<div class="hold animate1 rotateIn" style="opacity: 0;">
 												<p>Dengan sangat bangga kami dedikasikan keindahan serta kecantikan sekolah kami dari dunia oleh dunia dan untuk dunia.</p>
 											</div>
-											<a href="user-sambutan" class="btn btn-default btn-lg btn-white animate2 rotateIn" style="opacity: 0;background:white;color:black;">Sambutan</a>
+											<a href="user-sambutan"><button type="button" class="btn btn-light">Sambutan</button></a>
 										</div>
 									</div>
 								</div>
@@ -245,7 +220,7 @@
 							
 							<div class="hold-line">
 								<span class="hold-img">
-									<img style="height:150px;width:150px;margin-left:30px;margin-top:20px;" class="img-circle" src="{{ asset('user-web/aset/img/dedim.png') }}" alt="image" width="210" height="210">
+									<img style="height:150px;width:150px;margin-left:30px;margin-top:20px;" class="img-circle" src="{{ asset('user-web/aset/img/img103.jpg') }}" alt="image" width="210" height="210">
 								</span>
 								<label class="title">Dedi Maulana S.ST</label>
 								<strong class="office">Kepala Sekolah</strong>
@@ -296,26 +271,25 @@
 				
 				</div>
                             <!-- Bagian contents web -->
-							<div class="container" style="margin-top:-60px;float:left;width:73%;">> 
-					   
-								@yield('content')
+							<div class="container" style="margin-top:-60px;float:left;width:73%;">
+				
+
+							   @yield('content')
 								
 							</div>
 							<!-- Bagian contents web -->
 				</div>
 							
 				</section>
-				
-				<div class="" style="background:#ff7f50;width:1100px;height:8px;"></div>
 
-				<section class="link-penting" style="background:#747d8c;height:135px;color:white;width:1100px;">
+				<section class="link-penting" style="background:#747d8c;height:170px;color:white;width:1096px;">
 						<div class="container">
 							<div class="row">
 								<div class="gallery-partners">
 									<div class="gallery-holder">
 										<!--footer kontak-kami-->
 										<div class="alamat">
-											<br><strong style="margin-left:-835px;"><font size="3">Contact Person  :</font></strong>									
+											<br><strong style="margin-left:-890px;"><font size="3">Contact Person  :</font></strong>									
 											<p align="left" style="margin-left:75px;font-size: 12px;"><br>Ponpes Arribathul Mustofa Terisi
 											<br>JL. Jangga Cikamurang, Terisi, Rajasinga, Kabupaten Indramayu, Jawa Barat 45262
 											<br>NPSN : 20215995
@@ -323,16 +297,16 @@
 										</div>			
 										<!--footer Follow-us-->
 										
-										<div class="follow-us" style="margin-left:250px;margin-top:-130px;">
+										<div class="follow-us" style="margin-left:200px;margin-top:-115px;">
 											<strong><font size="3">Follow Us  :</font></strong><br>
-											<div style="margin-left:388px;margin-top:15px;" class="tools tools-middle pull-left">
+											<div style="margin-left:440px;margin-top:20px;" class="tools tools-middle pull-left">
 												<a href="" target="_blank"><img style="width:20px;height:20px;" src="{{ asset('user-web/aset/img/facebook.png') }}" alt="Logo"></a>
 												<a href="" target="_blank"><img style="width:25px;height:24px;margin-left:5px;" src="{{ asset('user-web/aset/img/instagram.png') }}" alt="Logo"></a>
 												<a href="" target="_blank"><img style="width:24px;height:20px;margin-left:3px;" src="{{ asset('user-web/aset/img/youtube.png') }}" alt="Logo"></a>
 											</div>						
 										</div>
 										<!--footer Link-terkait-->
-										<div class="follow-us" style="margin-top:-20px;">
+										<div class="follow-us" style="margin-top:-25px;">
 											<strong style="margin-left:700px;"><font size="3">About us  :</font></strong><br>
 																						
 										</div>
@@ -345,7 +319,7 @@
 
 					<section>				
 						<!-- Bagian Bawah -->
-						<div class="bawah" style="background:#747d8c;width:1100px;">
+						<div class="bawah" style="background:#747d8c;width:1096px;margin-top:-20px;">
 							<footer id="footer">
 								<div class="container">
 									<div class="row">

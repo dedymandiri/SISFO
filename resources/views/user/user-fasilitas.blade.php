@@ -5,12 +5,12 @@
 <div class="judul_halaman" style="margin-left:25px;margin-top:-1030px;">
 <strong><h6>Fasilitas Sekolah</h6></strong><br></div>
 
-<table border="solid 1px black" style="margin-left:25px;width:700px;">
+<table border="solid 1px black" style="margin-left:25px;width:700px;text-align:center;">
   <thead style="color:black;">
     <tr>
-      <th width="30px" align="center">No</th>
-      <th >Nama Ruangan</th>
-      <th >kuantitas</th>
+      <th width="30px" height="40px" style="text-align:center;">No</th>
+      <th style="text-align:center;">Nama Ruangan</th>
+      <th style="text-align:center;">kuantitas</th>
     </tr> 
   </thead>
   <tbody>

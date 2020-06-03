@@ -5,7 +5,7 @@
 <div class="judul_halaman" style="margin-left:20px;margin-top:-1030px;">
 <strong><h6>Buku Tamu</h6></strong><br></div>
 
-<div class="form-input" style="margin-left:23px;border : 2px solid #b2bec3;width:725px;"><br><br>
+<div class="form-input" style="margin-left:23px;border : 1px solid white;width:725px;"><br><br>
 <form style="margin-left:25px;width:670px;color:black;" action="/buku_tamu/storetamu" method="post"> 
 {{ csrf_field() }}
 <div class="form-group">

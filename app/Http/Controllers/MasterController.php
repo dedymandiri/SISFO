@@ -62,7 +62,8 @@ class MasterController extends Controller
     // update data sambutan
     public function updatesambutan($id, Request $request)
     {
-        $sambutan = [
+        $sambutan = [            
+            'foto' => $request->foto,
             'nama' => $request->nama,
             'isi' => $request->isi 
         ];
