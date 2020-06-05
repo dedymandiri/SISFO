@@ -176,8 +176,8 @@ class UserController extends Controller
         return view('user.konseling');
     }
 
-    public function bukutamu(){
-        return view('user.buku_tamu');
+    public function tamu(){
+        return view('user.user-buku_tamu');
     }
 
     //input data ke database
@@ -188,10 +188,15 @@ class UserController extends Controller
 		'nama' => $request->nama,
 		'email' => $request->email,
 		'komentar' => $request->komentar
-	]);
+	    ]);
 	    // alihkan halaman ke halaman berita
-	    return redirect('buku_tamu');
+	    return redirect('user-buku_tamu');
  
+    }
+
+    public function tampildetailtamu(){
+        $hasil = Bukutamu_Model::all();
+        return view('user.user-buku_tamu',['liat'=>$hasil]);
     }
 
     
@@ -200,10 +205,16 @@ class UserController extends Controller
         return view('user.user-sambutan',['liat'=>$hasil]);
     }
 
+    public function sambutan(){
+        $hasil = Sambutan_Model::all();
+        return view('layouts.user-master',['liat'=>$hasil]);
+    }
+
 
     public function tampildetailinfo(){
-        $hasil = Pengumuman_Model::all();
-        return view('user.beranda',['liat'=>$hasil]);
+        $info = Pengumuman_Model::all();
+        $berita = Berita_Model::all();
+        return view('user.beranda',['info'=>$info, 'berita'=>$berita]);
     }
 
     public function selengkapnyainfo(){
@@ -211,12 +222,14 @@ class UserController extends Controller
         return view('user.user-pengumuman',['liat'=>$hasil]);
     }
 
-    public function tampildetailtamu(){
-        $hasil = Bukutamu_Model::all();
-        return view('user.buku_tamu',['liat'=>$hasil]);
+
+    public function nilaitk1(){
+        $mapel = Mapel_Model::all();
+        $nilai = Nilai_tk1_Model::all();
+        return view('user.user-cetak_nilai',['mapel'=>$mapel, 'liat'=>$nilai]);
     }
 
-
+   
 
 
 

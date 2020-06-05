@@ -20,18 +20,20 @@
     </div>
     <!-- /.content-header -->
     <br><br>
-
+   
     <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
+          
               <div class="inner">
-                <h3>13<sup style="font-size: 20px"></sup></h3>
-
+                <h3>2<sup style="font-size: 20px"></sup></h3>
+            
                 <label>Pengguna</label>
               </div>
+            
               <div style="height:40px;" class="icon">
                 <i class="ion ion-bag"></i>
               </div>

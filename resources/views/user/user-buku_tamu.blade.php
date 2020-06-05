@@ -6,7 +6,7 @@
 <strong><h6>Buku Tamu</h6></strong><br></div>
 
 <div class="form-input" style="margin-left:23px;border : 1px solid white;width:725px;"><br><br>
-<form style="margin-left:25px;width:670px;color:black;" action="/buku_tamu/storetamu" method="post"> 
+<form style="margin-left:25px;width:670px;color:black;" action="/user-buku_tamu/storetamu" method="post"> 
 {{ csrf_field() }}
 <div class="form-group">
     <label for="nama">Nama :</label>

@@ -22,6 +22,7 @@ Route::get('/master','MasterController@master');
 
 //---------------------------------------------------------------------halaman dashboard dari admin lte
 Route::get('/dashboard','MasterController@dashboard');
+Route::get('/dashboard','MasterController@tampiljumlah');
 //---------------------------------------------------------------------batas halaman dashboard dari admin lte
 
 
@@ -390,7 +391,25 @@ Route::get('/pendaftaran/hapus/{id}','MasterController@hapusdaftar');
 //---------------------------------------------------------------------batas halaman DATA PENDAFTAR dari admin lte
 
 
+//---------------------------------------------------------------------halaman DATA BUKU TAMU dari admin lte
+Route::get('/bukutamu','MasterController@bukutamu');
+//menampilkan data berita dari database
+Route::get('/bukutamu', 'MasterController@lihatbukutamu');
+//tambah data berita ke database
+Route::get('/input_bukutamu', 'MasterController@tambahbukutamu');
+Route::post('/bukutamu/storebukutamu','MasterController@storebukutamu');
+//edit(update) data berita ke database
+Route::get('/edit_bukutamu/{id}', 'MasterController@editbukutamu');
+Route::post('/bukutamu/update/{id}', 'MasterController@updatebukutamu');
+//hapus data berita
+Route::get('/bukutamu/hapus/{id}','MasterController@hapusbukutamu');
+//---------------------------------------------------------------------batas halaman DATA BUKU TAMU dari admin lte
 
+
+//---------------------------------------------------------------------halaman LOGIN dari admin lte
+Route::get('/login','MasterController@login');
+Route::post('/login/proses','MasterController@AuthCheck');
+//---------------------------------------------------------------------batas akhir halaman LOGIN dari admin lte
 
 
 
@@ -456,16 +475,18 @@ Route::get('/user-hasil_seleksi', 'UserController@tampilhasilseleksi');
 
 Route::get('/konseling','UserController@konseling');
 
-Route::get('/buku_tamu','UserController@bukutamu');
-Route::post('/buku_tamu/storetamu','UserController@storetamu');
-Route::get('/buku_tamu', 'UserController@tampildetailtamu');
+Route::get('/user-buku_tamu','UserController@tamu');
+Route::post('/user-buku_tamu/storetamu','UserController@storetamu');
+Route::get('/user-buku_tamu', 'UserController@tampildetailtamu');
 
 Route::get('/user-sambutan','UserController@tampilsambutan');
 Route::get('/user-sambutan', 'UserController@tampildetailsambutan');
+Route::get('/user-master', 'UserController@sambutan');
 
 Route::get('/beranda', 'UserController@tampildetailinfo');
 Route::get('/user-pengumuman', 'UserController@selengkapnyainfo');
 
+Route::get('/user-cetak_nilai', 'UserController@nilaitk1');
 
 
 //---------------------------------------------------------------------batas halaman PROFIL dari user web

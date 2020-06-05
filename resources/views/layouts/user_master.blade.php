@@ -25,8 +25,8 @@
 		
 	</head>
 
-	<body style="background:#ff7f50;">
-		<div class="user-navigation"style="background:#ff7f50;color:white;height:40px;margin-top:5px;">
+	<body style="background:#7ed6df;">
+		<div class="user-navigation"style="background:#7ed6df;color:white;height:40px;margin-top:5px;">
 			<div align="center" style="margin-top:-10px;" class="container">
 						
 				<!--Tanggal dan waktu sekarang-->
@@ -126,7 +126,7 @@
                                                         <li style="margin-left:50px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Hubungi Kami</a>
                                                             <ul class="dropdown-menu">
                                                               <li><a href="konseling">Konsultasi</a></li>
-                                                              <li><a href="buku_tamu">Buku Tamu</a></li>
+                                                              <li><a href="user-buku_tamu">Buku Tamu</a></li>
                                                             </ul>
                                                         </li>												                                                     
 													</ul>
@@ -222,7 +222,7 @@
 								<span class="hold-img">
 									<img style="height:150px;width:150px;margin-left:30px;margin-top:20px;" class="img-circle" src="{{ asset('user-web/aset/img/img103.jpg') }}" alt="image" width="210" height="210">
 								</span>
-								<label class="title">Dedi Maulana S.ST</label>
+								<label class="title">Dedi maulana</label>
 								<strong class="office">Kepala Sekolah</strong>
 							</div>
 
@@ -289,7 +289,7 @@
 									<div class="gallery-holder">
 										<!--footer kontak-kami-->
 										<div class="alamat">
-											<br><strong style="margin-left:-890px;"><font size="3">Contact Person  :</font></strong>									
+											<br><strong style="margin-left:-830px;"><font size="3">Contact Person  :</font></strong>									
 											<p align="left" style="margin-left:75px;font-size: 12px;"><br>Ponpes Arribathul Mustofa Terisi
 											<br>JL. Jangga Cikamurang, Terisi, Rajasinga, Kabupaten Indramayu, Jawa Barat 45262
 											<br>NPSN : 20215995
@@ -297,18 +297,22 @@
 										</div>			
 										<!--footer Follow-us-->
 										
-										<div class="follow-us" style="margin-left:200px;margin-top:-115px;">
+										<div class="follow-us" style="margin-left:150px;margin-top:-125px;">
 											<strong><font size="3">Follow Us  :</font></strong><br>
-											<div style="margin-left:440px;margin-top:20px;" class="tools tools-middle pull-left">
-												<a href="" target="_blank"><img style="width:20px;height:20px;" src="{{ asset('user-web/aset/img/facebook.png') }}" alt="Logo"></a>
+											<div style="margin-left:435px;margin-top:20px;" class="tools tools-middle pull-left">
+												<a href="https://www.facebook.com/pages/Smks-Islam-Terisi/860769074012639" target="_blank"><img style="width:20px;height:20px;" src="{{ asset('user-web/aset/img/facebook.png') }}" alt="Logo"></a>
 												<a href="" target="_blank"><img style="width:25px;height:24px;margin-left:5px;" src="{{ asset('user-web/aset/img/instagram.png') }}" alt="Logo"></a>
 												<a href="" target="_blank"><img style="width:24px;height:20px;margin-left:3px;" src="{{ asset('user-web/aset/img/youtube.png') }}" alt="Logo"></a>
 											</div>						
 										</div>
 										<!--footer Link-terkait-->
-										<div class="follow-us" style="margin-top:-25px;">
-											<strong style="margin-left:700px;"><font size="3">About us  :</font></strong><br>
-																						
+										<div class="follow-us" style="margin-top:-20px;margin-left:-50px;">
+											<strong style="margin-left:625px;"><font size="3">About us  :</font></strong><br>
+											<div align="left" style="margin-left:850px;margin-top:15px;color:white;">
+											1. <a href="user-pendaftaran">Pendaftaran</a><br>
+											2. <a href="konseling">Konsultasi</a><br>
+											3. <a href="">Universitas Islam Dharma Kusuma</a><br>
+											</div>					
 										</div>
 									</div>									
 								</div>

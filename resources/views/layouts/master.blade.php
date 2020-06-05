@@ -29,6 +29,7 @@
     <ul class="navbar-nav">
       <li style="margin-top:-20px;margin-left:10px;" class="nav-item">
         <a class="nav-link" data-widget="pushmenu" role="button"><i class="fas fa-bars"></i></a>
+          
       </li>
     </ul>
   </nav>
@@ -294,12 +295,21 @@
               </li>
             </ul>
           </li>
-
+          <!--
           <li class="nav-item has-treeview">
             <a href="pengguna" class="nav-link">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
                 Data Pengguna
+              </p>
+            </a>
+          </li>-->
+
+          <li class="nav-item has-treeview">
+            <a href="bukutamu" class="nav-link">
+            <i class="nav-icon far fa-plus-square"></i>
+              <p>
+                Buku Tamu
               </p>
             </a>
           </li>
@@ -328,11 +338,17 @@
     <script src ="https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script>
 
     @yield('content')
-        
+    
+
+
     </section>
          
   </div>
   <!-- ./wrapper -->
+
+  <div class="col-md-5 col-sm-6">
+	   	<p align="center" style="width:1000px;color:grey;margin-left:250px;">&copy; 2020 Hak Cipta Dilindungi. Develop oleh Kelompok 5 Proyek 3 D4 Rekayasa Perangkay Lunak, Teknik Informatika, Politeknik Negeri Indramayu (POLINDRA) </p>
+	</div>
 
 <!-- jQuery -->
 <script src="{{ asset('admin/plugins/jquery-ui/jquery-ui.min.js') }}"></script>

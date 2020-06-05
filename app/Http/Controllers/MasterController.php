@@ -24,6 +24,8 @@ use App\Nilai_tk3_Model;
 use App\Seleksi_Model;
 use App\Daftar_Model;
 use App\Sambutan_Model;
+use App\Bukutamu_Model;
+use App\Admin_Model;
 // Batas Model buat manggil tabel di database
 
 use Storage;
@@ -38,6 +40,11 @@ class MasterController extends Controller
     //---------------------------------------------------------------------halaman dashboard admin
     public function dashboard(){
         return view('admin.dashboard');
+    }
+
+    public function tampiljumlah(){
+        $programming_count = Pengguna_Model::where('id_pengguna','1')->get()->count();
+        return view('admin.dashboard',['programming_count'=>$programming_count]);
     }
     //---------------------------------------------------------------------Batas halaman dashboard admin
 
@@ -948,6 +955,71 @@ class MasterController extends Controller
     //---------------------------------------------------------------------Batas halaman data user admin
 
 
+
+     //---------------------------------------------------------------------halaman BUKU TAMU  admin
+     public function bukutamu(){
+        return view('admin.bukutamu');
+    }
+
+    public function lihatbukutamu(){
+        $hasil = Bukutamu_Model::all();
+        return view('admin.bukutamu',['liat'=>$hasil]);
+    }
+
+    public function tambahbukutamu()
+    { 
+	    // memanggil view tambah
+	    return view('admin.input.input_bukutamu');
+ 
+    }
+
+    //input data ke database
+    public function storebukutamu(Request $request)
+    {
+	    // insert data ke table 
+	    DB::table('buku_tamu')->insert([
+		'nama' => $request->nama,
+		'email' => $request->email,
+		'komentar' => $request->komentar
+	]);
+	    // alihkan halaman ke halaman 
+	    return redirect('bukutamu');
+ 
+    }
+
+    //edit data 
+    public function editbukutamu($id){
+        $hasil = Bukutamu_Model::where('id_bukutamu',$id)->get();
+        return view('admin.edit.edit_bukutamu',['liat'=>$hasil]);
+    }
+
+    // update data 
+    public function updatebukutamu($id, Request $request)
+    {
+        $user = [
+            'nama' => $request->nama,
+		    'email' => $request->email,
+		    'komentar' => $request->komentar
+        ];
+	    // update data berita
+        DB::table('buku_tamu')->where('id_bukutamu',$request->id)->update($user);
+        return redirect('bukutamu');
+    }
+
+    
+    //hapus data berita berdasarkan id_berita
+    public function hapusbukutamu($id)
+    {
+	    // menghapus data pegawai berdasarkan id yang dipilih
+	    DB::table('buku_tamu')->where('id_bukutamu',$id)->delete();
+		
+	    // alihkan halaman ke halaman pegawai
+	    return redirect('bukutamu');
+    }
+    //---------------------------------------------------------------------Batas halaman data user admin
+
+
+
     
     //---------------------------------------------------------------------halaman GALERY FOTO admin
     public function gambar(){
@@ -1620,6 +1692,45 @@ class MasterController extends Controller
 
     //---------------------------------------------------------------------Batas halaman Nilai TK 3 admin
   
+
+    //---------------------------------------------------------------------halaman LOGIN admin
+    public function login(){
+        return view('admin.login.login');
+    }
+
+    public function AuthCheck(Request $request) 
+    {
+        $this->validate($request,
+ 
+            ['username'=>'required'],
+ 
+            ['password'=>'required']
+            
+        );
+ 
+        $user = $request->input('username');
+        $pass = $request->input('password');        
+ 
+        $users = DB::table('admin')->where(['username'=> $user])->first();
+        
+                if(count($users)==0){
+        
+                   return redirect('/herxpanel')->with('failed','Login gagal');
+        
+                } else
+               
+                if($users->username == $user AND Hash::check($pass, $users->password) ){
+                    
+                   Session::put('login', 'Selamat anda berhasil login');
+                   return redirect('/herxpanel');
+        
+                } else {
+                     
+                   return redirect('/herxpanel')->with('failed','Login gagal');
+          
+                }
+    }
+    //---------------------------------------------------------------------Batas halaman LOGIN admin
 
 
 }

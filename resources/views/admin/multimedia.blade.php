@@ -45,7 +45,7 @@
   <?php $no++ ;?>
     <tr>
         <td>{{ $no }}</td>
-        <td>{{ $li->deskripsi }}</td>
+        <td align="justify">{{ $li->deskripsi }}</td>
        
         <td>
             <a href="/edit_multimedia/{{ $li->id_multimedia }}"><button style="width:60px;" title="Edit" type="button"  class="btn btn-warning">Edit</button></a><br>

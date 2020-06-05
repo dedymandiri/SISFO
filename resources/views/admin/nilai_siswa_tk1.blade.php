@@ -83,7 +83,7 @@
             
             <a href="/nilai_siswa_tk1/hapus/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger"><img style="margin-left:-15px;margin-top:-9px;" src="{{ asset('admin/docs/assets/img/hapus.png') }}" height="30px" width="30px"></button></a>
             
-            <a href="/cetak_nilai_siswa/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" target="_BLANK" title="Unduh" type="button" class="btn btn-info"><img style="margin-left:-8px;margin-top:-7px;"  src="{{ asset('admin/docs/assets/img/unduh.png') }}" height="23px" width="20px;"></button></a>
+            <a href="/cetak_nilai_siswa/{{ $rekap->id_rekap }}"><button style="width:30px;height:30px;" title="Unduh" type="button" class="btn btn-info"><img style="margin-left:-8px;margin-top:-7px;"  src="{{ asset('admin/docs/assets/img/unduh.png') }}" height="23px" width="20px;"></button></a>
    
         </td>  
     </tr>

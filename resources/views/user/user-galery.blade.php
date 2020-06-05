@@ -7,7 +7,7 @@
 
   @foreach($liat as $li)
     <img src="{{ url('/data_file/'.$li->file) }}" style="width:220px;height:120px;margin-left:13px;margin-top:12px;">
-    
+   
   @endforeach
   </div>
 <br><br>
