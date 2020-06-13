@@ -422,7 +422,6 @@ Route::get('/user_master','UserController@user');
 Route::get('/beranda','UserController@beranda');
 Route::get('/user_master', 'UserController@tampilsambutan');
 
-
 Route::get('/user-sejarah','UserController@profilsejarah');
 Route::get('/user-sejarah','UserController@profildetailsejarah');
 
@@ -461,6 +460,7 @@ Route::post('/user-pendaftaran/daftar','UserController@adddaftar');
 
 Route::get('/user-nilai_tk1', 'UserController@rekap_nilai_tk1');
 Route::get('/user-nilai_tk1','UserController@lihat_rekap_nilai_tk1');
+Route::get('/user-cetak_nilai/{$id}', 'UserController@cetaknilaitk1');
 
 
 Route::get('/user-nilai_tk2', 'UserController@rekap_nilai_tk2');
@@ -481,12 +481,8 @@ Route::get('/user-buku_tamu', 'UserController@tampildetailtamu');
 
 Route::get('/user-sambutan','UserController@tampilsambutan');
 Route::get('/user-sambutan', 'UserController@tampildetailsambutan');
-Route::get('/user-master', 'UserController@sambutan');
 
 Route::get('/beranda', 'UserController@tampildetailinfo');
-Route::get('/user-pengumuman', 'UserController@selengkapnyainfo');
-
-Route::get('/user-cetak_nilai', 'UserController@nilaitk1');
-
+Route::get('/user-pengumuman/{id}', 'UserController@selengkapnyainfo');
 
 //---------------------------------------------------------------------batas halaman PROFIL dari user web

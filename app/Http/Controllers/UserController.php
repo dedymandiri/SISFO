@@ -47,71 +47,76 @@ class UserController extends Controller
         return view('layouts.user_master',['liat'=>$hasil]);
     }
 
-
-    public function profilsejarah(){
-        return view('user.user-sejarah');
-    }
-
     public function profildetailsejarah(){
         $hasil = Profil_Model::all();
-        return view('user.user-sejarah',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-sejarah',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
 
     public function profildetailvisimisi(){
-        $hasil = Profil_Model::all();
-        return view('user.user-visimisi',['liat'=>$hasil]);
+        $hasil = Profil_Model::all();        
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-visimisi',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
 
     public function profildetailstruktursek(){
-        $hasil = Struktursklh_Model::all();
-        return view('user.user-struktursek',['liat'=>$hasil]);
+        $hasil = Struktursklh_Model::all();            
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-struktursek',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
 
     public function profildetailfasilitas(){
         $hasil = Fasilitas_Model::all();
-        return view('user.user-fasilitas',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-fasilitas',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
-
     
     public function detailjurusanmultimedia(){
         $hasil = Multimedia_model::all();
-        return view('user.user-multimedia',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-multimedia',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
     
     public function kesiswaandetailosis(){
         $hasil = Ekskul_model::all();
-        return view('user.user-osis',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-osis',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
     
     public function kesiswaandetailpramuka(){
         $hasil = Ekskul_model::all();
-        return view('user.user-pramuka',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-pramuka',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
     
     public function kesiswaandetailpaskibra(){
         $hasil = Ekskul_model::all();
-        return view('user.user-paskibra',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-paskibra',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
     
     public function kesiswaandetailkarate(){
         $hasil = Ekskul_model::all();
-        return view('user.user-karate',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-karate',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
     
     public function kesiswaandetailhadroh(){
         $hasil = Ekskul_model::all();
-        return view('user.user-hadroh',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-hadroh',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
 
     public function kesiswaandetailgalery(){
         $hasil = Galery_Model::all();
-        return view('user.user-galery',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-galery',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
 
     public function ppdbdaftar()
     { 
-	    // memanggil view tambah
-	    return view('user.user-pendaftaran');
+        $kepsek = Sambutan_Model::all();
+	    return view('user.user-pendaftaran',['kepsek'=>$kepsek]);
  
     }
 
@@ -140,43 +145,51 @@ class UserController extends Controller
     }
 
     public function lihat_rekap_nilai_tk1(){
-        $siswa = Nilai_tk1_Model::all();
-        $pel = Mapel_Model::all();
-        return view('user.user-nilai_tk1',['tampil'=>$siswa, "pel"=>$pel]);
+        $hasil = Nilai_tk1_Model::all();
+        $mapel = Mapel_Model::all();
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-nilai_tk1',['liat'=>$hasil, 'mapel'=>$mapel,'kepsek'=>$kepsek]);
     }
+
 
     public function lihat_rekap_nilai_tk2(){
         $siswa = Nilai_tk2_Model::all();
         $pel = Mapel_Model::all();
-        return view('user.user-nilai_tk2',['tampil'=>$siswa, "pel"=>$pel]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-nilai_tk2',['tampil'=>$siswa, "pel"=>$pel,'kepsek'=>$kepsek]);
     }
 
     public function lihat_rekap_nilai_tk3(){
         $siswa = Nilai_tk3_Model::all();
         $pel = Mapel_Model::all();
-        return view('user.user-nilai_tk3',['tampil'=>$siswa, "pel"=>$pel]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-nilai_tk3',['tampil'=>$siswa, "pel"=>$pel,'kepsek'=>$kepsek]);
     }
 
     public function tampiljadwal(){
         $hasil = Jadwal_Model::all();
-        return view('user.user-jadwal_pelajaran',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-jadwal_pelajaran',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
 
     public function tampilkalender(){
         $hasil = Kalender_Model::all();
-        return view('user.user-kalender_sekolah',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-kalender_sekolah',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
 
     public function tampilhasilseleksi(){
         $hasil = Seleksi_Model::all();
-        return view('user.user-hasil_seleksi',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-hasil_seleksi',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
 
     public function konseling(){
-        return view('user.konseling');
+        $kepsek = Sambutan_Model::all();
+        return view('user.konseling',['kepsek'=>$kepsek]);
     }
 
-    public function tamu(){
+    public function tamu(){        
         return view('user.user-buku_tamu');
     }
 
@@ -196,41 +209,31 @@ class UserController extends Controller
 
     public function tampildetailtamu(){
         $hasil = Bukutamu_Model::all();
-        return view('user.user-buku_tamu',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-buku_tamu',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
 
     
     public function tampildetailsambutan(){
         $hasil = Sambutan_Model::all();
-        return view('user.user-sambutan',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-sambutan',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
-
-    public function sambutan(){
-        $hasil = Sambutan_Model::all();
-        return view('layouts.user-master',['liat'=>$hasil]);
-    }
-
 
     public function tampildetailinfo(){
         $info = Pengumuman_Model::all();
         $berita = Berita_Model::all();
-        return view('user.beranda',['info'=>$info, 'berita'=>$berita]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.beranda',['liat'=>$info, 'berita'=>$berita,'kepsek'=>$kepsek]);
     }
 
-    public function selengkapnyainfo(){
-        $hasil = Pengumuman_Model::all();
+    public function selengkapnyainfo($id){
+        $hasil = Pengumuman_Model::where('id_info',$id)->get();
         return view('user.user-pengumuman',['liat'=>$hasil]);
     }
 
 
-    public function nilaitk1(){
-        $mapel = Mapel_Model::all();
-        $nilai = Nilai_tk1_Model::all();
-        return view('user.user-cetak_nilai',['mapel'=>$mapel, 'liat'=>$nilai]);
-    }
 
-   
-
-
+    
 
 }

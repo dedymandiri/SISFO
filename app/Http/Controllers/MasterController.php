@@ -1482,15 +1482,6 @@ class MasterController extends Controller
         $hasil = Nilai_tk1_Model::where('id_rekap',$id)->get();
         $mapel = Mapel_Model::all();
         return view('admin.cetak_nilai_siswa',['liat'=>$hasil, 'mapel'=>$mapel]);
-        
-    }
-
-    public function exportPDF()
-    {
-        $pegawai = Mapel_Model::all();
- 
-    	$pdf = PDF::loadview('admin.cetak_nilai_siswa',['pegawai'=>$pegawai]);
-    	return $pdf->download('laporan-nilai-pdf');
     }
 
     //---------------------------------------------------------------------Batas halaman Nilai TK 1 admin

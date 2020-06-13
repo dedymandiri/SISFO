@@ -5,15 +5,15 @@
     <a href="/nilai_siswa_tk1"><button style="margin-left:700px;width:100px;" type="button" class="btn btn-primary">Kembali</button></a>
   </div>
  -->
-  <script>
+ <!-- <script>
 		window.print();
-	</script>
+	</script>-->
 
    <br><div style="margin-left:18px;width:1000px;height:1500px;" class="card"><br>
   
   <!--Bagian logo sekolah-->
   <div class="logo_sekolah">
-      <img style="margin-left:100px;margin-top:35px;" src="{{ asset('admin/docs/assets/img/smk-terisi.jpeg') }}" height="110px" width="110px;">
+      <img style="margin-left:100px;margin-top:50px;" src="{{ asset('admin/docs/assets/img/smk-terisi.jpeg') }}" height="110px" width="110px;">
   </div>
   <!--Bagian nama sekolah terkait-->
   <div class="text-judul" >
@@ -24,12 +24,12 @@
   </div>
   <!--Bagian logo pendidikan-->
   <div class="logo_pendidikan">
-      <img style="margin-left:800px;margin-top:-140px;" src="{{ asset('admin/docs/assets/img/indramayu.png') }}" height="115px" width="120px;">
+      <img style="margin-left:800px;margin-top:-105px;" src="{{ asset('admin/docs/assets/img/indramayu.png') }}" height="115px" width="120px;">
   </div>
   <!--Bagian garis inline judul-->
-  <div class="garis-inlane" style="margin-top:-10px;">
+  <div class="garis-inlane" style="margin-top:30px;">
     <HR style="margin-left:50px;border: 1px solid black;" WIDTH=90% >
-    <HR style="margin-left:50px;margin-top:-19px;border: 2px solid black;" WIDTH=90% >
+    <HR style="margin-left:50px;margin-top:-15px;border: 2px solid black;" WIDTH=90% >
   </div><br>
  
   @foreach($liat as $li)
@@ -129,7 +129,9 @@
 </div>
 @endforeach
 
-<div style="width:1335px;" class="card-header info-color white-text text-center py-4"></div>
+<div style="width:1335px;" class="card-header info-color white-text text-center py-4">
+    Indramayu, <div class=""></div>
+</div>
 
 </div>
 

@@ -2,11 +2,11 @@
 
 @section('content') 
 
- <!--bagian button-->
+ <!--bagian button
   <div style="width:1335px;" class="card-header info-color white-text text-center py-4">
     <a onClick="print_d()" target="_BLANK"><button style="margin-left:-300px;width:100px;" type="submit" value="Simpan" class="btn btn-secondary">Unduh</button></a>
     <a href="/nilai_siswa_tk1"><button style="margin-left:700px;width:100px;" type="button" class="btn btn-primary">Kembali</button></a>
-  </div>
+  </div>-->
 
   <script>
 		window.print();

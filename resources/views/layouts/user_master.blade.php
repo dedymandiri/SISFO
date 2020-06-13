@@ -212,27 +212,10 @@
        					   </div>
       				  </form>
     				</div>
-
-				<!--Bagian sambutan kepala sekolah-->
-				<div class="col-md-4 col-sm-6 col-xs-12" style="height:100px;width:300px;margin-top:10px;">
-					<div class="crewman crewman-center">
-						<div class="frame sambutan" id="kepala-sekolah">
-							
-							<div class="hold-line">
-								<span class="hold-img">
-									<img style="height:150px;width:150px;margin-left:30px;margin-top:20px;" class="img-circle" src="{{ asset('user-web/aset/img/img103.jpg') }}" alt="image" width="210" height="210">
-								</span>
-								<label class="title">Dedi maulana</label>
-								<strong class="office">Kepala Sekolah</strong>
-							</div>
-
-						</div>
-					</div>
-				</div> 
-				<!--Batas Bagian sambutan kepala sekolah-->
-			
+				
+								
 				<!-- link kampus-->
-				<div class="col-md-4 col-sm-6 col-xs-12" style="margin-top:190px;height:100px;width:300px;">
+				<div class="col-md-4 col-sm-6 col-xs-12" style="margin-top:460px;height:100px;width:300px;">
 					<div class="crewman crewman-center">
 						<div class="frame sambutan">
 							<div style="margin-top:-120px;">                                
@@ -267,22 +250,19 @@
 					</div>
 				</div> 
 				<!--Batas link jurusan-->
-
-				
-				</div>
+			
+						</div>
                             <!-- Bagian contents web -->
 							<div class="container" style="margin-top:-60px;float:left;width:73%;">
 				
-
 							   @yield('content')
 								
 							</div>
 							<!-- Bagian contents web -->
-				</div>
-							
-				</section>
-
-				<section class="link-penting" style="background:#747d8c;height:170px;color:white;width:1096px;">
+						</div>
+					</section>
+					<br><br>
+					<section class="link-penting" style="background:#747d8c;height:170px;color:white;width:1096px;">
 						<div class="container">
 							<div class="row">
 								<div class="gallery-partners">
@@ -311,7 +291,7 @@
 											<div align="left" style="margin-left:850px;margin-top:15px;color:white;">
 											1. <a href="user-pendaftaran">Pendaftaran</a><br>
 											2. <a href="konseling">Konsultasi</a><br>
-											3. <a href="">Universitas Islam Dharma Kusuma</a><br>
+											3. <a href="user-galery">Galery</a><br>
 											</div>					
 										</div>
 									</div>									
