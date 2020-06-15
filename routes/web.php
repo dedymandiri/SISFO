@@ -31,13 +31,15 @@ Route::get('/dashboard','MasterController@tampiljumlah');
 Route::get('/sambutan','MasterController@sambutan');
 //menampilkan data berita dari database
 Route::get('/sambutan', 'MasterController@lihatsambutan');
-
-Route::get('/detail_sambutan','MasterController@detailsambutan');
-Route::get('/detail_sambutan', 'MasterController@lihatdetailsambutan');
-
+//tambah data berita ke database
+Route::get('/input_sambutan', 'MasterController@tambahsambutan');
+Route::post('/sambutan/proses', 'MasterController@proses_upload_sambutan');
 //edit(update) data berita ke database
 Route::get('/edit_sambutan/{id}', 'MasterController@editsambutan');
 Route::post('/sambutan/update/{id}', 'MasterController@updatesambutan');
+
+Route::get('/detail_sambutan','MasterController@detailsambutan');
+Route::get('/detail_sambutan', 'MasterController@lihatdetailsambutan');
 //---------------------------------------------------------------------batas halaman SAMBUTAN dari admin lte
 
 
@@ -419,7 +421,9 @@ Route::post('/login/proses','MasterController@AuthCheck');
 
 //---------------------------------------------------------------------halaman User website dari user web
 Route::get('/user_master','UserController@user');
+
 Route::get('/beranda','UserController@beranda');
+
 Route::get('/user_master', 'UserController@tampilsambutan');
 
 Route::get('/user-sejarah','UserController@profilsejarah');

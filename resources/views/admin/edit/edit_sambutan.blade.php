@@ -9,38 +9,36 @@
 <h4 class="card-header info-color white-text text-center py-4">
   <strong>EDIT SAMBUTAN</strong>
 </h4>
-<br>
-
+<br><br>
 @foreach($liat as $li)
-<form style="width:825px;margin-left:35px;" action="/sambutan/update/{{ $li->id_sam }}" method="post">
+<form style="width:730px;margin-left:35px;" action="/sambutan/update/{{ $li->id_sam }}" method="post" enctype="multipart/form-data">
 {{ csrf_field() }}
 <br>
 <div class="form-group">
-    <label for="judul">Foto:</label>
-    <input type="text" id="jufotodul" class="form-control" placeholder="foto" required="required" name="foto" value="{{ $li->foto }}">
+    <label for="exampleFormControlFile1">Gambar/Foto :</label>
+    <input type="file" name="file" class="form-control-file" id="exampleFormControlFile1">
+    <br><label>File foto saat ini : {{ $li->file}}</label><br>
+    <div style="color:red;">*Note : pilih gambar dengan bentuk landscape!</div>
   </div>
   <div class="form-group">
-    <label for="judul">Nama Lengkap :</label>
-    <input type="text" id="judul" class="form-control" placeholder="nama" required="required" name="nama" value="{{ $li->nama }}">
+    <label for="nama">Nama Kepsek:</label>
+    <input type="text" class="form-control" placeholder="" required="required" name="nama" value="{{ $li->nama }}">
   </div>
   <div class="form-group">
-    <label for="judul">Isi Sambutan :</label>
-    <textarea id="isi" class="form-control" name="isi" rows="50" cols="80">{{ $li->isi }}</textarea>
+    <label for="judul">Sambutan :</label>
+    <textarea id="isi" class="form-control" placeholder="" name="isi">{{ $li->isi }}</textarea>
   </div>
- 
- <!--bagian button-->
+  
+  <!--bagian button-->
   <div style="margin-top:105px;width:930px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">
     <button style="margin-left:-700px;" type="submit" class="btn btn-primary" value="Simpan">Simpan</button>
     <a href="/sambutan"><button  title="Edit" type="button"  class="btn btn-primary">Kembali</button></a>
   </div>
 </form>
 
-
+</form>
 @endforeach
-
 </div>
-<br>
-
 
 <!-- CKEDITOR -->
 <script>
@@ -52,5 +50,6 @@
   });
   CKEDITOR.config.allowedContent = true;
 </script>
+<br>
 
 @endsection

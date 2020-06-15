@@ -60,25 +60,94 @@ class MasterController extends Controller
         return view('admin.sambutan',['liat'=>$hasil]);
     }
 
+    public function tambahsambutan()
+    { 
+	    // memanggil view tambah
+	    return view('admin.input.input_sambutan');
+ 
+    }
+
+    public function proses_upload_sambutan(Request $request){
+        $this->validate($request, [
+			'file' => 'required|image|mimes:jpeg,png,jpg',
+            'nama' => 'required',
+            'isi' => 'required'
+		]);
+ 
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+ 
+      	        // nama file
+		echo 'File Name: '.$file->getClientOriginalName();
+		echo '<br>';
+ 
+      	        // ekstensi file
+		echo 'File Extension: '.$file->getClientOriginalExtension();
+		echo '<br>';
+ 
+      	        // real path
+		echo 'File Real Path: '.$file->getRealPath();
+		echo '<br>';
+ 
+      	        // ukuran file
+		echo 'File Size: '.$file->getSize();
+		echo '<br>';
+ 
+      	        // tipe mime
+		echo 'File Mime Type: '.$file->getMimeType();
+ 
+      	        // isi dengan nama folder tempat kemana file diupload
+		$tujuan_upload = 'data_sambutan';
+ 
+                // upload file
+        $file->move($tujuan_upload,$file->getClientOriginalName());
+            
+        DB::table('sambutan')->insert([
+            'file'=> $file->getClientOriginalName(),
+            'nama' => $request->nama,
+            'isi' => $request->isi
+        ]);
+
+        // alihkan halaman ke halaman pegawai
+        return redirect('sambutan');
+    }
+    
+
     //edit data sambutan
     public function editsambutan($id){
         $hasil = Sambutan_Model::where('id_sam',$id)->get();
         return view('admin.edit.edit_sambutan',['liat'=>$hasil]);
     }
+ 
+    // update data 
+ public function updatesambutan($id, Request $request)
+ {
+     $this->validate($request, [
+         'file' => 'required|image|mimes:jpeg,png,jpg',
+         'nama' => 'required',
+         'isi' => 'required'
+     ]);
 
-    // update data sambutan
-    public function updatesambutan($id, Request $request)
-    {
-        $sambutan = [            
-            'foto' => $request->foto,
-            'nama' => $request->nama,
-            'isi' => $request->isi 
-        ];
-	    // update data sambutan
-        DB::table('sambutan')->where('id_sam',$request->id)->update($sambutan);
-        return redirect('sambutan');
-    }
-    
+     // menyimpan data file yang diupload ke variabel $file
+     $file = $request->file('file');
+
+     $sambutan = [
+         'file'=> $file->getClientOriginalName(),
+         'nama' => $request->nama,
+         'isi' => $request->isi
+     ];
+
+       // tujuan file disimpan di folder apa?
+     $tujuan_upload = 'data_sambutan';
+
+     // upload file
+     $file->move($tujuan_upload,$file->getClientOriginalName());
+            
+     // update data 
+     DB::table('sambutan')->where('id_sam',$request->id)->update($sambutan);
+     return redirect('sambutan');
+    }    
+
     public function detailsambutan(){
         return view('admin.detail.detail_sambutan');
     }
@@ -87,8 +156,7 @@ class MasterController extends Controller
         $hasil = Sambutan_Model::all();
         return view('admin.detail.detail_sambutan',['liat'=>$hasil]);
     }
-
-    
+   
     //---------------------------------------------------------------------Batas halaman SAMBUTAN admin
 
 

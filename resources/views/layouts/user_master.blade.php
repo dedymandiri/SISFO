@@ -213,9 +213,28 @@
       				  </form>
     				</div>
 				
+				<!--Bagian sambutan kepala sekolah-->
+				<div class="col-md-4 col-sm-6 col-xs-12" style="height:100px;width:300px;margin-top:15px;">
+					<div class="crewman crewman-center">
+						<div class="frame sambutan" id="kepala-sekolah">
+						
+							<div class="hold-line">
+								<span class="hold-img">
+								<img src="{{ url('/data_sambutan/'.$kepsek[0]->file) }}" style="margin-left:35px; margin-top:15px; width:140px; height:140px;">
+								</span>
+								<label class="title">{{ $kepsek[0]->nama}}</label>
+								<strong class="office">Kepala Sekolah</strong>
+								<?php echo substr ($kepsek[0]['isi'], 0,200) ?></q><a style="color:blue;" href="/user-sambutan">. Baca selengkapnya . . .</a>
+							</div>
+						
+						</div>
+					</div>
+				</div> 
+				<!--Batas Bagian sambutan kepala sekolah-->
+
 								
 				<!-- link kampus-->
-				<div class="col-md-4 col-sm-6 col-xs-12" style="margin-top:460px;height:100px;width:300px;">
+				<div class="col-md-4 col-sm-6 col-xs-12" style="margin-top:370px;height:100px;width:300px;">
 					<div class="crewman crewman-center">
 						<div class="frame sambutan">
 							<div style="margin-top:-120px;">                                
@@ -288,10 +307,11 @@
 										<!--footer Link-terkait-->
 										<div class="follow-us" style="margin-top:-20px;margin-left:-50px;">
 											<strong style="margin-left:625px;"><font size="3">About us  :</font></strong><br>
-											<div align="left" style="margin-left:850px;margin-top:15px;color:white;">
+											<div align="left" style="margin-left:850px;margin-top:15px;">
 											1. <a href="user-pendaftaran">Pendaftaran</a><br>
 											2. <a href="konseling">Konsultasi</a><br>
 											3. <a href="user-galery">Galery</a><br>
+											4. <a href="user-pengumuman">Pengumuman</a><br>
 											</div>					
 										</div>
 									</div>									

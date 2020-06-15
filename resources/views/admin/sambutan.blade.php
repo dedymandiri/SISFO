@@ -22,7 +22,12 @@
 
 
 <body>
-   
+<div class="col-sm-4">
+       <!-- <a href="/input_sambutan"><button type="button" class="btn btn-success">Tambah Data</button></a>--> 
+       <!-- Search form -->
+       <!--<input style="margin-top:-40px;margin-left:815px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search"> --> 
+</div>
+
 <div style="margin-left:20px;margin-top:10px;width:1065px;" class="berita">
   <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
    <thead>
@@ -42,7 +47,7 @@
   <?php $no++ ;?>
     <tr>
         <td>{{ $no }}</td>        
-        <td>{{ $li->foto }}</td>
+        <td><img src="{{ url('/data_sambutan/'.$li->file) }}" style="width:140px; height:140px;"></td>
         <td>{{ $li->nama }}</td>
         <td><p align="justify">{{ $li->isi }}</p></td>
       

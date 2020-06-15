@@ -35,7 +35,8 @@ class UserController extends Controller
 {
     
     public function user(){
-        return view('layouts.user_master');
+        $hasil = Sambutan_Model::get();
+        return view('layouts.user_master',['kepsek'=>$hasil]);
     }
 
     public function beranda(){
@@ -43,7 +44,7 @@ class UserController extends Controller
     }
 
     public function tampilsambutan(){
-        $hasil = Sambutan_Model::all();
+        $hasil = Sambutan_Model::get();
         return view('layouts.user_master',['liat'=>$hasil]);
     }
 

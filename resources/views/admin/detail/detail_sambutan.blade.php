@@ -15,8 +15,10 @@
 <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <!--Untuk menampilkan tabel berita dari database-->
     @foreach($liat as $li)
-       <div  class="isi">		
-			<div style="margin-left:20px;width:880px;" class="hr" align="justify">
+    <img src="{{ url('/data_sambutan/'.$li->file) }}" style="margin-left:25px;width:200px;border:1px solid black;height:200px;">
+    <strong><p style="margin-left:25px;margin-top:10px;">{{ $li->nama }}</p></strong><br>
+    <div  class="isi">		
+			<div style="margin-left:25px;width:880px;" class="hr" align="justify">
 			<?php echo $li['isi'] ?></div>
 		</div>
     @endforeach
@@ -24,7 +26,7 @@
   </table>
 
   <div style="margin-top:105px" class="card-header info-color white-text text-center py-4">
-      <a href="/sambutan"><button style="margin-left:-750px;" type="submit" class="btn btn-primary" value="Simpan">Kembali</button></a>
+      <a href="/sambutan"><button style="margin-left:-790px;" type="submit" class="btn btn-primary" value="Simpan">Kembali</button></a>
   </div>
 
 </div>
