@@ -76,7 +76,7 @@
 									
 												<span class="nook">&nbsp;</span>
 													<ul style="margin-left:350px;margin-top:20px;margin-left:40px;font-weight:bold;" class="nav navbar-nav">
-														<li><a href="beranda">Beranda</a></li>
+														<li><a href="home">Home</a></li>
 														<li style="margin-left:50px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Profil</a>
 														    <ul class="dropdown-menu">
 														      <li><a href="user-sejarah">Sejarah</a></li>
@@ -123,8 +123,9 @@
                                                               <li><a href="user-nilai_tk3">Nilai Tingkat 3</a></li>
                                                             </ul>
                                                         </li>
-                                                        <li style="margin-left:50px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Hubungi Kami</a>
+                                                        <li style="margin-left:50px;" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Informasi</a>
                                                             <ul class="dropdown-menu">
+															  <li><a href="user-pengumuman">Pengumuman</a></li>
                                                               <li><a href="konseling">Konsultasi</a></li>
                                                               <li><a href="user-buku_tamu">Buku Tamu</a></li>
                                                             </ul>

@@ -35,16 +35,15 @@ class UserController extends Controller
 {
     
     public function user(){
-        $hasil = Sambutan_Model::get();
-        return view('layouts.user_master',['kepsek'=>$hasil]);
+        return view('layouts.user_master');
     }
 
-    public function beranda(){
-        return view('user.beranda');
+    public function home(){
+        return view('user.home');
     }
 
     public function tampilsambutan(){
-        $hasil = Sambutan_Model::get();
+        $hasil = Sambutan_Model::all();
         return view('layouts.user_master',['liat'=>$hasil]);
     }
 
@@ -221,16 +220,28 @@ class UserController extends Controller
         return view('user.user-sambutan',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
 
-    public function tampildetailinfo(){
-        $info = Pengumuman_Model::all();
+    public function tampilberita(){
         $berita = Berita_Model::all();
         $kepsek = Sambutan_Model::all();
-        return view('user.beranda',['liat'=>$info, 'berita'=>$berita,'kepsek'=>$kepsek]);
+        return view('user.home',['liat'=>$berita,'kepsek'=>$kepsek]);
     }
 
-    public function selengkapnyainfo($id){
+    public function detail_berita($id){
+        $hasil = Berita_Model::where('id_berita',$id)->get();
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-detail_berita',['liat'=>$hasil,'kepsek'=>$kepsek]);
+    }
+    
+    public function tampilpengumuman(){
+        $berita = Pengumuman_Model::all();
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-pengumuman',['liat'=>$berita,'kepsek'=>$kepsek]);
+    }
+
+    public function detail_pengumuman($id){
         $hasil = Pengumuman_Model::where('id_info',$id)->get();
-        return view('user.user-pengumuman',['liat'=>$hasil]);
+        $kepsek = Sambutan_Model::all();
+        return view('user.user-detail_pengumuman',['liat'=>$hasil,'kepsek'=>$kepsek]);
     }
 
 
