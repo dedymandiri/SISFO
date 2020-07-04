@@ -40,7 +40,7 @@ table{
 }
 
 h6{
-	margin-left:25px;
+	margin-left:23px;
 }
 
 tr td{
@@ -57,8 +57,8 @@ tr td{
 			<tr>
 				<td><a href="/user-detail_berita/{{ $li->id_berita }}"><img class="img" src="{{ asset('user-web/aset/img/banjir.jpg') }}" alt="image" width="312" height="100"></a><br><br>
 					<strong class="title"><a href="user-detail_berita"><b>{{ $li->judul }}</b></a><br>
-					<small>{{ $li->tanggal_waktu }}</small></strong><br>										
-					<q align="justify"><?php echo substr ($li['isi'], 0,180) ?><a style="color:blue;" href="/user-detail_berita/{{ $li->id_berita }}">. Baca selengkapnya . . .</a></q>
+					<small>{{ $li->tanggal_waktu }}</small></strong>										
+					<p><?php echo substr ($li['isi'], 0,180) ?><a style="color:blue;" href="/user-detail_berita/{{ $li->id_berita }}">. Baca selengkapnya . . .</a></p>
 			    </td>
 			</tr>
 		</tbody>

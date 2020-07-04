@@ -19,8 +19,17 @@
   </div>
   <div class="form-group">
     <label for="tgl_waktu">Kuantitas :</label>
-    <input type="text" class="form-control" placeholder="Kuantitas " required="required" name="kuantitas">
+    <input type="text" class="form-control" placeholder="Kuantitas" required="required" name="kuantitas">
   </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Kondisi :</label>
+    <select class="form-control" id="exampleFormControlSelect1" class="form-control" placeholder="Kondisi" required="required" name="kondisi">
+      <option>Kurang Baik</option>
+      <option>Lumayan Baik</option>
+      <option>Baik</option>
+      <option>Sangat Baik</option>
+    </select>
+  </div> 
 
 <!--bagian button-->
 <div style="margin-top:105px;width:930px;margin-left:-35px;" class="card-header info-color white-text text-center py-4">

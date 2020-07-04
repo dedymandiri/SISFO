@@ -14,11 +14,15 @@
 {{ csrf_field() }}
 <br>
   <div class="form-group">
-    <label for="judul">Nama Guru</label>
+    <label for="nip_nik">NIP/NIK :</label>
+    <input type="text" class="form-control" placeholder="Nip/nik" required="required" name="nip_nik">
+  </div>
+  <div class="form-group">
+    <label for="nama_guru">Nama Guru :</label>
     <input type="text" class="form-control" placeholder="Nama guru" required="required" name="nama_guru">
   </div>
   <div class="form-group">
-    <label for="tgl_waktu">Jabatan</label>
+    <label for="jabatan">Jabatan :</label>
     <input type="text" class="form-control" placeholder="Jabatan " required="required" name="jabatan">
   </div>
 

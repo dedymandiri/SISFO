@@ -15,11 +15,15 @@
 {{ csrf_field() }}
 <br>
   <div class="form-group">
-    <label for="judul">Nama Guru :</label>
+    <label for="nip_nik">NIP/NIK :</label>
+    <input type="text" id="nip_nik" class="form-control" placeholder="nip_nik" required="required" name="nip_nik" value="{{ $li->nip_nik }}">
+  </div>
+  <div class="form-group">
+    <label for="nama_guru">Nama Guru :</label>
     <input type="text" id="nama_guru" class="form-control" placeholder="Nama guru" required="required" name="nama_guru" value="{{ $li->nama_guru }}">
   </div>
   <div class="form-group">
-    <label for="tanggal_waktu">Jabatan :</label>
+    <label for="jabatan">Jabatan :</label>
     <input type="text" id="jabatan" class="form-control" placeholder="Jabatan" required="required" name="jabatan" value="{{ $li->jabatan }}">
   </div>
 

@@ -34,6 +34,7 @@
    <thead>
     <tr>
       <th class="th-sm">No</th>
+      <th class="th-sm">NIP/NIK</th>
       <th class="th-sm">Nama Guru</th>
       <th class="th-sm">Jabatan</th>
       <th class="th-sm">Aksi</th>
@@ -47,6 +48,7 @@
   <?php $no++ ;?>
     <tr>
         <td>{{ $no }}</td>
+        <td>{{ $li->nip_nik }}</td>
         <td>{{ $li->nama_guru }}</td>
         <td>{{ $li->jabatan }}</td>
        

@@ -14,7 +14,6 @@
       <div class='input-group date' id='datepicker'>
        <input type="date" class="form-control" placeholder="Tanggal Daftar" required="required" name="tgl_masuk">
          <span class="input-group-addon">
-           <span class="glyphicon glyphicon-calendar"></span>
         </span>
       </div>
   </div>
@@ -31,7 +30,6 @@
       <div class='input-group date' id='datepicker2'>
        <input type="date" class="form-control" placeholder="Tanggal Lahir" required="required" name="tgl_lahir">
          <span class="input-group-addon">
-           <span class="glyphicon glyphicon-calendar"></span>
         </span>
       </div>
   </div>

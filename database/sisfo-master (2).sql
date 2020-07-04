@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Jun 2020 pada 14.23
+-- Waktu pembuatan: 04 Jul 2020 pada 02.29
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 7.3.3
 
@@ -59,8 +59,10 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id_berita`, `judul`, `tanggal_waktu`, `isi`) VALUES
-(10, 'Mayat Perempuan Bertato \'Burung Hantu\' di Lembang, Anggota Geng Motor?', '06 March 2020 10:02', '<figure class=\"easyimage easyimage-full\"><img alt=\"\" src=\"blob:http://localhost:8000/b0f51944-277a-45fc-af5e-be7b86f7e20a\" width=\"7360\" />\r\n<figcaption></figcaption>\r\n</figure>\r\n\r\n<p>- Penemuan mayat perempuan di selokan depan Hotel Novena, Jalan Raya Lembang-Bandung, membuat heboh pengendara yang melintas, Kamis (5/3/2020) sekitar pukul 08.00 WIB. Mayat perempuan tersebut pertama kali ditemukan oleh seorang pedagang asongan yang melintas, lalu dilaporkan ke security hotel dekat TKP penemuan mayat. Pihak kepolisian langsung terjun ke lokasi untuk melakukan evakuasi dan olah TKP. Mayat tersebut ditemukan tanpa mengantongi satupun identitas. Untuk mengungkap identitas korban, pihak kepolisian hanya berbekal tanda berupa tato di lengan korban, salah satunya tato &#39;burung hantLembang u&#39;</p>\r\n\r\n<p>atupun identitas. Untuk mengungkap identitas korban, pihak kepolisian hanya berbekal tanda berupa tato di lengan korban, salah satunya tato &#39;burung hantatupun identitas. Untuk mengungkap identitas korban, pihak kepolisian hanya berbekal tanda berupa tato di lengan korban, salah satunya tato &#39;burung hant. ckdsnckdsnc</p>'),
-(12, 'Masuk Level 3, Begini Prinsip PSBB Proporsional di Depok Mulai Jumat Besok', '04 June 2020 22:45', '<p>&nbsp;</p>\r\n\r\n<p>DEPOK, KOMPAS.com &ndash;&nbsp;Kota Depok resmi memasuki fase PSBB proporsional mulai Jumat (5/6/2020) besok, sebagai transisi menuju new normal.</p>\r\n\r\n<p>Dalam PSBB proporsional yang didesain di tingkat provinsi, Kota Depok termasuk dalam kategori kewaspadaan level 3 (cukup berat), di mana ketentuan pembatasan akan diterapkan secara parsial/sebagian.</p>\r\n\r\n<p>Beberapa aktivitas di tempat umum mulai dari rumah ibadah hingga pusat perbelanjaan akan dibuka namun secara bertahap.</p>\r\n\r\n<p>Baca juga:&nbsp;<a href=\"https://megapolitan.kompas.com/read/2020/06/04/09380931/psbb-terakhir-cara-jakarta-bogor-depok-dan-bekasi-kendalikan-zona-merah\" target=\"_self\">PSBB Terakhir, Cara Jakarta, Bogor, Depok, dan Bekasi Kendalikan Zona Merah Covid-19</a></p>\r\n\r\n<p>Pembukaan aktivitas sesuai dengan risiko penularan dan tren kasus Covid-19 di Depok.</p>\r\n\r\n<p>Wali Kota Depok, Mohammad Idris menerbitkan beberapa prinsip dasar pelaksanaan PSBB proporsional level 3 di Depok mulai besok.</p>\r\n\r\n<p>Hal itu termuat dalam Peraturan Wali Kota Depok Nomor 37 Tahun 2020 yang ia teken pada Kamis (4/6/2020).</p>\r\n\r\n<p>Dalam PSBB proporsional, setiap penduduk di Depok wajib mengenakan masker ketika bepergian dan mencuci tangan serta menjaga jarak fisik.</p>\r\n\r\n<p>Lalu, mobilitas penduduk tetap dibatasi, baik di dalam Provinsi Jawa Barat maupun antarprovinsi seperti dengan DKI Jakarta.</p>\r\n\r\n<p>&quot;Kedua, aktivitas sekolah melakukan pembelajaran secara online,&quot; tulis Idris.</p>\r\n\r\n<p>Aktivitas ekonomi, mulai dari perkantoran, industri, pasar, dan pertokoan di tempat dapat kembali dibuka.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>');
+(13, 'Dituding Politik Dinasti, Gibran: Dipilih Monggo, Tidak Dipilih Ya Silakan', '16 June 2020 21:30', '<p>Suara.com - Tudingan politik dinasti yang disampaikan sejumlah pihak kepada putra sulung Presiden Joko Widodo (Jokowi) Gibran Rakabuming Raka yang berencana ikut ambil bagian pada kontestasi politik Pilkada Surakarta 2020, direspon oleh Bos Markobar tersebut.<br />\r\n<br />\r\nGibran mengemukakan, Pilkada Solo yang digelar 2020 merupakan bentuk kontestasi, sehingga siapa saja bisa dipilih dan bisa tidak dipilih.<br />\r\n<br />\r\n&quot;Ini kan untuk kontestasi, saya bisa menang bisa kalah, bisa dipilih bisa tidak,&quot; katanya seperti dilansir Antara di Solo pada Selasa (17/12/2019).<br />\r\n<br />\r\nIa mengatakan yang penting baginya adalah tidak ada penunjukan dari pihak tertentu terkait keikutsertaannya tersebut, karena langkah itu merupakan keinginannya sendiri. Menurutnya, apapun hasilnya diserahkan kepada masyarakat.<br />\r\n<br />\r\n&quot;Dipilih monggo, tidak dipilih ya silahkan,&quot; katanya.<br />\r\n<br />\r\nIa juga mengatakan pada kontestasi tersebut tidak ada perlakuan istimewa yang diperolehnya. Bahkan, layaknya calon peserta lain, banyak tahapan yang harus dilaluinya.<br />\r\n<br />\r\n&quot;Semua mekanisme partai saya lalui,&quot; katanya.<br />\r\n<br />\r\nSementara itu, meskipun pihaknya belum mendirikan posko pemenangan secara resmi, saat ini sudah mulai banyak posko relawan yang ada di sejumlah titik.<br />\r\n<br />\r\n&quot;Sekarang ada tetapi posko tertutup, ini posko relawan. Setiap hari saya &#39;muterin&#39; (berkeliling),&quot; katanya.<br />\r\n<br />\r\nMeski demikian, dalam waktu dekat pihaknya akan mendirikan posko sendiri secara resmi.<br />\r\n<br />\r\n&quot;Memang harus ada posko sendiri. Nanti kami kasih tahu Bulan Januari atau Februari,&quot; katanya.</p>'),
+(14, 'PPP: Jiwasraya Jangan Jadi Bahan Adu Domba Pemerintahan SBY-Jokowi', '16 June 2020 21:37', '<p>PPP meminta permasalahan PT Asuransi Jiwasraya (Persero) tak dijadikan adu domba pemerintahan Presiden ke-6 RI Susilo Bambang Yudhoyono (SBY) dan pemerintahan Presiden Joko Widodo (Jokowi) saat ini. Hal itu menanggapi pernyataan SBY yang mempersilakan jika masalah Jiwasraya ditarik ke masa lalu.<br />\r\n<br />\r\n&quot;PPP meminta semua pihak agar tidak menjadikan persoalan Asuransi Jiwasraya sebagai bahan adu domba antara pemerintahan SBY dan pemerintahan saat ini,&quot; kata Sekjen PPP Arsul Sani kepada wartawan, Jumat (27/12/2019).<br />\r\n<br />\r\nMenurut Arsul, langkah tepat untuk memahami masalah Jiwasraya adalah dengan melakukan audit investigatif atas semua proses bisnis serta transaksi dan keadaan keuangannya selama 10 tahun terakhir. Arsul juga meminta OJK dilibatkan dalam audit investigatif itu.<br />\r\n<br />\r\n&quot;OJK perlu mengambil inisiatif ini dengan melibatkan BPK sebagai lembaga yang diberi kewenangan melakukan audit dan perhitungan kerugian negara. Dari audit investigatif inilah diharapkan akan ditemukan fakta sejak kapan Jiwasraya bermasalah dan mengapa masalah tersebut menjadi terakumulasi semakin membesar,&quot; ujarnya.<br />\r\n<br />\r\nLebih lanjut Arsul menyebut PPP mendukung dibentuknya Pansus Jiwasraya asalkan Pansus bekerja proporsional dalam mencari akar masalah asuransi tersebut.<br />\r\n<br />\r\n&quot;Pansus adalah salah satu instrumen pengawasan yang dimiliki DPR. Oleh karena itu, sepanjang wacana Pansus Jiwasraya ini proporsional dalam rangka mencari akar masalahnya, PPP tidak alergi terhadap wacana pembentukan pansus ini,&quot; ucap Arsul.<br />\r\n<br />\r\nDihubungi terpisah, Wasekjen PPP Achmad Baidowi (Awiek) meminta masalah Jiwasraya tak disikapi dengan bawa perasaan (baper). Menurut Awiek, persoalan Jiwasraya pada 10 tahun lalu semuanya merupakan ulah direksi BUMN tersebut.<br />\r\n<br />\r\n&quot;Risiko tinggi nggak dipikirkan sehingga terkena saham gorengan. Dan itu semua ulah direksi Jiwasraya, bukan ulah presiden. Jadinya ndak perlu baper dan jangan pula ibarat menggaruk pada bagian yang tidak gatal,&quot; ujar Awiek.<br />\r\n<br />\r\nSebelumnya, staf pribadi Presiden ke-6 Presiden Susilo Bambang Yudhoyono (SBY) Ossy Dermawan menceritakan respons SBY terkait masalah PT Asuransi Jiwasraya (Persero). SBY merespons masalah Jiwasraya saat menerima tamu, dan tamu itu menyampaikan kasus Jiwasraya ingin ditarik ke masa lalu.<br />\r\n<br />\r\nOssy mengatakan SBY tak mempermasalahkan jika persoalan Jiwasraya ditarik ke masa lalu jika pejabat saat ini enggan bertanggung jawab terkait masalah yang membelit asuransi pelat merah ini.<br />\r\n<br />\r\n&quot;Dengan tenang SBY menjawab: Kalau di negeri ini tak satu pun yang mau bertanggung jawab tentang kasus Jiwasraya, ya.. salahkan saja masa lalu,&quot; cuit Ossy, Jumat (27/12).</p>'),
+(16, 'Pasien Sembuh Corona Tembus Rekor Kemarin, Hari Ini 406 Orang', '22 June 2020 22:09', '<p>Beberapa syarat&nbsp;tersebut di antaranya&nbsp;kewajiban menunjukkan identitas diri (KTP) dan surat keterangan uji tes PCR dengan hasil negatif, atau rapid test dengan hasil nonreaktif yang berlaku 3 hari saat hari keberangkatan.<br />\r\n<br />\r\nOrang yang bepergian juga harus menunjukkan surat keterangan bebas dari flu.<br />\r\nSemua persyaratan itu tidak berlaku bagi perjalanan orang komuter dan perjalanan orang di dalam wilayah/kawasan aglomerasi.<br />\r\n<br />\r\n&quot;Persyaratan perjalanan orang dalam negeri dikecualikan untuk perjalanan orang komuter dan perjalanan orang di dalam wilayah/kawasan aglomerasi,&quot; dikutip dari surat edaran tersebut</p>'),
+(17, 'Surabaya Raya Dinilai Berbahaya Jika Buru-buru Setop PSBB', '22 June 2020 22:15', '<p>Dalam SE tersebut dijelaskan bahwa pemerintah dan pemerintah daerah berhak melarang dan menghentikan perjalanan orang apabila tidak memenuhi syarat yang telah ditetapkan.Bagian lain surat edaran baru mengatur soal pemantauan, pengendalian dan evaluasi. Salah satu poinnnya adalah pemerintah, pemda, penyelenggara transportasi umum dibantu TNI dan Polri sama-sama melakukan pengendalian perjalanan orang dan transportasi umum yang aman Covid-19.<br />\r\n<br />\r\nDengan adanya SE ini, maka mencabut SE sebelumnya yakni SE Nomor 4 Tahun 2020 dan SE Nomor 5 Tahun 2020 yang hanya berlaku sampai 7 Juni 2020.<br />\r\n<br />\r\n&quot;SE ini berlaku sejak tanggal ditetapkan dan dapat diubah sesuai perkembangan situasi, serta berakhir sampai ditetapkan Keputusan Presiden yang mengakhiri Keppres Nomor 11 Tahun 2020,&quot; demikian penutup SE Nomor 7 Tahun 2020.&nbsp;<b>(yoa/wis)</b></p>');
 
 -- --------------------------------------------------------
 
@@ -115,17 +117,18 @@ INSERT INTO `ekskul` (`id_ekskul`, `deskripsi_osis`, `deskripsi_pramuka`, `deskr
 CREATE TABLE `fasilitas` (
   `id_fas` int(11) NOT NULL,
   `nama_ruang` varchar(225) NOT NULL,
-  `kuantitas` int(5) NOT NULL
+  `kuantitas` int(5) NOT NULL,
+  `kondisi` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `fasilitas`
 --
 
-INSERT INTO `fasilitas` (`id_fas`, `nama_ruang`, `kuantitas`) VALUES
-(1, 'Ruang Kelas', 25),
-(3, 'Ruang Guru', 2),
-(4, 'Ruang Bk', 2);
+INSERT INTO `fasilitas` (`id_fas`, `nama_ruang`, `kuantitas`, `kondisi`) VALUES
+(1, 'Ruang Kelas', 25, 'Lumayan Baik'),
+(3, 'Ruang Guru', 2, 'Kurang Baik'),
+(4, 'Ruang Bk', 2, 'Sangat Baik');
 
 -- --------------------------------------------------------
 
@@ -474,6 +477,7 @@ INSERT INTO `sambutan` (`id_sam`, `file`, `nama`, `isi`) VALUES
 
 CREATE TABLE `struktur_guru` (
   `id_struktur_guru` int(7) NOT NULL,
+  `nip_nik` varchar(50) NOT NULL,
   `nama_guru` varchar(225) NOT NULL,
   `jabatan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -482,9 +486,9 @@ CREATE TABLE `struktur_guru` (
 -- Dumping data untuk tabel `struktur_guru`
 --
 
-INSERT INTO `struktur_guru` (`id_struktur_guru`, `nama_guru`, `jabatan`) VALUES
-(1, 'Dedi Maulana, S.ST', 'Kepala Sekolah'),
-(3, 'Rezha Agascha Permana,S.ST', 'Wakil Kepala Sekolah');
+INSERT INTO `struktur_guru` (`id_struktur_guru`, `nip_nik`, `nama_guru`, `jabatan`) VALUES
+(1, '123456789', 'Dedi Maulana, S.ST', 'Kepala Sekolah'),
+(3, '987654321', 'Rezha Agascha Permana,S.ST', 'Wakil Kepala Sekolah');
 
 -- --------------------------------------------------------
 
@@ -629,7 +633,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id_berita` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_berita` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `buku_tamu`
@@ -647,7 +651,7 @@ ALTER TABLE `ekskul`
 -- AUTO_INCREMENT untuk tabel `fasilitas`
 --
 ALTER TABLE `fasilitas`
-  MODIFY `id_fas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_fas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `galery`
@@ -719,7 +723,7 @@ ALTER TABLE `sambutan`
 -- AUTO_INCREMENT untuk tabel `struktur_guru`
 --
 ALTER TABLE `struktur_guru`
-  MODIFY `id_struktur_guru` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_struktur_guru` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`

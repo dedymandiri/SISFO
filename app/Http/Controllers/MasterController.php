@@ -395,7 +395,8 @@ class MasterController extends Controller
 	    // insert data ke table berita
 	    DB::table('fasilitas')->insert([
 		'nama_ruang' => $request->nama_ruang,
-		'kuantitas' => $request->kuantitas
+        'kuantitas' => $request->kuantitas,
+        'kondisi' => $request->kondisi
 		
 	]);
 	    // alihkan halaman ke halaman berita
@@ -414,7 +415,8 @@ class MasterController extends Controller
     {
         $fas = [
             'nama_ruang' => $request->nama_ruang,
-            'kuantitas' => $request->kuantitas
+            'kuantitas' => $request->kuantitas,
+            'kondisi' => $request->kondisi
         ];
         DB::table('fasilitas')->where('id_fas',$request->id)->update($fas);
         return redirect('fasilitas');
@@ -454,6 +456,7 @@ class MasterController extends Controller
     {
 	    // insert data ke table berita
 	    DB::table('struktur_guru')->insert([
+        'nip_nik' => $request->nip_nik,
 		'nama_guru' => $request->nama_guru,
 		'jabatan' => $request->jabatan
 		
@@ -473,6 +476,7 @@ class MasterController extends Controller
     public function updatestruktur_guru($id, Request $request)
     {
         $sg = [
+            'nip_nik' => $request->nip_nik,
             'nama_guru' => $request->nama_guru,
             'jabatan' => $request->jabatan
         ];
@@ -1543,13 +1547,13 @@ class MasterController extends Controller
     }
 
     public function cetaknilai(){
-        return view('admin.cetak_nilai_siswa');
+        return view('admin.cetak.cetak_nilai_siswa');
     }
 
     public function lihatcetaknilai($id){
         $hasil = Nilai_tk1_Model::where('id_rekap',$id)->get();
         $mapel = Mapel_Model::all();
-        return view('admin.cetak_nilai_siswa',['liat'=>$hasil, 'mapel'=>$mapel]);
+        return view('admin.cetak.cetak_nilai_siswa',['liat'=>$hasil, 'mapel'=>$mapel]);
     }
 
     //---------------------------------------------------------------------Batas halaman Nilai TK 1 admin
@@ -1641,15 +1645,14 @@ class MasterController extends Controller
 	    return redirect('nilai_siswa_tk2');
     }
 
-    public function cetaknilai_tk2(){
-        return view('admin.cetak_nilai_siswa_tk2');
+    public function cetaknilai2(){
+        return view('admin.cetak.cetak_nilai_siswa-2');
     }
 
-    public function lihatcetaknilai_tk2($id){
+    public function lihatcetaknilai2($id){
         $hasil = Nilai_tk2_Model::where('id_rekap',$id)->get();
         $mapel = Mapel_Model::all();
-        return view('admin.cetak_nilai_siswa_tk2',['liat'=>$hasil, 'mapel'=>$mapel]);
-        
+        return view('admin.cetak.cetak_nilai_siswa-2',['liat'=>$hasil, 'mapel'=>$mapel]);
     }
 
 
@@ -1737,17 +1740,15 @@ class MasterController extends Controller
 	    return redirect('nilai_siswa_tk3');
     }
 
-    public function cetaknilai_tk3(){
-        return view('admin.cetak_nilai_siswa_tk3');
+    public function cetaknilai3(){
+        return view('admin.cetak.cetak_nilai_siswa-3');
     }
 
-    public function lihatcetaknilai_tk3($id){
+    public function lihatcetaknilai3($id){
         $hasil = Nilai_tk3_Model::where('id_rekap',$id)->get();
         $mapel = Mapel_Model::all();
-        return view('admin.cetak_nilai_siswa_tk3',['liat'=>$hasil, 'mapel'=>$mapel]);
-        
+        return view('admin.cetak.cetak_nilai_siswa-3',['liat'=>$hasil, 'mapel'=>$mapel]);
     }
-
 
     //---------------------------------------------------------------------Batas halaman Nilai TK 3 admin
   

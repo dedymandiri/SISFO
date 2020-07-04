@@ -29,9 +29,9 @@
             <div class="small-box bg-info">
           
               <div class="inner">
-                <h3>2<sup style="font-size: 20px"></sup></h3>
+                <h3>40<sup style="font-size: 20px"></sup></h3>
             
-                <label>Pengguna</label>
+                <label>PPDB</label>
               </div>
             
               <div style="height:40px;" class="icon">
@@ -44,7 +44,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>32<sup style="font-size: 20px"></sup></h3>
+                <h3>10<sup style="font-size: 20px"></sup></h3>
 
                 <label>Berita</label>
               </div>
@@ -58,7 +58,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div style="color:white;" class="inner">
-                <h3>44<sup style="font-size: 20px"></sup></h3>
+                <h3>3<sup style="font-size: 20px"></sup></h3>
 
                 <label>Pengumuman</label>
               </div>
@@ -72,9 +72,9 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>20<sup style="font-size: 20px"></sup></h3>
+                <h3>13<sup style="font-size: 20px"></sup></h3>
 
-                <label>Pendaftar</label>
+                <label>Buku Tamu</label>
               </div>
               <div style="height:40px;" class="icon">
                 <i class="ion ion-pie-graph"></i>

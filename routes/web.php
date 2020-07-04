@@ -315,7 +315,7 @@ Route::get('/edit_nilai_siswa_tk1/{id}', 'MasterController@editnilai');
 Route::post('/nilai_siswa_tk1/update/{id}', 'MasterController@updatenilai');
 //hapus data berita
 Route::get('/nilai_siswa_tk1/hapus/{id}','MasterController@hapusnilai');
-
+//cetak nilai siswa
 Route::get('/cetak_nilai_siswa/{id}','MasterController@cetaknilai');
 Route::get('/cetak_nilai_siswa/{id}', 'MasterController@lihatcetaknilai');
 
@@ -334,9 +334,9 @@ Route::get('/edit_nilai_siswa_tk2/{id}', 'MasterController@editnilai_tk2');
 Route::post('/nilai_siswa_tk2/update/{id}', 'MasterController@updatenilai_tk2');
 //hapus data berita
 Route::get('/nilai_siswa_tk2/hapus/{id}','MasterController@hapusnilai_tk2');
-
-Route::get('/cetak_nilai_siswa_tk2/{id}','MasterController@cetaknilai_tk2');
-Route::get('/cetak_nilai_siswa_tk2/{id}', 'MasterController@lihatcetaknilai_tk2');
+//cetak nilai siswa
+Route::get('/cetak_nilai_siswa-2/{id}','MasterController@cetaknilai2');
+Route::get('/cetak_nilai_siswa-2/{id}', 'MasterController@lihatcetaknilai2');
 
 //---------------------------------------------------------------------batas halaman NILAI TINGKAT 2 dari admin lte
 
@@ -354,9 +354,9 @@ Route::get('/edit_nilai_siswa_tk3/{id}', 'MasterController@editnilai_tk3');
 Route::post('/nilai_siswa_tk3/update/{id}', 'MasterController@updatenilai_tk3');
 //hapus data berita
 Route::get('/nilai_siswa_tk3/hapus/{id}','MasterController@hapusnilai_tk3');
-
-Route::get('/cetak_nilai_siswa_tk3/{id}','MasterController@cetaknilai_tk3');
-Route::get('/cetak_nilai_siswa_tk3/{id}', 'MasterController@lihatcetaknilai_tk3');
+//cetak nilai siswa
+Route::get('/cetak_nilai_siswa-3/{id}','MasterController@cetaknilai3');
+Route::get('/cetak_nilai_siswa-3/{id}', 'MasterController@lihatcetaknilai3');
 
 //---------------------------------------------------------------------batas halaman NILAI TINGKAT 3 dari admin lte
 
