@@ -9,6 +9,7 @@
   <thead style="color:black;">
     <tr>
       <th width="30px" height="40px" style="text-align:center;">No</th>
+      <th style="text-align:center;">NIP/NIK</th>
       <th style="text-align:center;">Nama Guru/Staff</th>
       <th style="text-align:center;">Jabatan</th>
     </tr> 
@@ -21,6 +22,7 @@
 <?php $no++ ;?>
 <tr>
     <td>{{ $no }}</td>
+    <td>{{ $li->nip_nik }}</td>
     <td>{{ $li->nama_guru }}</td>
     <td>{{ $li->jabatan }}</td>
 </tr>

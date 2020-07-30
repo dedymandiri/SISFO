@@ -39,8 +39,8 @@ silahkan download nilai untuk mencetak hasil ujiannya.</p>
         <td>{{ $nilai->jurusan }}</td>
         <td>{{ $nilai->kelas }}</td>
           
-		<td>           
-            <a class="unduh" href=""  title="Download">Download</a>
+        <td>           
+            <a href="/cetak_nilai_siswa-3/{{ $nilai->id_rekap }}" class="unduh" title="Download">Download</a>
             
         </td>            
     </tr>

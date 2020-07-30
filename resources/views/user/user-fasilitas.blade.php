@@ -11,6 +11,7 @@
       <th width="30px" height="40px" style="text-align:center;">No</th>
       <th style="text-align:center;">Nama Ruangan</th>
       <th style="text-align:center;">kuantitas</th>
+      <th style="text-align:center;">Kondisi</th>
     </tr> 
   </thead>
   <tbody>
@@ -23,6 +24,7 @@
     <td>{{ $no }}</td>
     <td>{{ $li->nama_ruang }}</td>
     <td>{{ $li->kuantitas }}</td>
+    <td>{{ $li->kondisi }}</td>
 </tr>
 @endforeach
 </tbody>

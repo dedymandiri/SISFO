@@ -40,7 +40,7 @@ silahkan download nilai untuk mencetak hasil ujiannya.</p>
         <td>{{ $nilai->kelas }}</td>
           
 		    <td>           
-            <a href="/user-cetak_nilai/{{ $nilai->id_rekap }}" class="unduh" title="Download">Download</a>
+            <a href="/cetak_nilai_siswa/{{ $nilai->id_rekap }}" class="unduh" title="Download">Download</a>
             
         </td>            
     </tr>
