@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
+	
+<!--===============================================================================================-->
   <link rel="icon" type="image/png" href="{{ asset('admin/docs/assets/img/logo sekolah.png') }}">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="{{ asset('admin/login/admin/login/images/icons/favicon.ico') }}"/>
-<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('admin/login/vendor/bootstrap/css/bootstrap.min.css') }}">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{ asset('admin/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
@@ -33,7 +33,7 @@
 				<form class="login100-form validate-form" action="/login/proses/" method="post">
 					{{ csrf_field() }}
 					<div class="login100-form-avatar">
-						<img src="admin/login/images/avatar-01.jpg" alt="AVATAR">
+						<img src="{{ asset('admin/docs/assets/img/logo sekolah.png') }}" alt="AVATAR">
 					</div>
 
 					<span class="login100-form-title p-t-20 p-b-45">SISFO Admin</span>
@@ -50,7 +50,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="password" placeholder="Password">
 						@if($errors->has('password'))
                 		<label style="color:red" class="login-field-icon fui-user" for="login-name">Password Jangan kosong!</label>
                 		@endif
@@ -68,9 +68,9 @@
 					</div>
 
 					<div class="text-center w-full p-t-25 p-b-230">
-						<a href="#" class="txt1">
+					<!-- 	<a href="#" class="txt1">
 							Forgot Username / Password?
-						</a>
+						</a> -->
 					</div>
 
 				</form>
@@ -79,6 +79,18 @@
 	</div>
 	
 	
+	<script type="text/javascript">
+	function validasi() {
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;		
+		if (username != "" && password!="") {
+			return true;
+		}else{
+			alert('Username dan Password harus di isi !');
+			return false;
+		}
+	}
+	</script>
 
 	
 <!--===============================================================================================-->	

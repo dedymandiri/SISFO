@@ -26,6 +26,7 @@ use App\Daftar_Model;
 use App\Sambutan_Model;
 use App\Bukutamu_Model;
 use App\Admin_Model;
+use App\Pendaftaran_Model;
 // Batas Model buat manggil tabel di database
 
 use Storage;
@@ -40,12 +41,9 @@ class MasterController extends Controller
     //---------------------------------------------------------------------halaman dashboard admin
     public function dashboard(){
         return view('admin.dashboard');
+
     }
 
-    public function tampiljumlah(){
-        $programming_count = Pengguna_Model::where('id_pengguna','1')->get()->count();
-        return view('admin.dashboard',['programming_count'=>$programming_count]);
-    }
     //---------------------------------------------------------------------Batas halaman dashboard admin
 
 
@@ -171,6 +169,7 @@ class MasterController extends Controller
         return view('admin.berita',['liat'=>$hasil]);
     }
 
+
     public function tambahberita()
     { 
 	    // memanggil view tambah
@@ -178,40 +177,89 @@ class MasterController extends Controller
  
     }
 
-    //input data ke database
-    public function store(Request $request)
-    {
-	    // insert data ke table berita
-	    DB::table('berita')->insert([
-		'judul' => $request->judul,
-		'tanggal_waktu' => $request->tanggal_waktu,
-		'isi' => $request->isi
-	]);
-	    // alihkan halaman ke halaman berita
-	    return redirect('berita');
+    public function proses_uploud_berita(Request $request){
+		$this->validate($request, [
+            'judul' => 'required',
+            'tanggal_waktu' => 'required',
+			'file' => 'required|image|mimes:jpeg,png,jpg',
+			'isi' => 'required',
+		]);
  
-    }
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+ 
+      	        // nama file
+		echo 'File Name: '.$file->getClientOriginalName();
+		echo '<br>';
+ 
+      	        // ekstensi file
+		echo 'File Extension: '.$file->getClientOriginalExtension();
+		echo '<br>';
+ 
+      	        // real path
+		echo 'File Real Path: '.$file->getRealPath();
+		echo '<br>';
+ 
+      	        // ukuran file
+		echo 'File Size: '.$file->getSize();
+		echo '<br>';
+ 
+      	        // tipe mime
+		echo 'File Mime Type: '.$file->getMimeType();
+ 
+      	        // isi dengan nama folder tempat kemana file diupload
+		$tujuan_upload = 'data_berita';
+ 
+                // upload file
+        $file->move($tujuan_upload, $file->getClientOriginalName());
+        DB::table('berita')->insert([
+            'file'=> $file->getClientOriginalName(),
+            'judul' => $request->judul,
+            'tanggal_waktu' => $request->tanggal_waktu,
+            'isi' => $request->isi
+        ]);
+        return redirect('berita');
+	}
 
-    //edit data berita
+    //edit data sambutan
     public function editberita($id){
         $hasil = Berita_Model::where('id_berita',$id)->get();
         return view('admin.edit.edit_berita',['liat'=>$hasil]);
     }
+ 
+    // update data 
+ public function updateberita($id, Request $request)
+ {
+     $this->validate($request, [
+        'judul' => 'required',
+        'tanggal_waktu' => 'required',
+        'file' => 'required|image|mimes:jpeg,png,jpg',
+        'isi' => 'required',
+     ]);
 
-    // update data berita
-    public function updateberita($id, Request $request)
-    {
-        $berita = [
-            'judul' => $request->judul,
-            'tanggal_waktu' => $request->tanggal_waktu,
-            'isi' => $request->isi 
-        ];
-	    // update data berita
-        DB::table('berita')->where('id_berita',$request->id)->update($berita);
-        return redirect('berita');
-    }
+     // menyimpan data file yang diupload ke variabel $file
+     $file = $request->file('file');
 
-    
+     $berita = [
+        'file'=> $file->getClientOriginalName(),
+        'judul' => $request->judul,
+        'tanggal_waktu' => $request->tanggal_waktu,
+        'isi' => $request->isi
+     ];
+
+       // tujuan file disimpan di folder apa?
+     $tujuan_upload = 'data_berita';
+
+     // upload file
+     $file->move($tujuan_upload,$file->getClientOriginalName());
+            
+     // update data 
+     DB::table('berita')->where('id_berita',$request->id)->update($berita);
+
+     return redirect('berita');
+    }    
+
+
     //hapus data berita berdasarkan id_berita
     public function hapusberita($id)
     {
@@ -223,66 +271,119 @@ class MasterController extends Controller
     }
 
     
-    public function detailberita(){
+    public function detailsberita(){
         return view('admin.detail.detail_berita');
     }
 
-    public function lihatdetailberita(){
-        $hasil = Berita_Model::all();
+    public function lihatdetailberita($id){
+        $hasil = Berita_Model::where('id_berita',$id)->get();
         return view('admin.detail.detail_berita',['liat'=>$hasil]);
     }
-    //---------------------------------------------------------------------Batas halaman berita admin
+       //---------------------------------------------------------------------Batas halaman berita admin
 
 
     //---------------------------------------------------------------------halaman pengumuman admin
-    public function info(){
+    public function pengumuman(){
         return view('admin.pengumuman');
     }
 
-    public function lihatinfo(){
+    public function lihatpengumuman(){
         $hasil = Pengumuman_Model::all();
         return view('admin.pengumuman',['liat'=>$hasil]);
     }
 
-    public function tambahinfo()
+    public function tambahpengumuman()
     { 
 	    // memanggil view tambah
 	    return view('admin.input.input_pengumuman');
     }
 
-    //input data ke database
-    public function storeinfo(Request $request)
-    {
-	    // insert data ke table pegawai
-	    DB::table('pengumuman')->insert([
-		'judul' => $request->judul,
-		'tanggal_waktu' => $request->tanggal_waktu,
-		'isi' => $request->isi
-	]);
-	    // alihkan halaman ke halaman pegawai
-	    return redirect('pengumuman');
-    }
+    
+    public function proses_uploud_pengumuman(Request $request){
+		$this->validate($request, [
+            'judul' => 'required',
+            'tanggal_waktu' => 'required',
+			'file' => 'required|image|mimes:jpeg,png,jpg',
+			'isi' => 'required',
+		]);
+ 
+		// menyimpan data file yang diupload ke variabel $file
+		$file = $request->file('file');
+ 
+      	        // nama file
+		echo 'File Name: '.$file->getClientOriginalName();
+		echo '<br>';
+ 
+      	        // ekstensi file
+		echo 'File Extension: '.$file->getClientOriginalExtension();
+		echo '<br>';
+ 
+      	        // real path
+		echo 'File Real Path: '.$file->getRealPath();
+		echo '<br>';
+ 
+      	        // ukuran file
+		echo 'File Size: '.$file->getSize();
+		echo '<br>';
+ 
+      	        // tipe mime
+		echo 'File Mime Type: '.$file->getMimeType();
+ 
+      	        // isi dengan nama folder tempat kemana file diupload
+		$tujuan_upload = 'data_pengumuman';
+ 
+                // upload file
+        $file->move($tujuan_upload, $file->getClientOriginalName());
+        DB::table('pengumuman')->insert([
+            'file'=> $file->getClientOriginalName(),
+            'judul' => $request->judul,
+            'tanggal_waktu' => $request->tanggal_waktu,
+            'isi' => $request->isi
+        ]);
+        return redirect('pengumuman');
+	}
 
-    public function editinfo($id){
+    //edit data sambutan
+    public function editpengumuman($id){
         $hasil = Pengumuman_Model::where('id_info',$id)->get();
         return view('admin.edit.edit_pengumuman',['liat'=>$hasil]);
     }
+ 
+    // update data 
+ public function updatepengumuman($id, Request $request)
+ {
+     $this->validate($request, [
+        'judul' => 'required',
+        'tanggal_waktu' => 'required',
+        'file' => 'required|image|mimes:jpeg,png,jpg',
+        'isi' => 'required',
+     ]);
 
-    // update data berita
-    public function updateinfo($id, Request $request)
-    {
-        $info = [
-            'judul' => $request->judul,
-            'tanggal_waktu' => $request->tanggal_waktu,
-            'isi' => $request->isi 
-        ];
-        // update data berita
-        DB::table('pengumuman')->where('id_info',$request->id)->update($info);
-        return redirect('pengumuman');
-    }
+     // menyimpan data file yang diupload ke variabel $file
+     $file = $request->file('file');
+
+     $pengumuman = [
+        'file'=> $file->getClientOriginalName(),
+        'judul' => $request->judul,
+        'tanggal_waktu' => $request->tanggal_waktu,
+        'isi' => $request->isi,
+     ];
+
+       // tujuan file disimpan di folder apa?
+     $tujuan_upload = 'data_pengumuman';
+
+     // upload file
+     $file->move($tujuan_upload,$file->getClientOriginalName());
+            
+     // update data 
+     DB::table('pengumuman')->where('id_info',$request->id)->update($pengumuman);
+
+     return redirect('pengumuman');
+    }    
+
 
     //hapus data berita berdasarkan id_berita
-    public function hapusinfo($id)
+    public function hapuspengumuman($id)
     {
 	    // menghapus data pegawai berdasarkan id yang dipilih
 	    DB::table('pengumuman')->where('id_info',$id)->delete();
@@ -292,12 +393,12 @@ class MasterController extends Controller
     }
 
     
-    public function detailinfo(){
+    public function detailpengumuman(){
         return view('admin.detail.detail_pengumuman');
     }
 
-    public function lihatdetailinfo(){
-        $hasil = Pengumuman_Model::all();
+    public function lihatdetailpengumuman($id){
+        $hasil = Pengumuman_Model::where('id_info',$id)->get();
         return view('admin.detail.detail_pengumuman',['liat'=>$hasil]);
     }
     //---------------------------------------------------------------------Batas halaman pengumuman admin

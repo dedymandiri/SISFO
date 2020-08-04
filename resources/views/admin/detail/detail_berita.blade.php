@@ -16,11 +16,16 @@
 <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <!--Untuk menampilkan tabel berita dari database-->
     @foreach($liat as $li)
-    <div  class="judul" style="margin-left:20px;width:880px;" class="hr" align="justify">		
-			Judul : <?php echo $li['judul'] ?>
-		<br>		
-			Tanggal : <?php echo $li['tanggal_waktu'] ?>
-		<br>
+  <table style="margin-left:40px;" class="identitas-siswa">
+    <tbody>
+        <tr><td width="105px">Judul</td><td width="30px">:</td><td>{{ $li->judul }}</td></tr>
+        <tr><td>Tanggal/Waktu</td><td>:</td><td>{{ $li->tanggal_waktu }}</td></tr>      
+    </tbody>
+  </table>
+  <br> 
+  <td><img src="{{ url('/data_berita/'.$li->file) }}" style="width:300px; height:150px;margin-left:40px"></td>
+  <br>
+  <div align="justify" style="width:850px;margin-left:40px;">
 			<?php echo $li['isi'] ?>
 	</div>
     @endforeach

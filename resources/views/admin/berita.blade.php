@@ -24,7 +24,7 @@
 <body>
 <div>
    <div style="margin-left:7px;" class="col-sm-4">
-       <a href="/inputberita"><button type="button" class="btn btn-success">Tambah Data</button></a>
+       <a href="/input_berita"><button type="button" class="btn btn-success">Tambah Data</button></a>
        <!-- Search form 
        <input style="margin-left:830px;width:250px" class="form-control" type="text" placeholder="Search" aria-label="Search">   
        -->
@@ -39,6 +39,7 @@
       <th class="th-sm">No</th>
       <th class="th-sm">Judul</th>
       <th class="th-sm">Tanggal_Waktu</th>
+      <th class="th-sm">Gambar/Foto</th>
       <th class="th-sm">Isi</th>
       <th class="th-sm">Aksi</th>
     </tr>
@@ -53,6 +54,7 @@
         <td>{{ $no }}</td>
         <td>{{ $li->judul }}</td>
         <td>{{ $li->tanggal_waktu }}</td>
+        <td><img src="{{ url('/data_berita/'.$li->file) }}" style="width:140px; height:140px;"></td>
         <td><p align="justify">{{ $li->isi }}</p></td>
       
         <td>
@@ -60,7 +62,7 @@
         
             <a href="/berita/hapus/{{ $li->id_berita }}"><button style="margin-top:8px;" onclick="return confirm('Apakah anda yakin hapus data?')" title="Hapus" type="button" class="btn btn-danger">Hapus</button></a>
       
-            <a href="/detail_berita"><button  style="margin-top:8px;width:65px;" type="button" class="btn btn-primary" >Detail</button></a>
+            <a href="/detail_berita/{{ $li->id_berita }}"><button  style="margin-top:8px;width:65px;" type="button" class="btn btn-primary" >Detail</button></a>
            
         </td>   
     </tr>

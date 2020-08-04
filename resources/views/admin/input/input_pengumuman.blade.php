@@ -10,7 +10,7 @@
   <strong>TAMBAH PENGUMUMAN</strong>
 </h4>
 <br>
-<form style="width:825px;margin-left:35px;" action="/pengumuman/storeinfo" method="post">
+<form style="width:825px;margin-left:35px;" action="/pengumuman/proses_pengumuman" method="post" enctype="multipart/form-data">
 {{ csrf_field() }}
 <br>
   <div class="form-group">
@@ -27,6 +27,12 @@
         </span>
        </div>
     </div>
+
+    <div class="form-group">
+    <label for="exampleFormControlFile1">Gambar/Foto :</label>
+    <input type="file" name="file" class="form-control-file" id="exampleFormControlFile1"><!-- 
+    <div style="color:red;">*Note : pilih gambar dengan bentuk landscape!</div> -->
+  </div>
 
   <div class="form-group">
     <label for="judul">Deskripsi :</label>

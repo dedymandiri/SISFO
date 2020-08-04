@@ -12,7 +12,7 @@
 <br>
 
 @foreach($liat as $li)
-<form style="width:825px;margin-left:35px;" action="/berita/update/{{ $li->id_berita }}" method="post">
+<form style="width:825px;margin-left:35px;" action="/berita/update/{{ $li->id_berita }}" method="post" enctype="multipart/form-data">
 {{ csrf_field() }}
 <br>
   <div class="form-group">
@@ -30,6 +30,13 @@
        </div>
     </div>
 
+    <div class="form-group">
+    <label for="exampleFormControlFile1">Gambar/Foto :</label>
+    <input type="file" name="file" class="form-control-file" id="exampleFormControlFile1">
+    <br><label>File foto saat ini : {{ $li->file}}</label><br><!-- 
+    <div style="color:red;">*Note : pilih gambar dengan bentuk landscape!</div> -->
+  </div>
+  
   <div class="form-group">
     <label for="judul">Deskripsi :</label>
     <textarea id="isi" class="form-control" name="isi" rows="50" cols="80">{{ $li->isi }}</textarea>

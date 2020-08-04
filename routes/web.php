@@ -22,7 +22,6 @@ Route::get('/master','MasterController@master');
 
 //---------------------------------------------------------------------halaman dashboard dari admin lte
 Route::get('/dashboard','MasterController@dashboard');
-Route::get('/dashboard','MasterController@tampiljumlah');
 //---------------------------------------------------------------------batas halaman dashboard dari admin lte
 
 
@@ -48,36 +47,42 @@ Route::get('/detail_sambutan', 'MasterController@lihatdetailsambutan');
 Route::get('/berita','MasterController@berita');
 //menampilkan data berita dari database
 Route::get('/berita', 'MasterController@lihatberita');
+
 //tambah data berita ke database
-Route::get('/inputberita', 'MasterController@tambahberita');
-Route::post('/berita/store','MasterController@store');
+Route::get('/input_berita', 'MasterController@tambahberita');
+Route::post('/berita/proses_berita', 'MasterController@proses_uploud_berita');
+
 //edit(update) data berita ke database
 Route::get('/edit_berita/{id}', 'MasterController@editberita');
 Route::post('/berita/update/{id}', 'MasterController@updateberita');
+
 //hapus data berita
 Route::get('/berita/hapus/{id}','MasterController@hapusberita');
 
 Route::get('/detail_berita','MasterController@detailberita');
-Route::get('/detail_berita', 'MasterController@lihatdetailberita');
+Route::get('/detail_berita/{id}', 'MasterController@lihatdetailberita');
 
 //---------------------------------------------------------------------batas halaman berita dari admin lte
 
 
 //---------------------------------------------------------------------halaman pengumuman dari admin lte
-Route::get('/pengumuman','MasterController@info');
+Route::get('/pengumuman','MasterController@pengumuman');
 //menampilkan data berita dari database
-Route::get('/pengumuman', 'MasterController@lihatinfo');
-//tambah data berita ke database
-Route::get('/input_pengumuman', 'MasterController@tambahinfo');
-Route::post('/pengumuman/storeinfo','MasterController@storeinfo');
-//edit(update) data berita ke database
-Route::get('/edit_pengumuman/{id}', 'MasterController@editinfo');
-Route::post('/pengumuman/update/{id}', 'MasterController@updateinfo');
-//hapus data berita
-Route::get('/pengumuman/hapus/{id}','MasterController@hapusinfo');
+Route::get('/pengumuman', 'MasterController@lihatpengumuman');
 
-Route::get('/detail_pengumuman','MasterController@detailinfo');
-Route::get('/detail_pengumuman', 'MasterController@lihatdetailinfo');
+//tambah data berita ke database
+Route::get('/input_pengumuman', 'MasterController@tambahpengumuman');
+Route::post('/pengumuman/proses_pengumuman', 'MasterController@proses_uploud_pengumuman');
+
+//edit(update) data berita ke database
+Route::get('/edit_pengumuman/{id}', 'MasterController@editpengumuman');
+Route::post('/pengumuman/update/{id}', 'MasterController@updatepengumuman');
+
+//hapus data berita
+Route::get('/pengumuman/hapus/{id}','MasterController@hapuspengumuman');
+
+Route::get('/detail_pengumuman','MasterController@detailpengumuman');
+Route::get('/detail_pengumuman/{id}', 'MasterController@lihatdetailpengumuman');
 
 //---------------------------------------------------------------------batas halaman pengumuman dari admin lte
 
@@ -410,7 +415,7 @@ Route::get('/bukutamu/hapus/{id}','MasterController@hapusbukutamu');
 
 //---------------------------------------------------------------------halaman LOGIN dari admin lte
 Route::get('/login','MasterController@login');
-Route::post('/login/proses','MasterController@AuthCheck');
+
 //---------------------------------------------------------------------batas akhir halaman LOGIN dari admin lte
 
 

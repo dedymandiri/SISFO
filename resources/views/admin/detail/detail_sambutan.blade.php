@@ -15,7 +15,7 @@
 <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <!--Untuk menampilkan tabel berita dari database-->
     @foreach($liat as $li)
-    <img src="{{ url('/data_sambutan/'.$li->file) }}" style="margin-left:25px;width:200px;border:1px solid black;height:200px;">
+    <img src="{{ url('/data_sambutan/'.$li->file) }}" style="margin-left:25px;width:300px;border:1px solid grey;height:200px;">
     <strong><p style="margin-left:25px;margin-top:10px;">{{ $li->nama }}</p></strong><br>
     <div  class="isi">		
 			<div style="margin-left:25px;width:880px;" class="hr" align="justify">

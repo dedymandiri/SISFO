@@ -4,7 +4,7 @@
 
 <div style="margin-top:-1027px;width:750px;" class="col-sm-12">
     @foreach($liat as $li)
-	<span class="hold-img"><img src="{{ asset('user-web/aset/img/banjir.jpg') }}" alt="image" width="720" height="350"></a></span><br><br>
+	<span class="hold-img"><img src="{{ url('/data_berita/'.$li->file) }}"  alt="image" width="720" height="350"></a></span><br><br>
 		<small>Oleh Administrator</small><br><br><br>
 			<div class="block">
 				<h5 class="title">{{ $li->judul }}</h5>

@@ -47,7 +47,7 @@
   <?php $no++ ;?>
     <tr>
         <td>{{ $no }}</td>        
-        <td><img src="{{ url('/data_sambutan/'.$li->file) }}" style="width:140px; height:140px;"></td>
+        <td><img src="{{ url('/data_sambutan/'.$li->file) }}" style="width:200px; height:140px;"></td>
         <td>{{ $li->nama }}</td>
         <td><p align="justify">{{ $li->isi }}</p></td>
       

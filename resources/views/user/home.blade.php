@@ -48,14 +48,14 @@ tr td{
 }
 </style>
 
-<div style="margin-top:-1030px;">
+<div style="margin-top:-1030px;margin:right;">
 	<!--Bagian berita-->
 	<strong><h6>Berita</h6></strong><br>
 	@foreach($liat as $li)
 	<table>	
 		<tbody>
 			<tr>
-				<td><a href="/user-detail_berita/{{ $li->id_berita }}"><img class="img" src="{{ asset('user-web/aset/img/banjir.jpg') }}" alt="image" width="312" height="100"></a><br><br>
+				<td><a href="/user-detail_berita/{{ $li->id_berita }}"><img src="{{ url('/data_berita/'.$li->file) }}" style="width:300px; height:150px;margin-left:5px"></a><br><br>
 					<strong class="title"><a href="user-detail_berita"><b>{{ $li->judul }}</b></a><br>
 					<small>{{ $li->tanggal_waktu }}</small></strong>										
 					<p><?php echo substr ($li['isi'], 0,180) ?><a style="color:blue;" href="/user-detail_berita/{{ $li->id_berita }}">. Baca selengkapnya . . .</a></p>

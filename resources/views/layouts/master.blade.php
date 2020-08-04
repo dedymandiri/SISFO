@@ -29,7 +29,9 @@
     <ul class="navbar-nav">
       <li style="margin-top:-20px;margin-left:10px;" class="nav-item">
         <a class="nav-link" data-widget="pushmenu" role="button"><i class="fas fa-bars"></i></a>
-          
+      </li>
+      <li class="logout">
+      
       </li>
     </ul>
   </nav>
@@ -42,6 +44,7 @@
       <img style="margin-top:-18px;" src="{{ asset('admin/dist/img/avatar5.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <h4 style="margin-top:-10px;margin-left:40px;" class="brand-text font-weight-light">SISFO ADMIN</h4>
+      
     </a>
 <br>
     <!--  Halaman Sidebar -->
@@ -313,7 +316,6 @@
               </p>
             </a>
           </li>
-
       </nav>
       <!-- /.sidebar-menu -->
     </div>

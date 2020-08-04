@@ -225,7 +225,7 @@
 								</span>
 								<label class="title">{{ $kepsek[0]->nama}}</label>
 								<strong class="office">Kepala Sekolah</strong>
-								<?php echo substr ($kepsek[0]['isi'], 0,200) ?></q><a style="color:blue;" href="/user-sambutan">. Baca selengkapnya . . .</a>
+								<?php echo substr ($kepsek[0]['isi'], 0,200) ?> <a style="color:blue;" href="/user-sambutan">. Baca selengkapnya . . .</a>
 							</div>
 						
 						</div>

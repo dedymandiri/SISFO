@@ -2,6 +2,10 @@
 
 @section('content')   
     
+<?php
+session_start();
+?>
+
   <!-- Content Header (Page header) -->
   <div class="content-header">
       <div class="container-fluid">
@@ -22,15 +26,18 @@
     <br><br>
    
     <div class="container-fluid">
+        
         <!-- Small boxes (Stat box) -->
-        <div class="row">
+        <div class="row" style="widht:200px">
+       
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
-          
+           
               <div class="inner">
-                <h3>40<sup style="font-size: 20px"></sup></h3>
-            
+              
+                <h3>8<sup style="font-size: 20px"></sup></h3>
+                
                 <label>PPDB</label>
               </div>
             
@@ -39,6 +46,7 @@
               </div>
             </div>
           </div>
+          
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
